@@ -1,0 +1,227 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population,Coding Data  Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Attribute,Data Element Type,SIFFrame,Able to be mapped RAW
+1,Data Standards Manual,5.2,Enrolment,Raw,Sex,"‘Sex’ is the distinction ‘male’ and ‘female’, as reported by a person.",,,Numeric,1,"‘Sex’ is a flat classification having only one level with the two categories 'male' and 'female'. The code structure is simply:
+1 = Male
+2 = Female
+9 = Not stated/inadequately described",‘Sex’ is regarded as the physical and biological distinction between male and female. It is not the socially expected/perceived dimensions of behaviour associated with male and female (masculinity and femininity).,"It is necessary to store ‘Sex’ data that will enable output according to the following:
+Form of representation:  Code
+Datatype: Numeric character
+Size of data element values: 1
+Permissible data element values:  Code values represented in the ‘Sex’ classification.
+Where ‘sex’ is NOT stated/inadequately described, the code should be 9
+",Refer to ABS1285.0,‘Sex’ of student is required to report on student’s performance by male and female.,,,School Enrolling Student,,ACARA,,StudentPersonal,PersonInfo/Demographics/Sex,Descriptor,Student,
+2,Data Standards Manual,5.3,Enrolment,Raw,Indigenous Status,"A student is considered to be ‘Indigenous’ if he or she identifies as being of Aboriginal and/or Torres Strait Islander origin. The term 'origin' is considered to relate to people's Australian Aboriginal or Torres Strait Islander descent and for some, but not all, their cultural identity.",,,Numeric,1,"‘Indigenous status’ has a hierarchical structure comprising two levels. There are four categories at the detailed level of the classification that are grouped into two categories at the broader level. The classification is as follows:
+1 = Indigenous
+11 = Aboriginal but not Torres Strait Islander origin
+12 = Torres Strait Islander but not Aboriginal origin
+13 = Both Aboriginal and Torres Strait Islander origin
+2 = Non-Indigenous
+24 = Neither Aboriginal nor Torres Strait Islander origin
+9 = Not stated/unknown
+Only the second digit of the two-digit code needs to be used for data input and storage purposes. Responses should be coded to the appropriate category of the classification. For example, '24 Neither Aboriginal nor Torres Strait Islander origin' has an input code of '4'.
+'Not stated/unknown' ‘Indigenous status’ is to be uniquely represented in information management systems using the code ‘9’. The 'Not stated/unknown' category should not, however, appear as a response option on enrolment forms.",,"It is necessary to store ‘Indigenous status’ data that will enable output according to the following:
+Form of representation:  Code
+Datatype: Numeric character
+Size of data element values:   1
+Permissible data element values:  Code values represented in the ‘Indigenous status’ classification.
+Where ‘Indigenous status’ is not stated or unknown, the code should be '9'.",,‘Indigenous status’ of the student is used to derive the Indigenous status indicator.,"The 'Indigenous status' question allows for more than one response. The procedure for coding multiple responses is as follows:
+* If the respondent marks 'No' and either 'Aboriginal' or 'Torres Strait Islander', then the response should be coded to either 'Aboriginal' or 'Torres Strait Islander' as indicated (i.e. disregard the 'No' response).
+* If the respondent marks both the 'Aboriginal' and 'Torres Strait Islander' boxes, then the response should be coded to ‘Both Aboriginal and Torres Strait Islander origin'
+* If the respondent marks all three boxes ('No', 'Aboriginal' and 'Torres Strait Islander'), then the response should be coded to disregard the 'No' response).
+Where ‘Indigenous status’ is not stated or unknown, the code should be '9'.",,School Enrolling Student,,ACARA,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,Descriptor,Student,
+3,Data Standards Manual,5.4,Enrolment,Raw,Parental school education (Parent/Guardian 1),Parental school education' is the highest year of primary or secondary education a parent/guardian has completed.,,,Numeric,1,"The coding structure for ""Parental school education' is:
+4 = Year 12 or equivalent
+3 = Year 11 or equivalent
+2 = Year 10 or equivalent
+1 = Year 9 or equivalent or below
+0 = Not stated/unknown",,"It is necessary to store 'Parental school education' data that will enable output according to the following:
+Form of representation:  Code
+Datatype: Numeric character
+Size of data element values = 1
+Permissible data element values: All relevant categories of the coding structure/format as specified",,Parental school education' of mother/parent1/guardian1 and father/parent2/guardian2 are required to derive the Socio-economic background - education indicator.,"For the purposes of this data element, school education means primary and secondary education, regardless of the location or institution where it is undertaken. It therefore includes study at a secondary education level that might, for example, be undertaken at a Technical and Further Education (TAFE) institution.
+For the purposes of this data element, persons who have never attended school should be included in the 'Year 9 or equivalent or below' category.",,School Enrolling Student,,ACARA,,StudentPersonal,PersonInfo/MostRecent/Parent1SchoolEducationLevel,Descriptor,Student,
+4,Data Standards Manual,5.4,Enrolment,Raw,Parental school education (Parent/Guardian 2),Parental school education' is the highest year of primary or secondary education a parent/guardian has completed.,,,Numeric,1,"The coding structure for ""Parental school education' is:
+4 = Year 12 or equivalent
+3 = Year 11 or equivalent
+2 = Year 10 or equivalent
+1 = Year 9 or equivalent or below
+0 = Not stated/unknown",,"It is necessary to store 'Parental school education' data that will enable output according to the following:
+Form of representation:  Code
+Datatype: Numeric character
+Size of data element values = 1
+Permissible data element values: All relevant categories of the coding structure/format as specified",,Parental school education' of mother/parent1/guardian1 and father/parent2/guardian2 are required to derive the Socio-economic background - education indicator.,"For the purposes of this data element, school education means primary and secondary education, regardless of the location or institution where it is undertaken. It therefore includes study at a secondary education level that might, for example, be undertaken at a Technical and Further Education (TAFE) institution.
+For the purposes of this data element, persons who have never attended school should be included in the 'Year 9 or equivalent or below' category.",,School Enrolling Student,,ACARA,,StudentPersonal,PersonInfo/MostRecent/Parent1SchoolEducationLevel,Descriptor,Student,
+5,Data Standards Manual,5.5,Enrolment,Raw,Parental non-school education (Parent/Guardian1),Parental non-school education' identifies the highest qualification attained by a parent'guardian in any area of study other than school education.,,,Numeric,1,"The coding structure for ""Parental non-school education' is:
+7 = Bachelor degree or above
+6 = Advanced diploma/Diploma
+5 = Certificate I to IV (including trade certificate)
+8 = No non-school education
+0 = Not stated/unknown",,"It is necessary to store 'Parental non school education' data that will enable output according to the following:
+Form of representation: Code
+Datatype: Numeric character
+Size of data element values: 1
+Permissible data element values: All relevant categores of the coding structure as specified.",,Parental non-school education' of mother/parent1/guardian1 and father/parent2/guardian2 are required to derive the Socio-economic background - education indicator.,"Primary and secondary education are not non-school qualifications, regardless of the location or institution where the study is undertaken. Secondary education undertaken for example as a mature-age student at a Technical and Further Education (TAFE) institution is considered school education. However, non-school qualifications completed by parents/guardians when at school, e.g. Certificate I, should be included as non-school qualifications.",,School Enrolling Student,,ACARA,,StudentPersonal,MostRecent/Parent1NonSchoolEducation,Descriptor,Student,
+6,Data Standards Manual,5.5,Enrolment,Raw,Parental non-school education (Parent/Guardian2),Parental non-school education' identifies the highest qualification attained by a parent'guardian in any area of study other than school education.,,,Numeric,1,"The coding structure for ""Parental non-school education' is:
+7 = Bachelor degree or above
+6 = Advanced diploma/Diploma
+5 = Certificate I to IV (including trade certificate)
+8 = No non-school education
+0 = Not stated/unknown",,"It is necessary to store 'Parental non school education' data that will enable output according to the following:
+Form of representation: Code
+Datatype: Numeric character
+Size of data element values: 1
+Permissible data element values: All relevant categores of the coding structure as specified.",,Parental non-school education' of mother/parent1/guardian1 and father/parent2/guardian2 are required to derive the Socio-economic background - education indicator.,"Primary and secondary education are not non-school qualifications, regardless of the location or institution where the study is undertaken. Secondary education undertaken for example as a mature-age student at a Technical and Further Education (TAFE) institution is considered school education. However, non-school qualifications completed by parents/guardians when at school, e.g. Certificate I, should be included as non-school qualifications.",,School Enrolling Student,,ACARA,,StudentPersonal,MostRecent/Parent1NonSchoolEducation,Descriptor,Student,
+7,Data Standards Manual,5.5,Enrolment,Derived,Derived Socio-economic background - Education indicator,"The 'Socio-economic background' indicator is derived by combining 'Parental school education' data and ""Parental non-school education'",,,Numeric,1,,See Data Standards Manual,,,,,Still refers to Mother and Father rather than Parent/Guardian1 and Parent/Guardian2,School Enrolling Student,,ACARA,,,,,,Yes
+8,Data Standards Manual,5.6,Enrolment,Raw,Parental occupation group,"‘Parental occupation group’ is defined as the occupation group which includes the main work undertaken by the parent/guardian. If a parent/guardian has more than one job, report the occupation group which includes their main job.",,,Numeric,1,"‘Parental occupation’ is a flat classification having only one level with six categories. The code structure is simply:
+1= Senior management in large business organisation, government administration and defence, and qualified professionals
+2= Other business managers, arts/media/sportspersons and associate professionals
+3= Tradespeople, clerks and skilled office, sales and service staff
+4= Machine operators, hospitality staff, assistants, labourers and related workers
+8= Not in pid work in last 12 months
+9= Not stated or unknown","Using List of Parental Occupation Groups  the following 2 question modules should be used:
+What is the occupation group of the mother/parent1/guardian1? _____
+Please select the appropriate parental occupation group from the attached list.
+* If the person is not currently in paid work but has had a job in the last 12 months or has retired in the last 12 months, please use the person's last occupation.
+* If the person has not been in paid work in the last 12 months, enter '8' above.
+
+What is the occupation group of the father/parent2/guardian2? _____
+Please select the appropriate parental occupation group from the attached list.
+* If the person is not currently in paid work but has had a job in the last 12 months or has retired in the last 12 months, please use the person's last occupation.
+* If the person has not been in paid work in the last 12 months, enter '8' above.
+","The following output codes need to be recorded for each student:
+* 1-digit 'Parental occumation group' code for mother/parent1/guardian1
+* 1-digit 'Parental occumation group' code for father/parent2/guardian2",,,"‘Parental occupation group’ is used to derive the Socio-economic background – occupation indicator. It is necessary therefore to uniquely identify in the collection and storage processes (e.g. on student enrolment forms and in information management systems) the:
+* ‘Parental occupation group’ of the mother/parent1/guardian1
+* ‘Parental occupation group’ of the father/parent2/guardian2.",,School Enrolling Student,,ACARA,,StudentPersonal,MostRecent/Parent1EmploymentType,Descriptor,Student,
+9,Data Standards Manual,5.6,,Derived,Derived Socio-economic background,The 'Socio-economic background'  occupation indicator is derived by comparing 'Parental occupation group' data from the father and the mother.,,,Numeric,1,"Derivation requires the combination of 
+FOCC Father's Occupation
+MOCC Mother's Occupation
+to determine a single value.",See Data Standards Manual p30.,,,,,Still refers to Mother and Father rather than Parent/Guardian1 and Parent/Guardian2,School Enrolling Student,,ACARA,,StudentPersonal,,Calculated,,
+10,Data Standards Manual,5.7,Enrolment,Raw,Main language other than English spoken at home (of the student),"‘Main language other than English spoken at home’ is defined as the main language other than English, spoken in the home by the respondent.
+If the respondent speaks more than one language at home (not including English), report the language the respondent speaks most often.
+Information is to be sought in relation to the student, mother/parent1/guardian1 and father/parent2/guardian2.",,,Numeric,4,"The 1267.0 - ASCL, 2011 Second Edition is a 4-digit, three-level hierarchical coding structure. The following example illustrates the coding scheme:
+Broad Group: 1 = Northern European Languages
+Narrow Group: 11 = Celtic
+Detailed Level: 1101 = Gaelic (Scotland)
+                                1102 = Irish
+                                1103 = Welsh
+                                1199 = Celtic, n.e.c.
+The ASCL (2011) Second Edition comprises nine Broad Groups, 51 Narrow Groups and 388 Detailed Levels. For a complete list of Language codes refer to the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011. The coding index is described at Attachment 3 and can be accessed on the ABS website at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument.
+
+Correspondence tables published by the ABS allow users to convert data from the ASCL (1997) First Edition to the ASCL (2011) Second Edition. The tables are also provided at www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02005-06?OpenDocument .","The ABS coding index to link responses to the ‘Main language other than English spoken at home’ question to the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011 is described at Attachment 3 and can be accessed on the ABS website at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument.
+This coding index facilitates data being accurately coded to the appropriate ASCL (2011) code by providing an alphabetical listing of possible question responses that can be coded to the relevant ASCL (2011) code.
+Correspondence tables published by the ABS allow users to convert data from the ASCL (1997) First Edition to the ASCL (2011) Second Edition. The tables are provided at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument .","It is necessary to store ‘Main language other than English spoken at home’ data that will enable output according to the following:
+
+Form of representation: Code
+Datatype: Numeric character
+Size of data element values: 4
+Permissible data element values: All codes represented in the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011.
+
+Where the language spoken by the respondent is not stated the code should be ‘0002’.
+The code for the most common response ‘No, English only’ is 1201.
+Four-digit codes ending with two or three zeros are described as 'not further defined' (n.f.d.) codes. These codes are used to code responses that cannot be coded to the most detailed level of the classification but can be coded to a higher level of the classification.
+For example: a response 'Celtic' does not contain sufficient information to be coded to a particular language but it can be coded to the Narrow Group 'Celtic' (11) as 'Celtic n.f.d.' (1100), which includes all languages in this Group.
+
+","Refer to ABS 1267.0 - Australian Standard Classification of Languges,2011",,"The ‘Main language other than English spoken at home’ by the respondent is used to derive the ‘Language background’ and the ‘Main language other than English spoken at home’ indicators. It is necessary therefore to uniquely identify in the collection and storage processes (e.g. on student enrolment forms and in information management systems):
+* ‘Main language other than English spoken at home’ of the student
+* ‘Main language other than English spoken at home’ of the mother/parent1/guardian1
+* ‘Main language other than English spoken at home’ of the father/parent2/guardian2.
+
+The procedures for coding multiple language responses are:
+* If the respondent specifies that more than one language other than English is spoken, then the response should be coded to the first language other than English specified.
+* If the respondent specifies that they speak both English and another language(s), then the response should be coded to the first language other than English specified.
+The above coding rules will result in some misreporting, as the first language specified might not be the main language (other than English) spoken at home.",,School Enrolling Student,,ACARA,,StudentPersonal,PersonInfo/Demographics/LanguageList/LanguageCode,Descriptor,,
+11,Data Standards Manual,5.7,Enrolment,Raw,Main language other than English spoken at home (mother/parent1/guardian1),"‘Main language other than English spoken at home’ is defined as the main language other than English, spoken in the home by the respondent.
+If the respondent speaks more than one language at home (not including English), report the language the respondent speaks most often.
+Information is to be sought in relation to the student, mother/parent1/guardian1 and father/parent2/guardian2.",,,Numeric,4,"The 1267.0 - ASCL, 2011 Second Edition is a 4-digit, three-level hierarchical coding structure. The following example illustrates the coding scheme:
+Broad Group: 1 = Northern European Languages
+Narrow Group: 11 = Celtic
+Detailed Level: 1101 = Gaelic (Scotland)
+                                1102 = Irish
+                                1103 = Welsh
+                                1199 = Celtic, n.e.c.
+The ASCL (2011) Second Edition comprises nine Broad Groups, 51 Narrow Groups and 388 Detailed Levels. For a complete list of Language codes refer to the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011. The coding index is described at Attachment 3 and can be accessed on the ABS website at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument.
+
+Correspondence tables published by the ABS allow users to convert data from the ASCL (1997) First Edition to the ASCL (2011) Second Edition. The tables are also provided at www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02005-06?OpenDocument .","The ABS coding index to link responses to the ‘Main language other than English spoken at home’ question to the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011 is described at Attachment 3 and can be accessed on the ABS website at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument.
+This coding index facilitates data being accurately coded to the appropriate ASCL (2011) code by providing an alphabetical listing of possible question responses that can be coded to the relevant ASCL (2011) code.
+Correspondence tables published by the ABS allow users to convert data from the ASCL (1997) First Edition to the ASCL (2011) Second Edition. The tables are provided at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument .","It is necessary to store ‘Main language other than English spoken at home’ data that will enable output according to the following:
+
+Form of representation: Code
+Datatype: Numeric character
+Size of data element values: 4
+Permissible data element values: All codes represented in the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011.
+
+Where the language spoken by the respondent is not stated the code should be ‘0002’.
+The code for the most common response ‘No, English only’ is 1201.
+Four-digit codes ending with two or three zeros are described as 'not further defined' (n.f.d.) codes. These codes are used to code responses that cannot be coded to the most detailed level of the classification but can be coded to a higher level of the classification.
+For example: a response 'Celtic' does not contain sufficient information to be coded to a particular language but it can be coded to the Narrow Group 'Celtic' (11) as 'Celtic n.f.d.' (1100), which includes all languages in this Group.
+
+","Refer to ABS 1267.0 - Australian Standard Classification of Languges,2011",,"The ‘Main language other than English spoken at home’ by the respondent is used to derive the ‘Language background’ and the ‘Main language other than English spoken at home’ indicators. It is necessary therefore to uniquely identify in the collection and storage processes (e.g. on student enrolment forms and in information management systems):
+* ‘Main language other than English spoken at home’ of the student
+* ‘Main language other than English spoken at home’ of the mother/parent1/guardian1
+* ‘Main language other than English spoken at home’ of the father/parent2/guardian2.
+
+The procedures for coding multiple language responses are:
+* If the respondent specifies that more than one language other than English is spoken, then the response should be coded to the first language other than English specified.
+* If the respondent specifies that they speak both English and another language(s), then the response should be coded to the first language other than English specified.
+The above coding rules will result in some misreporting, as the first language specified might not be the main language (other than English) spoken at home.",,School Enrolling Student,,ACARA,,StudentPersonal,MostRecent/Parent1Language,Descriptor,,
+12,Data Standards Manual,5.7,Enrolment,Raw,Main language other than English spoken at home (father/parent2/guardian2),"‘Main language other than English spoken at home’ is defined as the main language other than English, spoken in the home by the respondent.
+If the respondent speaks more than one language at home (not including English), report the language the respondent speaks most often.
+Information is to be sought in relation to the student, mother/parent1/guardian1 and father/parent2/guardian2.",,,Numeric,4,"The 1267.0 - ASCL, 2011 Second Edition is a 4-digit, three-level hierarchical coding structure. The following example illustrates the coding scheme:
+Broad Group: 1 = Northern European Languages
+Narrow Group: 11 = Celtic
+Detailed Level: 1101 = Gaelic (Scotland)
+                                1102 = Irish
+                                1103 = Welsh
+                                1199 = Celtic, n.e.c.
+The ASCL (2011) Second Edition comprises nine Broad Groups, 51 Narrow Groups and 388 Detailed Levels. For a complete list of Language codes refer to the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011. The coding index is described at Attachment 3 and can be accessed on the ABS website at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument.
+
+Correspondence tables published by the ABS allow users to convert data from the ASCL (1997) First Edition to the ASCL (2011) Second Edition. The tables are also provided at www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02005-06?OpenDocument .","The ABS coding index to link responses to the ‘Main language other than English spoken at home’ question to the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011 is described at Attachment 3 and can be accessed on the ABS website at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument.
+This coding index facilitates data being accurately coded to the appropriate ASCL (2011) code by providing an alphabetical listing of possible question responses that can be coded to the relevant ASCL (2011) code.
+Correspondence tables published by the ABS allow users to convert data from the ASCL (1997) First Edition to the ASCL (2011) Second Edition. The tables are provided at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1267.02011?OpenDocument .","It is necessary to store ‘Main language other than English spoken at home’ data that will enable output according to the following:
+
+Form of representation: Code
+Datatype: Numeric character
+Size of data element values: 4
+Permissible data element values: All codes represented in the 1267.0 - Australian Standard Classification of Languages (ASCL), 2011.
+
+Where the language spoken by the respondent is not stated the code should be ‘0002’.
+The code for the most common response ‘No, English only’ is 1201.
+Four-digit codes ending with two or three zeros are described as 'not further defined' (n.f.d.) codes. These codes are used to code responses that cannot be coded to the most detailed level of the classification but can be coded to a higher level of the classification.
+For example: a response 'Celtic' does not contain sufficient information to be coded to a particular language but it can be coded to the Narrow Group 'Celtic' (11) as 'Celtic n.f.d.' (1100), which includes all languages in this Group.
+
+","Refer to ABS 1267.0 - Australian Standard Classification of Languges,2011",,"The ‘Main language other than English spoken at home’ by the respondent is used to derive the ‘Language background’ and the ‘Main language other than English spoken at home’ indicators. It is necessary therefore to uniquely identify in the collection and storage processes (e.g. on student enrolment forms and in information management systems):
+* ‘Main language other than English spoken at home’ of the student
+* ‘Main language other than English spoken at home’ of the mother/parent1/guardian1
+* ‘Main language other than English spoken at home’ of the father/parent2/guardian2.
+
+The procedures for coding multiple language responses are:
+* If the respondent specifies that more than one language other than English is spoken, then the response should be coded to the first language other than English specified.
+* If the respondent specifies that they speak both English and another language(s), then the response should be coded to the first language other than English specified.
+The above coding rules will result in some misreporting, as the first language specified might not be the main language (other than English) spoken at home.",,School Enrolling Student,,ACARA,,StudentPersonal,MostRecent/Parent2Language,Descriptor,,
+13,Data Standards Manual,5.7,Enrolment,Derived,Socio-economic background - Language background indicator,"The 'Socio-economic background - Language background indicator' requires the combination of Students’ Language (SLG), Father’s Language (FLG) and Mother’s Language (MLG) to determine a single value, the ‘Language background’ indicator.",,,Numeric,4,"The coding structure for Main Language Other Than English Spoken At Home, represented above by Student’s Language (SLG), Father’s Language (FLG) and Mother’s Language (MLG) is based on the 1267.0 - Australian Standard Classification of Languages, 2011 where:
+0000 = Inadequately described
+0001 = Non-verbal, so described
+0002 = Not stated
+1201 = English
+All other 4-digit codes as specified in the ASCL (2011).",See Data Standards Manual p36.,,"Refer to ABS 1267.0 - Australian Standard Classification of Languges,2011",,,Still refers to Mother and Father rather than Parent/Guardian1 and Parent/Guardian2,,,,,,,,,Yes
+14,Data Standards Manual,5.8,Enrolment,Derived,Country of birth,Country of birth' of student is defined as being the one in which the student was born,,,Numeric,4,"The SACC (2011) is a four-digit, three-level hierarchical structure (Major Group, Minor Group and Detailed Level). It comprises nine Major Groups, 27 Minor Groups and 252 detailed levels. The following example illustrates the coding scheme:
+Major Group: 2 North-West Europe
+Minor Group: 21 United Kingdom, Channel Islands & Isle of Man
+Detailed level: 2102 England
+                               2103 Isle of Man
+                               2104 Northern Ireland
+                               2105 Scotland
+                               2106 Wales
+                               2107 Guernsey
+                               2108 Jersey
+For a complete list of Country codes refer to the 1269.0 - Standard Australian Classification of Countries (SACC), 2011 at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02011?OpenDocument.","The ABS coding index to link responses to the 'Country of birth' question to the 1269.0 - Standard Australian Classification of Countries (SACC), 2011 is described at Attachment 5 and can be accessed on the ABS website at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02011?OpenDocument. This coding index facilitates data being accurately coded to the appropriate SACC (2011) code by providing both alphabetical and numeric listings of possible question responses and the relevant SACC (2011) code.
+
+Correspondence tables published by the ABS allow users to convert data from the SACC (1998) First Edition to the SACC (2011) Second Edition are also provided at http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1269.02011?OpenDocument","It is necessary to store ‘Country of birth’ data that will enable output according to the following:
+Form of representation: Code
+Datatype: Numeric character
+Size of data element values: 4
+Permissible data element values: All codes represented in the 1269.0 - Standard Australian Classification of Countries (SACC), 2011.
+
+Where the ‘Country of birth’ is not stated, the code should be '0003'.
+Four-digit codes ending with two or three zeros are described as 'not further defined' (n.f.d.) codes. These codes are used to code responses that cannot be coded to the most detailed level of the classification but can be coded to a broader level of the classification.
+For example: a response 'United Kingdom' does not contain sufficient information to be coded to a particular country but it can be coded to the Minor Group 'United Kingdom' (21) as 'United Kingdom n.f.d.' (2100) which includes all countries in this Group.","Refer tp ABS 1269.0 - Standard Australian Classification of Countries (SACC), 2011",,It is necessary to uniquely identify the ‘Country of birth’ of the student in the collection and storage processes (e.g. on student enrolment forms and in information management systems).,,School Enrolling Student,,ACARA,,StudentPersonal,PersonInfo/Demographics/CountryOfBirth,Descriptor,Student,

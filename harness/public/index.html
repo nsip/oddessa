@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ========================================== 
+                Fonts 
+    ============================================= -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed|Rubik|Varela+Round" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+    <!-- ========================================== 
+                CSS 
+    ============================================= -->
+    <!-- styles for sliding panels -->
+    <link rel="stylesheet" href="css/slidingpanel.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- nias house style -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <!-- timeline styles for search results -->
+    <link rel="stylesheet" href="css/searchresults.css">
+    <!-- ========================================== 
+                JavaScript 
+    ============================================= -->
+    <!-- search/autocomp external components support -->
+    <script src="javascript/jquery-2.1.4.min.js"></script>
+    <script src="javascript/modernizr.js"></script>
+    <script src="javascript/jquery-ui.min.js"></script>
+    <script src="javascript/searchanimation.js"></script>
+    <!-- skeleton css javascript support for persistent menus etc.  -->
+    <script src="javascript/site.js"></script>
+    <!-- charting javascript support -->
+    <script src="javascript/d3.v3.4.8.min.js"></script>
+    <script src="javascript/dimple.v2.2.0.min.js"></script>
+    <!-- oddessa specific javascript routines -->
+    <script src="javascript/oddessa.js"></script>
+    <!-- ========================================== 
+                HTML Head
+    ============================================= -->
+    <title>NIAS - ODDESSA</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <section class="header">
+            <img class="value-img" src="images/booklet.svg" width="132" height="132">
+            <div class="row">
+                <div class="twelve columns" style="margin-top: 5%">
+                    <h4>NIAS - ODDESSA</h4>
+                    <p>Online Data Dictionary for Education Schools Sector Australia</p>
+                    </br>
+                </div>
+            </div>
+        </section>
+        <!-- navigation -->
+        <div class="navbar-spacer"></div>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a class="navbar-link" href="#search_collections">Search</a></li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="" data-popover="#mapNavPopover">Map</a>
+                        <div id="mapNavPopover" class="popover">
+                            <ul class="popover-list">
+                                <li class="popover-item">
+                                    <a class="popover-link" href="#map_collections">Coverage Graph</a>
+                                </li>
+                                <li class="popover-item">
+                                    <a class="popover-link" href="#includes">Elements in SIF-AU</a>
+                                </li>
+                                <li class="popover-item">
+                                    <a class="popover-link" href="#excludes">Elements not in SIF-AU</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- instructions -->
+        <div class="docs-section" id="search_instructions">
+            <div class="row">
+                <div class="twelve columns">
+                    <h6 class="docs-header">How to use the ODDESSA search tool</h6>
+                    <p>The oddessa search engine allows you to look for data elements across all mapped national collections and datsets.</p>
+                    <p>To search for a particular term just start typing in the search box. ODDESSA will present a list of options based on what you type to make searches more specific, you are free to ignore these choices and enter the terms you want.</p>
+                    <p>The radio buttons beneath the search text box specify the type of search 'Elements' searches for matches in all the known data elements ODDESSA contains, 'SIF' allows you to search for all elements that map to the SIF objects you choose, 'Collections' is simply a shorthand way to retrieve all elements of a collection at once.</p>
+                    <p>The search accepts multiple terms separated by commas allowing you to make search requests for multiple elements, sif objects, or collections at the same time.</p>
+                    <p>When you have as many terms as you want to search with, press the 'Go' button to perform the search.</p>
+                    <p>Search results are returned below the search bar showing major features of each element and the collection they come from.</p>
+                    <p>To see the extended meta-data for each item click on the 'Read More' button for that search result.</p>
+                    <p>By selecting the 'pin' option on a search result it is maintained as part of the search results between searches. This allows you to construct new datasets based on elements of existing collections.</p>
+                    <p>Use the 'Map' menu items to see the mapping of your search results to the SIF National Use Cases and the SIF-AU Data Model.</p>
+                    <p>Below the coverage graph, tables show which of the search results are within the current SIF-AU Data Model and which are not.</p>
+                </div>
+            </div>
+        </div>
+        <!-- search tools -->
+        <div class="docs-section" id="search_collections">
+            <div class="row">
+                <div class="twelve columns">
+                    <h6 class="docs-header">Search Collections</h6>
+                </div>
+            </div>
+            <!-- search input -->
+            <div class="row">
+                <div class="twelve columns">
+                    <label for="search">Search: </label>
+                    <input id="search" class="ui-widget u-full-width" type="text" size="100">
+                    <button class="button-primary" id="btn_search" type="button">Go</button>
+                    <form id="searchtype">
+                        <input type="radio" name="autocomp" value="element" id="rdo_elements" checked> Elements
+                        <input type="radio" name="autocomp" value="sif" id="rdo_sif"> SIF
+                        <input type="radio" name="autocomp" value="collection" id="rdo_collections"> Collections
+                    </form>
+                </div>
+            </div>
+            <!-- search results -->
+            <div class="row">
+                <div class="twelve columns">
+                    <div class="search-results">
+                        <section id="cd-timeline" class="cd-container">
+                            <!-- search result content will go here -->
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mapping tools -->
+        <div class="docs-section" id="map_collections">
+            <div class="row">
+                <div class="twelve columns">
+                    <h6 class="docs-header">Map to Australian Data Model</h6>
+                    <!-- use-case coverage graph -->
+                    <div id="usecasesRowChart">
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="includes">
+                <div class="twelve columns">
+                    <h6 class="docs-header" id="includes-hdr">Collection Elements in SIF-AU Data Model</h6>
+                    <table class="u-max-full-width">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h5>Collection</h5></th>
+                                <th>
+                                    <h5>Context</h5></th>
+                                <th>
+                                    <h5>Data Element</h5></th>
+                                <th>
+                                    <h5>SIF Object</h5></th>
+                                <th>
+                                    <h5>SIF Element</h5></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbl-includes">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row" id="excludes">
+                <div class="twelve columns">
+                    <h6 class="docs-header" id="excludes-hdr">Collection Elements not in SIF-AU Data Model</h6>
+                    <table class="u-max-full-width">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h5>Collection</h5></th>
+                                <th>
+                                    <h5>Context</h5></th>
+                                <th>
+                                    <h5>Data Element</h5></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbl-excludes">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- nsip footer -->
+        <div class="docs-section" id="footer">
+            <div class="row">
+                <div class="twelve columns">
+                    <footer>
+                        <p>NIAS Tools are provided by NSIP: <a href="http://www.nsip.edu.au">nsip.edu.au</a></p>
+                        <p>Contact us: <a href="mailto:info@nsip.edu.au">info@nsip.edu.au</a>.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+</body>
+<!-- sliding panel for display of full search result content -->
+<div class="cd-panel from-right">
+    <header class="cd-panel-header">
+        <h1> </h1>
+        <!-- <a href="#0" class="cd-panel-close">Close</a> -->
+    </header>
+    <div class="cd-panel-container">
+        <div class="cd-panel-content">
+        </div>
+        <!-- cd-panel-content -->
+    </div>
+    <!-- cd-panel-container -->
+</div>
+<!-- cd-panel -->
+
+</html>

@@ -1,0 +1,76 @@
+[usecases]
+
+	[usecases.attendance]
+	Name = "Attendance"
+	Objects = [
+		"StudentPersonal",
+		"StudentSchoolEnrolment",
+		"CalendarDate",
+		"CalendarSummary",
+		"StudentDailyAttendance",
+		"StudentAttendanceSummary",
+		"StudentAttendanceTimeList"
+	]
+
+	[usecases.finance]
+	Name = "Finance"
+	Objects = [
+		"Invoice",
+		"FinancialAccount",
+		"FinancialClassification",
+		"ChargedLocationInfo",
+		"PaymentReceipt",
+		"PurchaseOrder",
+		"VendorInfo",
+		"Journal",
+		"Debtor",
+		"EquipmentInfo",
+		"StaffPersonal",
+		"StudentContactPersonal"
+	]
+
+	[usecases.naplan-registration]
+	Name = "NAPLAN Registration"
+	Objects = [
+		"StudentPersonal"
+	]
+
+	[usecases.gradebook]
+	Name = "Gradebook"
+	Objects = [
+		"SchoolInfo",
+		"StudentPersonal",
+		"StudentSchoolEnrolment",
+		"StaffPersonal",
+		"StaffAssignment",
+		"TeachingGroup",
+		"GradingAssignment",
+		"GradingAssignmentScore"
+	]
+
+	[usecases.enrolment]
+	Name = "Enrolment"
+	Objects = [
+		"StudentPersonal",
+		"SchoolInfo",
+		"StudentSchoolEnrolment",
+		"StudentContactPersonal",
+		"StudentContactRelationship"
+	]
+
+	[usecases.timetable]
+	Name = "Timetable"
+	Objects = [
+		"StudentPersonal",
+		"StudentSchoolEnrolment",
+		"StaffPersonal",
+		"StaffAssignment",
+		"RoomInfo",
+		"SchoolCourseInfo",
+		"TimeTableSubject",
+		"TimeTable",
+		"TimeTableCell",
+		"TeachingGroup",
+		"ScheduledActivity"
+	]
+

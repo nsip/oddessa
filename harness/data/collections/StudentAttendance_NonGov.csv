@@ -1,0 +1,28 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population: ,Coding Data Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Element,Data Element Type,SIFFrame,Able to be mapped RAW
+1,Non-government Schools Student Attendance System (STATS),,School/Agency,Raw,AgeID,The Australian Government Department of Education Client ID,,,Integer,,,,,,,Value to be entered into each row.,,,,,,SchoolInfo OR LEAInfo,CommonwealthId,,,
+2,Non-government Schools Student Attendance System (STATS),,Collection Period,Raw,Collection,Identifies the reference period for the collection,,,Character,up to 10,"Permissible values: 
+Semester 1
+Term 3","Reference periods for data inclusion:
+Data for the complete reference period should include every school day falling between:
+* Semester 1 - the first day and last day (inclusive) of semester 1, or until the Friday on or before 30 June if there is no mid-year break in June/July;
+* Term 3 - the first and last day (inclusive) of term 3, or until the friday on or before 30 September if there is no break in September/October.",,,,Value to be entered into each row.,,,,,,TermInfo,Description,,,
+3,Non-government Schools Student Attendance System (STATS),,Individual Student  collected then aggregated.,Aggregated,Year Level,Grade level,,,Character,Up to 3,"Permissible Values: 
+Y1 - Y10
+PU
+SU","Ungraded students are restricted to special schools or special support units where students in ungraded classes cannot readily be allocated to a year level.  Ungraded students are included as either ungraded primary or ungraded secondary, according to the typical age level in each State or Territory.  Note: Ungraded students do NOT include Foundation (year 1 minus 1) and earlier programs, or year 11 and 12 students.",,,,"A record is required for each Year level with enrolments, with ungraded students to be allocated to a year level, as done for the Census on the Internet.  Primary Ungraded (PU) and Secondary Ungraded (SU) are valid entries for Special Schools only.",,,,,,StudentPersonal,MostRecent/YearLevel,,,
+4,Non-government Schools Student Attendance System (STATS),,Individual Student  collected then aggregated.,Aggregated,Gender,"Gender is the distinction male or female, as reported by a person.",,,Character,1,"
+Permissible Values:
+M
+F",,,,,As recorded at enrolment,,,,,,StudentPersonal,PersonInfo/Demographics/Sex,Descriptor,Student,
+5,Non-government Schools Student Attendance System (STATS),,Individual Student  collected then aggregated.,Aggregated,Indigenous status,A student is considered to be Indigenous if he or she identifies as being of Aboriginal and/or Torres Strait Islander origin.,,,Character,1,"Permissible Values:
+T = Total Students Including indigenous
+I = Indigenous Students only",,,,,,,,,,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,Descriptor,Student,
+6,Non-government Schools Student Attendance System (STATS),,Aggregated and Derived,Derived,Enrolment Days,"The total possible number of days that full -time students are expected to attend school over the reference period.  Enrolment days cannot include days when students are not expected to be at the school, such as school holidays, public holidays, pupil free days, and weekends.  ",,,Integer,,"Permissible Values: 
+>=0",The sum of the number of days each student is enrolled during the reference period,,,,Refers to full-time enrolments only for students in each category.,,,,,,N/A - Derived from above.,N/A - Derived from above.,N/A - Derived from above.,N/A - Derived from above.,Yes
+7,Non-government Schools Student Attendance System (STATS),,Aggregated and Derived,Derived,Attendance Days,The total number of days actually attended by full time students over the reference period.  The number of attendance days cannot exceed the number of enrolment days.  Part day attendances are to be included.,,,Numeric,,"Permissible Values: 
+>=0
+Up to 2 decimal places",The sum of the number of days each student attended school during the reference period,,,,Must be less than or equal to the number of Enrolment days.  Can include partial attendance days.,,,,,,N/A - Derived from above.,N/A - Derived from above.,N/A - Derived from above.,N/A - Derived from above.,Yes
+8,Non-government Schools Student Attendance System (STATS),,Aggregated and Derived,Derived,Students with <90% attendance,Number of full-time enrolled students who attended school less than 90% of the reference period.,,,Integer,,"Permissible Values: 
+>=0",Total number of students in the cohort with attendance rates below 90% during the reference period.  ,,,,Number of students where (Attendance days / Enrolment days) x100 < 90.,,,,,,N/A - Derived from above.,N/A - Derived from above.,N/A - Derived from above.,N/A - Derived from above.,Yes
+9,Non-government Schools Student Attendance System (STATS),,Aggregated and Derived,Calculated,Students with >=90% attendance,Number of full-time enrolled students who attended school  for 90% or more of the reference period.,,,Integer,,"Permissible Values: 
+>=0",,,,,Number of students where (Attendance days / Enrolment days) x100 >= 90.,,,,,,N/A - Derived from above.,N/A - Derived from above.,N/A - Derived from above.,N/A - Derived from above.,Yes

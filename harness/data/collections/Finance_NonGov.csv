@@ -1,0 +1,57 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population,Coding Data Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Attribute,Data Element Type,SIFFrame,Able to be mapped RAW
+1,Finance NonGov,,School Contact and Auditor Details,Raw,AGEID ,School ID,,,Number,,,,,,,,,,,,,SchoolInfo,CommonwealthId,,,
+2,Finance NonGov,,School Contact and Auditor Details,Raw,Name,School Name,,,Character,,,,,,,,,,,,,SchoolInfo,SchoolName,,,
+3,Finance NonGov,,School Contact and Auditor Details,Raw,Address,School Address,,,Character,,,,,,,,,,,,,SchoolInfo,"AddressList/StreetNumber
+AddressList/StreetName",,,
+4,Finance NonGov,,School Contact and Auditor Details,Raw,Suburb,School Suburb,,,Character,,,,,,,,,,,,,SchoolInfo,AddressList/City,,,
+5,Finance NonGov,,School Contact and Auditor Details,Raw,State,School state,,,Character,,,,,,,,,,,,,SchoolInfo,AddressList/StateProvince ,,,
+6,Finance NonGov,,School Contact and Auditor Details,Raw,Postcode ,School Postcode,,,Number,,,,,,,,,,,,,SchoolInfo,AddressList/PostalCode,,,
+7,Finance NonGov,,School Contact and Auditor Details,Raw,Title,School Contact Person Title (is this Mr/Ms etc?),,,,,,,,,,,,,,,,,,,,
+8,Finance NonGov,,School Contact and Auditor Details,Raw,First Name,School Contact Person First Name,,,Character,,,,,,,,,,,,,SchoolInfo,SchoolContactList/GivenName,,,
+9,Finance NonGov,,School Contact and Auditor Details,Raw,Family Name,School Contact Person Family Name,,,Character,,,,,,,,,,,,,SchoolInfo,SchoolContactList/FamilyName,,,
+10,Finance NonGov,,School Contact and Auditor Details,Raw,Position,School Contact Person Position,,,Character,,,,,,,,,,,,,SchoolInfo,SchoolContactList/PositionTitle,,,
+11,Finance NonGov,,School Contact and Auditor Details,Raw,Telephone No,School Contact Person Telephone,,,Number,,,,,,,,,,,,,SchoolInfo,SchoolContactList/PhoneNumberList/PhoneNumberType/Number,,,
+12,Finance NonGov,,School Contact and Auditor Details,Raw,Fax No,School Contact Person Fax Number,,,Number,,,,,,,,,,,,,SchoolInfo,SchoolContactList/PhoneNumberList/PhoneNumberType/Number,,,
+13,Finance NonGov,,School Contact and Auditor Details,Raw,Email,School Contact Person Email address,,,Character,,,,,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/EmailList,,,
+14,Finance NonGov,,School Contact and Auditor Details,Raw,First Name,School Auditor First Name,,,Character,,,,,,,,,,,,,,,,,
+15,Finance NonGov,,School Contact and Auditor Details,Raw,Family Name,School Auditor Family Name,,,Character,,,,,,,,,,,,,,,,,
+16,Finance NonGov,,School Contact and Auditor Details,Raw,Telephone No,School Auditor Telephone,,,Number,,,,,,,,,,,,,,,,,
+17,Finance NonGov,,School Contact and Auditor Details,Raw,Company,School Auditor Company Name,,,Character,,,,,,,,,,,,,,,,,
+18,Finance NonGov,,School Contact and Auditor Details,Raw,Membership Level and Registration Number,School Auditor Membership Level and Registration Number,,,,,2 different things?,,,,,,,,,,,,,,,
+19,Finance NonGov,,School Contact and Auditor Details,Selection,Qualifications of Auditor,School Auditor professional qualifications,,,,,"Tick boxes for user selection:
+Please select the option that identifies the auditor's professional qualifications:
+-A registered company auditor in a State or Territory, under the Part 9.2 of the Corporations Act 2001
+
+- A membver of the Institure of Chartered Accountants in Australia
+- A member of CPA Australia
+-A member of the Institute of  Public Accountants",,,,,,,,,,,,,,,
+20,Finance NonGov,,General Accounting Information,Selection,Accounting Method used,,,,,,"Tick boxes for user selection:
+- Cash
+- Accrual",,,,,,,,,,,,,,,
+21,Finance NonGov,,,Selection,Boarding,Are Separate accounts maintained for the boarding school activities? (Tick one as applicable),,,,,"Tick boxes for user selection:
+-Yes
+-No",Boarding Schools,,,,,,,,,,,,,,
+22,Finance NonGov,,Year 1 Minus 2 (and lower),,FTE of Year 1 minus 2 (and lower) students,,,,Number,,,"This section should be completed by schools which operate a Year 1 minus 2 (and lower) program but CANNOT separately identify all the income and expenditure related to that program. You should report Full-Time Equivalent (FTE) of the students. Please be aware that for the purposes of populating My School finance reports, the amounts reported by your school in the FQ will be assumed to only apply to school students (Year 1 minus 1 to Year 12 only). Enrolments reported below in GI.030 will not be included to calculate the per student income amounts reported on My School. As an alternative to reporting enrolments in GI.030, you may choose to pro-rate your income and expenses so that the amounts reported in the FQ only relate to school students.",,,,,,,,,,,,,,Yes
+23,Finance NonGov,,Year 1 Minus 2 (and lower),,FTE of Primary Students as at the 2014 Census (exclude Year 1 minus 2 and lower but include Year 1 minus 1 students),,,,Number,,,"This section should be completed by schools which operate a Year 1 minus 2 (and lower) program but CANNOT separately identify all the income and expenditure related to that program. You should report Full-Time Equivalent (FTE) of the students. Please be aware that for the purposes of populating My School finance reports, the amounts reported by your school in the FQ will be assumed to only apply to school students (Year 1 minus 1 to Year 12 only). Enrolments reported below in GI.030 will not be included to calculate the per student income amounts reported on My School. As an alternative to reporting enrolments in GI.030, you may choose to pro-rate your income and expenses so that the amounts reported in the FQ only relate to school students.",,,,,,,,,,,,,,Yes
+24,Finance NonGov,repeatable,Day Schools School Fees,,Item,,,,,,,,,,,,,,,,,,,,,Yes
+25,Finance NonGov,,Day Schools School Fees,,Tuition,,,,,,,,,,,,,,,,,,,,,Yes
+26,Finance NonGov,,Day Schools School Fees,,Description,,,,,,,,,,,,,,,,,,,,,Yes
+27,Finance NonGov,repeatable,Boarding Schools School Fees,,Item,,,,,,,,,,,,,,,,,,,,,Yes
+28,Finance NonGov,,Boarding Schools School Fees,,Tuition,Amount ,,,,,,,,,,,,,,,,,,,,Yes
+29,Finance NonGov,,Boarding Schools School Fees,,Boarding,,,,,,,,,,,,,,,,,,,,,Yes
+30,Finance NonGov,,Boarding Schools School Fees,,Description,,,,,,,,,,,,,,,,,,,,,Yes
+31,Finance NonGov,repeatable,Systemic Boarding Schools,,Item,,,,,,,,,,,,,,,,,,,,,Yes
+32,Finance NonGov,,Systemic Boarding Schools,,Tuition,,,,,,,,,,,,,,,,,,,,,Yes
+33,Finance NonGov,,Systemic Boarding Schools,,Boarding,,,,,,,,,,,,,,,,,,,,,Yes
+34,Finance NonGov,,Systemic Boarding Schools,,Description,,,,,,,,,,,,,,,,,,,,,Yes
+35,Finance NonGov,repeatable,Cathoic Diocese Day School,,Item,,,,,,,,,,,,,,,,,,,,,Yes
+36,Finance NonGov,,Cathoic Diocese Day School,,Tuition,,,,,,,,,,,,,,,,,,,,,Yes
+37,Finance NonGov,,Cathoic Diocese Day School,,System Allocation,,,,,,,,,,,,,,,,,,,,,Yes
+38,Finance NonGov,,Cathoic Diocese Day School,,Diocese Allocation,,,,,,,,,,,,,,,,,,,,,Yes
+39,Finance NonGov,,Cathoic Diocese Day School,,Description,,,,,,,,,,,,,,,,,,,,,Yes
+40,Finance NonGov,repeatable,Cathoic Diocese Boarding School,,Item,,,,,,,,,,,,,,,,,,,,,Yes
+41,Finance NonGov,,Cathoic Diocese Boarding School,,Tuition,,,,,,,,,,,,,,,,,,,,,Yes
+42,Finance NonGov,,Cathoic Diocese Boarding School,,Boarding,,,,,,,,,,,,,,,,,,,,,Yes
+43,Finance NonGov,,Cathoic Diocese Boarding School,,System Allocation,,,,,,,,,,,,,,,,,,,,,Yes
+44,Finance NonGov,,Cathoic Diocese Boarding School,,Diocese Allocation,,,,,,,,,,,,,,,,,,,,,Yes
+45,Finance NonGov,,Cathoic Diocese Boarding School,,Description,,,,,,,,,,,,,,,,,,,,,Yes

@@ -1,0 +1,25 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population,Coding Data  Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Attribute,Data Element Type,SIFFrame,Able to be mapped RAW
+1,NCCD SWD,,Multiple school collection,Raw,School ID,As allocated to the Head Campus of the school,,,Number,,,"Referred in 'Nationally  Consistent Collection of Data on School Students with Disability, Non-Government Schools Detailed Data Requirements for 2015' as AGEID",,,,"Where a school has multiple campuses, student data will need to be collected from all campuses and aggregated at school level.","The states and territories will provide a list of their schools, with their Australian Government Education IDs (AGE ID) and the numbers of primary and secondary student enrolments",,,,,SchoolInfo,CommonwealthId,,,
+2,NCCD SWD,,Multiple school collection,Derived,Region,Region is defined based on ABS2006 ARIA where 'Metro' refers to 'Major Cities of Australia' and 'Non-Metro' refers to all other regions.,,,Character,,"Permissible Values:
+Metro
+Non-Metro","Note on page 5 'Nationally  Consistent Collection of Data on School Students with Disability, Non-Government Schools Detailed Data Requirements for 2015' - ""These fields are redundant but have not been deleted for technical reasons.  Put any valid response in these fields, they will be ignored in later processing"" ",,ABS2006 ARIA,,,,,,,,SchoolInfo,SchoolDistrict,,,
+3,NCCD SWD,,Multiple school collection,Raw,School Type,School level will include Primary/Secondary/Combined/Special,,,Character,,"Permissible Values:
+Primary
+Secondary
+Combined
+Special","Note on page 5 'Nationally  Consistent Collection of Data on School Students with Disability, Non-Government Schools Detailed Data Requirements for 2015' - ""These fields are redundant but have not been deleted for technical reasons.  Put any valid response in these fields, they will be ignored in later processing"" ",,,,,,School Enroling Student,,,,SchoolInfo,SchoolType,,,
+4,NCCD SWD,,Multiple school collection,Descriptor,Student Level Indicators,,,,Character,,"Permissible Values:
+Primary
+Secondary
+",,,,,,,School Enroling Student,,,,StudentPersonal,MostRecent/YearLevel,,,
+5,NCCD SWD,,Multiple school collection,Descriptor,Disability Category,"Once a student is assessed, if applicable their disability must be recorded under one of the following categories: physical, cognitive, sensory, and social/emotional.",,,Character,,"Permissible Values:
+Physical
+Cognitive
+Sensory
+Social/Emotional",,,,,,,School Enroling Student,,,,,,,,
+6,NCCD SWD,,Multiple school collection,Descriptor,Level of Adjustment,"There are four levels of adjustment to be recorded for students with disability: support provided within quality differentiated teaching practice (previously known as 'No Adjustment'), supplementary, substantial, and extensive. ",,,Character,,"Permissible Values:
+Support provided within quality differentiated teaching practice
+Supplementary
+Substantial
+Extensive",,,,,,,School Enroling Student,,,,,,,,
+7,NCCD SWD,,Multiple school collection,Aggregate Count,Number of Students (Head Count),"The number of school students (both full-time and part-time) assessed as having a disability, by disability type and the level of reasonable education adjustments provided to these students.",,,Number,,"If zero, leave blank.",,,,,Each identified student must be only counted ONCE for the purpose of the data collection. Schools and/or their Education Authority should determine the most appropriate disability and level of adjustment category for each student.,,School Enroling Student,,,,,,,,Yes

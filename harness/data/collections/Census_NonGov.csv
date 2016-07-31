@@ -1,0 +1,132 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition:,Collection Short Name,Population:,Coding Data  Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Element,Data Element Type,SIFFrame,Could be mapped at RAW
+1,Census NonGov,,School Name and Contact Details,Raw,AGEID,,,,Number,,,"Data in the Client Detail fields are pre-populated from the Department's records, only amend the data if incorrect, do NOT make purely cosmetic changes.",,,,,,,,,,SchoolInfo,CommonwealthId,,,
+2,Census NonGov,,School Name and Contact Details,Raw,School Name,,,,Character,,,A separate Census return must be completed for each campus of a multi-campus school,,,,Must correspond with State/Territory Registration.  Changes must be made outside the Census - ie through School Entry Point (SEP) or via grantsanddata.help@education.gov.au,,,,,,SchoolInfo,SchoolName,,,
+3,Census NonGov,,School Name and Contact Details,Raw,Location Address,Address of school or campus completing census return.,,,Character,,,,,,,Must correspond with State/Territory Registration.  Changes must be made outside the Census - ie through School Entry Point (SEP) or via grantsanddata.help@education.gov.au,,,,,,SchoolInfo,AddressList,,,
+4,Census NonGov,,School Name and Contact Details,Raw,Location Suburb,Suburb of school or campus completing census return.,,,Character,,,,,,,Must correspond with State/Territory Registration.  Changes must be made outside the Census - ie through School Entry Point (SEP) or via grantsanddata.help@education.gov.au,,,,,,SchoolInfo,AddressList/City,,,
+5,Census NonGov,,School Name and Contact Details,Raw,Location State,State of school or campus completing census return,,,Character,,,,,,,Must correspond with State/Territory Registration.  Changes must be made outside the Census - ie through School Entry Point (SEP) or via grantsanddata.help@education.gov.au,,,,,,SchoolInfo,AddressList/State,,,
+6,Census NonGov,,School Name and Contact Details,Raw,Location Postcode,Postcode of school or campus completing census return.,,,Number,,,,,,,Must correspond with State/Territory Registration.  Changes must be made outside the Census - ie through School Entry Point (SEP) or via grantsanddata.help@education.gov.au,,,,,,SchoolInfo,AddressList/PostalCode,,,
+7,Census NonGov,,School Name and Contact Details,Raw,Postal Address,Postal address of school or campus completing census return.,,,Character,,,,,,,,,,,,,SchoolInfo,AddressList,,,
+8,Census NonGov,,School Name and Contact Details,Raw,Postal Suburb,Postal suburb of school or campus completing census return.,,,Character,,,,,,,,,,,,,SchoolInfo,AddressList/City,,,
+9,Census NonGov,,School Name and Contact Details,Raw,Postal State,Postal state of school or campus completing census return,,,Character,,,,,,,,,,,,,SchoolInfo,AddressList/State,,,
+10,Census NonGov,,School Name and Contact Details,Raw,Postal Postcode,Postal postcode of school or campus completing census return.,,,Number,,,,,,,,,,,,,SchoolInfo,AddressList/PostalCode,,,
+11,Census NonGov,,School Name and Contact Details,Raw,Phone Number,Phone number of school or campus completing census return,,,Number,,,,,,,,,,,,,SchoolInfo,PhoneNumberList,,,
+12,Census NonGov,,School Name and Contact Details,Raw,Fax Number,Fax number of school or campus completing census return,,,Number,,,,,,,,,,,,,SchoolInfo,PhoneNumberList,,,
+13,Census NonGov,,School Name and Contact Details,Raw,Client Type,,,,,,,,,,,,,,,,,,,,,
+14,Census NonGov,,School Name and Contact Details,Raw,Affiliation,,,,,,,,,,,,,,,,,,,,,
+15,Census NonGov,,School Name and Contact Details,Raw,Student Gender,,,,,,,,,,,,,,,,,SchoolInfo,SchoolCoEdStatus,,,
+16,Census NonGov,,School Name and Contact Details,Raw,Education Level,,,,,,,,,,,Must correspond with State/Territory Registration.  Changes must be made outside the Census - ie through School Entry Point (SEP) or via grantsanddata.help@education.gov.au,,,,,,SchoolInfo,SchoolType (SchoolLevel?),,,
+17,Census NonGov,,School Name and Contact Details,Raw,Website,,,,,,,,,,,,,,,,,SchoolInfo,SchoolURL,,,
+18,Census NonGov,,School Name and Contact Details,Raw,Email Address,,,,Character,,,,,,,,,,,,,SchoolInfo,SchoolEmailList,,,
+19,Census NonGov,,School Name and Contact Details,Raw,Principal's Full Name,,,,Character,,,,,,,,,,,,,SchoolInfo,PrincipalInfo,,,
+20,Census NonGov,,Characteristics,Selection,Characteristics of a school or Campus,,,,,,"Tick Boxes for user selection:
+Part-time Students
+Indigenous Students
+Overseas Students
+Students with Disabilities
+Boarding Students
+Distance Education Students
+Indigenous Staff (Self Identified)
+Indigenouse Non-Stated Students
+",User clicks on tick boxes for each to enable or disable the characteristics applicable to School/System/Diocese.,,,,,,,,,,StudentPersonal,Demographics,,,
+21,Census NonGov,,Contacts,Raw,Full Name,Principal Contact Name,,,Character,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/Name,,,
+22,Census NonGov,,Contacts,Raw,Position,,,,Character,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/PositionTitle,Derived,,
+23,Census NonGov,,Contacts,Raw,Contact Type,,,,,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/Role,Derived,,
+24,Census NonGov,,Contacts,Raw,Phone,,,,Number,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/PhoneNumberList,,,
+25,Census NonGov,,Contacts,Raw,Fax,,,,Number,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/PhoneNumberList,,,
+26,Census NonGov,,Contacts,Raw,Email Address,,,,Character,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/EmailList,,,
+27,Census NonGov,,Contacts,Raw,Full Name,,,,Character,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/Name,,,
+28,Census NonGov,,Contacts,Raw,Position,,,,Character,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/PositionTitle,,,
+29,Census NonGov,,Contacts,Raw,Contact Type,,,,,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/Role,,,
+30,Census NonGov,,Contacts,Raw,Phone,,,,Number,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/PhoneNumberList,,,
+31,Census NonGov,,Contacts,Raw,Fax,,,,Number,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/PhoneNumberList,,,
+32,Census NonGov,,Contacts,Raw,Email Address,,,,Character,,,"Contacts - The information shown here is the current information held by Department. Check the names and change if applicable or add a new contact person, click on Save/Continue, the confirmation page will appear.",,,,,,,,,,SchoolInfo,SchoolContactList/SchoolContact/ContactInfo/EmailList,,,
+33,Census NonGov,,Confirmation,Selection,Year Levels,Approved Year levels for which you currently receive funding by the Department are listed in the table,,,,,"Tick Boxes
+Pre-Year 1
+Year 1
+…….
+Year 12",You must tick the confirmation tab once you have verified your client details and read the Census Guidelines and Instructions.  You cannot enter student or staff data until you tick the confirmation tab.,,,,,Not sure if the user can change these or if they are ticked for display/information only.,,,,,SchoolInfo,YearLevels,,,
+34,Census NonGov,,Confirmation,Raw,Confirmation statement,Confirm that you have read and understood the census guidelines and instructions.,,,,,Tick box,You must tick the confirmation tab once you have verified your client details and read the Census Guidelines and Instructions.  You cannot enter student or staff data until you tick the confirmation tab.,,,,,,,,,,,,,,
+35,Census NonGov,,Staff Information (Teaching and Non-teaching),Aggregate,Number of Staff (Headcount),Number of staff - Headcount ,,,Number,,,The reference period for staff is 5 consecutive school days leadingup to and including census day (7 August 2015),,,,,,School employing Staff,,,,,,,,Yes
+36,Census NonGov,,Staff Information (Teaching and Non-teaching),Aggregate,Number of Staff (FTE),Full Time Equivalent (FTE) number of staff,,,Number,,,"A part-time staff member with an FTE of less than 0.1, after rounding, is NOT to be included in the Census",,,,,,School employing Staff,,,,,,,,Yes
+37,Census NonGov,,Staff Information (Teaching and Non-teaching),Aggregate,Mode of Employment?,Full-time or part-time employment,,,Number,,Number to one (1) decimal place,,,,,,,School employing Staff,,,,,,,,Yes
+38,Census NonGov,,Staff Information (Teaching and Non-teaching),Aggregate,Function?,Teaching or non-teaching staff (see further definitions in Guide for Use),,,Character?,,"Teaching: 
+Principal
+Teaching Staff (including librarians)
+
+Non-teaching:
+Specialist Support
+Administrative and Clerical (including aides & assistants)
+Building Operations Maintenance and Other Staff
+","A principal is the person designated by the Approved Authority as being responsible for the overall control and administration of the schools.  If a school has multiple locations, a different principal can be reported at each location.  If the same principal works across locations, see instructions for staff at multi-location schools.
+Teaching staff are employed or engaged to impart the school curriculum and provide support services.  Teaching staff spend the majority of their work time with students either in direct class contact or on an individual bases. Teachers are usually employed under a State teacher's award or equivalent.
+
+Specialist support functions are of special benefit to students or teaching staff in the development of the school curriculum.  While these staff may spend the majority of their time in contact with students, they are not employed or engaged to impart the school curriculum.
+Administrative and Clerical. These are staff whose main function is clerical or administrative.  These include:  Classroom assistant, Library assistant, Teachers' aides, Bursars/School administrators, IT support staff or Accountants.
+Building Operations Maintenance and Other Staff.  Staff is only included in this category if their major function is undertaken within school hours and are at the school in the reference period.
+",,,,"Staff members are to be reported according to their ‘major function’ rather than their type of appointment, for example; if a staff member spends 70 per cent of their time teaching and 30 per cent of their time on administration duties they would be reported under their ‘major function’ which would be teaching.  A staff member is to be included in only one section of the staff tables.",,School employing Staff,,,,StaffAssignment,StaffActivity,,,
+39,Census NonGov,,Staff Information (Teaching and Non-teaching),Aggregate,Sex,Male or Female,,,,,"Male
+Female",,,,,,,School employing Staff,,,,StaffPersonal,PersonInfo/Demographics/Sex,,,
+40,Census NonGov,,Staff Information (Teaching and Non-teaching),Aggregate,Year Levels taught,Primary Only/Secondary Only/Primary & Secondary,,,,,"Primary Only
+Secondary Only
+Primary & Secondary",,,,,,,School employing Staff,,,,StaffAssignment,YearLevels,,,
+41,Census NonGov,,Student Information,Aggregate,Student Count,"Number of Students, including FTE",,,Number,,,The reference period for students consists of four continuous school weeks (excluding school holidays) leading up to and including Census day. For example count back 20 school days from 7 August 2015.,,,,"ELIGIBILITY FOR INCLUSION
+Which Students are eligible to be reported in the Census?
+Students who:
+• are enrolled and participating in a level of education that constitutes primary education or secondary education and who attend school on a daily basis, and
+• are in attendance for at least one day in the census reference period (including census day) and who regularly attend school; and
+• are Australian citizens, permanent residents or persons with appropriate resident status.
+A student in the foundation (Year 1 – minus 1), the first year of formal schooling is reported in the Census only if they meet the above requirements and progress to the second year of formal schooling (Year 1) in the first or second term.
+
+Which students are NOT eligible to be reported in the Census?
+Students who:
+• are enrolled but have not attended the school during the year, including census day; or
+• last attended the school before the census day and will not be returning to the school until the following year; or
+• are no longer enrolled or in attendance at the school before Census day; or
+• did not attend for any part of the Reference Period; or
+• are not undertaking normal school subjects from Foundation (Year 1-minus 1) to Year 12; or
+• are approved as a home education student; or
+• are prohibited from engaging in studies as a condition of a visa; or
+• are on a visitor’s visa and in Australia for less than 6 months; or
+• are on exchange and at the school for a period shorter than 6 months in a programme year, or has completed their formal schooling in their own country; or
+• do not undertake any normal school subjects, and are only participating in apprenticeship and traineeships, English as a Second Language courses, TAFE courses, tertiary studies, work placements or a combination of such activities.",,School enrolling student,,,,,,,,Yes
+42,Census NonGov,,Student Information,Aggregate,Year Level  ,Year level of student,,,,,"Pre Year 1
+Year 1
+…..
+Year 12",,,,,,,School enrolling student,,,,StudentPersonal,MostRecent/YearLevel,,,
+43,Census NonGov,,Student Information,Aggregate,FTE,Full-time or part-time enrolment,,,,,,,,,,,,School enrolling student,,,,StudentPersonal,MostRecent/FTE,,,
+44,Census NonGov,,Student Information,Aggregate,Full time Student,"A full time student is enrolled and participates in a level of education that constitutes primary or secondary education, who undertakes a full time study load (as prescribed by the relevant State or Territory) and is included in the school’s census day enrolment. A Full time student has an FTE of 1.0",,,Number,,Number to 1 decimal place,,,,,,,School enrolling student,,,,StudentPersonal,MostRecent/FTE,,,
+45,Census NonGov,,Student Information,Aggregate,Part-time Student,A Part Time student is enrolled and participates in a level of education that constitutes primary or secondary education and whose study load is less than the study load that a full-time student undertakes at the school and is included in the school’s census day enrolment. Part Time students will have an FTE of less than 1.0.,,,Number,,Number less than 1.0,,,,,,,School enrolling student,,,,StudentPersonal,MostRecent/FTE,,,
+46,Census NonGov,,Student Information,Derived,Age ,Student's age as at 1st July,,,,,"Age 4 to 21
+A = Adult
+U = Unknown",,,,,,,School enrolling student,,,,StudentPersonal,PersonInfo/Demographics/Birthdate,,,
+47,Census NonGov,,Student Information,Aggregate,Sex,Male or Female,,,,,"Male
+Female",,,,,,,School enrolling student,,,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+48,Census NonGov,,Student Information,Aggregate,Indigenous Status,"Aboriginal or Torres Strait Islander Student (Indigenous Students)
+Indigenous students are students of Aboriginal or Torres Strait Islander descent who self-identify as an Aboriginal or Torres Strait Islander.",,,,,,"Parents or guardians are asked to identify their child as Aboriginal or Torres Strait Islander, both or neither, when enrolling for the first time.  When a selection has not been made the student should be reported in the census as non-stated indigenous.
+Provision of Indigenous status is not generally mandatory and if this section of the enrolment form is left blank, non-stated should be recorded by the school in their records.",,,,,,School enrolling student,,,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+49,Census NonGov,,Student Information,Aggregate,Boarders,This is a student attending the school and accommodated in residential facilities administered by the school.,,,,,,,,,,,,School enrolling student,,,,StudentPersonal,PersonInfo/Demographics/DwellingArrangement,,,
+50,Census NonGov,,Student Information,Aggregate,Student with a Disability,"A Student with a Disability is a student who has been assessed by a person with relevant qualifications as having intellectual, sensory, physical, social/emotional or multiple impairments to a degree that satisfies the criteria for financial assistance in special education services or programmes provided by the State or Territory in which the school is located. Only eligible students who satisfy this definition can be reported in the census.  If a State or Territory government does not provide a special education service or programme for a particular impairment, or the impairment is not of sufficient severity to qualify the student for a government special education service or programme, the student cannot be included as a student with a disability.",SWD,,,,,"During the 2015 school census most schools will also be participating in the Nationally Consistent Collection of Data (NCCD) - on Students with Disability.  There is a definition of SWD for the census and a different definition for the NCCD.  Schools will need to be particularly vigilant that the correct applicable definition is used in the appropriate collection.
+If a State or Territory government does not provide a special education service or programme for a particular impairment, or the impairment is not of sufficient severity to qualify the student for a government special education service or programme, the student cannot be included as a student with a disability.",,,,,,School enrolling student,,,,StudentPersonal,Disability,,,
+51,Census NonGov,,Student Information,Aggregate,Overseas Students,"An Overseas Student holds or is included in a visa that permits the visa holder to travel to Australia for the purpose of undertaking a course provided by an educational establishment. This means a student is reported as an overseas student if they are on a visa that is specifically related to studying in Australia (or a bridging visa attached to a substantive visa with those provisions).  Only students who are the primary visa holder, or the dependent of a primary visa holder, that is issued for the purposes of study are ‘Overseas Students’.   ",,,,,,Exchange students are school-age students participating in a Student Exchange Programme registered by the state or territory education authority.  Exchange students who attend the school for a period shorter than 6 months are not to be reported in the census.,,,,"Overseas student visa subclasses include 570, 571, 572, 573, 574, and 575.
+Overseas Students do not include:
+• Dependents of a person who is receiving a full sponsorship or scholarship to one of the institutions mentioned in section 4(1) of the Higher Education Funding Act 1988. The sponsorship or scholarship has to meet the full cost of the education component of the course, or
+• A person or dependent of a person who is receiving a sponsorship or a scholarship from the Commonwealth, or
+• Students who are studying in Australia under a properly registered student exchange programme (Exchange Students)
+If you require information on the conditions of a visa sub-class (to determine if they meet the meaning of ‘Overseas Student’), search the visa subclass at www.immi.gov.au.",,School enrolling student,,,"visa subclasses include 570, 571, 572, 573, 574, and 575.",StudentSchoolEnrollment,FFPOS,,,
+52,Census NonGov,,Student Information,Aggregate,Distance education,"A Distance education student is a student who:
+• is enrolled at and receiving DE education from a school which has State recognition for the provision of DE or can provide evidence that the State/Territory provides funding for the school (outside the Australian Education Act 2013) for primary or secondary education for students enrolled and receiving DE from the school; and
+• resides in the State in which the school is located; and
+• is not approved as a home education student; and
+• is not an Overseas Student.",,,,,,,,,,,,School enrolling student,,,,,,,,Yes
+53,Census NonGov,,Student Information,Aggregate,Indigenous Distance Education,Student fits definitions of both Indigenous Status and Distance Education Student,,,,,,,,,,,,School enrolling student,,,,,,,,Yes
+54,Census NonGov,,Student Information,Aggregate,Students on Visas,"A student on a Visa is any student who hold (or are dependents of persons who hold) a permanent, bridgin or temporary visa, this includes New Zealand citizens.  ",,,,,,"The purpose of the bridging visa is to provide lawful status while the visa holder is waiting for the outcome of their substantive visa application.
+
+Where a student is on a bridging visa you need to check if their previous substantive visa is still valid to determine whether  they would be classed as an overseas student. If the substantive visa has expired the student is then classified according to the bridging visa status. 
+
+Schools must retain copies of the student's or parent's visa information, documentation and assessment material used by the school to make the decision that a student satisfies the definition for inclusion as a Student on A Visa. This material may be required by the Department to validate your Census submission.",,,,,,School enrolling student,,,,StudentPersonal,PersonInfo/Demographics/VisaSubClass,,,
+55,Census NonGov,,Student Information,Aggregate,Indigenous Boarding Students,Student fits definitions of both Indigenous Status and Boarding Student,,,,,,,,,,,,School enrolling student,,,,StudentPersonal,"PersonInfo/Demographics/IndigenousStatus  AND
+
+PersonInfo/Demographics/DwellingArrangement
+",,,
+56,Census NonGov,,Student Information,Aggregate,SWD Distance Education Students,,,,,,,,,,,,,School enrolling student,,,,,,,,Yes
+57,Census NonGov,,Student Information,Aggregate,Attend another school,Student is Part-time and attends another school,,,,,,,,,,,,School enrolling student,,,,StudentPersonal,MostRecent/OtherEnrollmentSchoolACARAId,,,

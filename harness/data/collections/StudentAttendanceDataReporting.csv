@@ -1,0 +1,195 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population,Coding Data Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Attribute,Data Element Type,SIFFrame,Able to be mapped RAW
+1,National Standards Student Attendance Data Reporting ,6.1,,Calculated,Attendance Rate (calculation formula),"The student attendance rate measure is defined as:
+the number of actual full time equivalent student-days attended by full-time students in Years 1 to 10 as a percentafe of the total number of possible student-days attended over the period.
+
+The formula for calculating the attendance rate (%) is as follows:
+
+100 x Actual days in attendance (see 6.2)
+           ----------------------------------
+           Possible school days (see 6.3)",,,Calculated,,Percentage,,,,"6.2. Actual Days in Attendance (numerator)
+6.3. Number of possible school days (denominator)",,,School,,,,,,Calculated,,Yes
+2,National Standards Student Attendance Data Reporting ,6.2,,Calculated,Actual days in attendance (numerator),"Numerator
+Actual days (or part-days of) in attendance are defined as the number of days that a student actually attends school over the collection period, on a possible school day (see Section 6.3).",,,,,,"Refer to Section 6.8: Student enrolment types for the definition of students, Section 6.10: Part-day absences for details regarding the reporting of part-days and Section 7: Treatment of incidents/absences for details regarding the treatment of absences.",,"There are two possible calculation methods as listed below. 
+1. Sum of possible school days minus sum of absent days
+2. Sum of days that a full-time student is present at school on each possible school day. This number cannot exceed the number of possible school days.","6.3.Number of possible school days
+6.8. Student enrolment types
+6.10. Part-day absences
+7. Treadment of incidents/absences",,,School,,,,StudentAttendanceSummary,DaysAttended,,,
+3,National Standards Student Attendance Data Reporting ,6.3,,Derived,Number of possible school days (denominator),"Denominator
+Possible school days are defined as the number of days that a student is expected to attend school over the collection period, as defined in Section 7: Treatment of incidents/absences.",,,,,,"Example 1 shows a scenario of when a student has moved schools during the collection period:
+Student A, a full-time student, was enrolled for 40% at school X and 60% at school Y of semester 1. If there were 99 possible school days in semester 1. School X records 40 possible days (40%) and 59 possible days (60%) for school Y.
+
+Refer to document National Standards for Student Attendance Reporting for further examples.
+",,"Sum of possible school days per full-time student (see Section 6.8: Student enrolment types, for the definition of full-time student to be included) that meets the standards as documented in the remainder of the document.","6.8. Student enrolment types
+7. Treatment of incidents/absences",,"There are several examples of scenarios in the document National Standards for Student Attendance Data Reporting which relate to this item.  They should be accessible in ODDESSA but because they are tables, have been left off this spreadsheet for now.",School,,,,StudentAttendanceSummary,DaysInMembership,,,
+4,National Standards Student Attendance Data Reporting ,6.4,,Calculated,Proportion of students who attend school 90% or more of possible days (calculation),"The student attendance level measure is defined as:
+the proportion of full-time students in Years 1-10 whose attendance rate is greater than or equal to 90 percent over the period.
+
+The formula for calculating the proportion of students who attend school 90% or more (of the time) is as follows:
+100 x Sum of possible school days for students attending more than or equal to 90%
+_________________________________________________________
+                    Sum of possible school days for all students (see 6.3)
+
+The proportion of students who attend school 90% or more of possible days is defined as the sum of possible school days that a student is expected to attend school over the collection period, for students whose actual days (or part-day of) in attendance divided by their possible school days is greater than or equal to 90%, divided by the sum of possible school days for all students.",,,,,,"This formula solves two problems that arise with reporting a simple proportion of students with attendance rates greater than or equal to 90%.  
+Firstly, it overcomes a problem that students enrolled at multiple schools during the collection period will be counted multiple times across schools. Secondly, it overcomes a problem that students enrolled at a school for only part of the reporting period are likely to have a lower attendance rate, and therefore unduly influence the simple proportion of students at 90% or more attendance.   
+In determining the calculation, the denominator is the same denominator as is used for the average rate of student attendance. The numerator is the sum of possible or enrolled days for students whose actual days divided by their possible days is greater than or equal to 90%.
+
+Refer to document National Standards for Student Attendance Reporting for an example.",,"In calculating the proportion of students who attend school 90% or more of possible days, both the number of possible school days and actual school days attended must be collected at an individual student level.",,,"There is an example scenario in the document National Standards for Student Attendance Data Reporting which relate to this item.  It should be accessible in ODDESSA but because it is in table form, has been left off this spreadsheet for now.",School,,,,,,Calculated,,Yes
+5,National Standards Student Attendance Data Reporting ,6.5,,Descriptor ,Level of disaggregation,Outlines the minimum disaggregation requirements for national reporting,,,,,,"Refer to Section 6.11 Ungraded students for further detail on the reporting of ungraded students if applicable.
+These disaggregations are regarded as the minimum for national reporting and additional disaggregations may be required for future reporting.",,"Attendance data for national reporting are required to be disaggregated by:
+-school level: state, geo-lcation and sector
+-student level: sex, year level, indigenous status",6.11. Ungraded Students.,School level attendance data will not be reported for schools with five or fewer students.,,School,,,,,,,,
+6,National Standards Student Attendance Data Reporting ,6.6,,Descriptor ,Data collection period,Collection period for which the student attendance data must be reported.,,,,,,"The actual start and end dates of Semester 1 and Term 3 will very slightly; these are dependent on student year level, jurisdictions and sector operational requirements.",,"Student attendance data for national reporting are required to be reported for Semester 1 annually.
+Student attendance data for school level reporting are required to be reported for Semester 1 and Term 3 annually.",,Attendance data is not collected / reported for school studies undertaken through distance education.,,School,,,,StudentAttendanceSummary,"StartDate
+
+EndDate",,,
+7,National Standards Student Attendance Data Reporting ,6.7,,Descriptor ,School types,Schools to be included in the student attendance data reporting dataset.,,,,,,,,"Only schools that fall within the National Schools Statistics Collection (NSSC) definition below are included.
+A school as defined in the NSSC is:
+an education establishment which satisfies all of the following criteria:
+* its major activity is the provision of full-time day:
+    -primary education
+    -secondary education
+    -distance education
+    -special education
+    -any combination of the above.
+*it is possible for a person to enrol and be active in a course of study provided by that school's formal curriculum for a minimum of four continuous weeks (excluding breaks for school vacations).",,,,School,,,,SchoolInfo,SchoolType,,,
+8,National Standards Student Attendance Data Reporting ,6.8,,Descriptor ,Student enrolment types,Students to be included in the student attendance data reporting dataset.,,,,,,"A full-time student as defined in the NSSC:
+is one who undertakes a workload equivalent to, or greater than that prescribed for a full-time student of that Year (level). This may vary between states and territories and from Year (level) to Year (level). The minimum workload for a full-time student would ensure that a student could complete a given Year (level) in a year.
+
+Includes
+-students who were enrolled for part of the collection period but who may no longer be enrolled in the school (see 6.9 Movement during collection period).
+-full-time students enrolled part-time at multiple schools within the same sector where the total enrolment at the state level is 1.0 or greater. Students' attendance reocrds in these cases may be maintained at both schools and apportioned where possible.
+
+Excludes:
+-part-time students (state level)
+-students enrolled part-time at multiple schools across multiple sectors.
+
+It is noted that there may be informal arrangements between schools where a student may attend multiple schools, but remains enrolled full-time at one school. All absences and attendances would then be attributed to the main school. It is estimated that the number of students in these arrangements are small.
+
+",,"Full-time students, at state level by sector, enrolled in Years 1-10 at any time during the collection period.",6.9. Movement during collection period,"Students enrolled full-time at state level but across multiple schools in the same sector are excluded from SA and QLD government, all Catholic and independent schools. There is minimal impact to the attendance rates due to the low numbers of students with multiple / shared enrolments.",,School,,,,StudentAttendanceSummary,FTE,,,
+9,National Standards Student Attendance Data Reporting ,6.9,,Descriptor ,Movement during collection period,Descriptions of how absences and attendance are treated for students who move schools during the collection period.,,,,,,"Includes students who were enrolled for part of the collection period but who may, however, no longer be enrolled in the school.
+Example 1 shows a scenario of when a student moves schools during the collection period: Student A, a full-time student, was enrolled for 40% at school X and 60% at school Y of semester 1. If there were 99 possible school days in semester 1. School X records 40 possible days (40%) and 59 possible days (60%) is recorded for school Y. All absences are attributed back to the appropriate school where the absence occurred.",,"Absences and attendances are recorded and attributed to multiple schools, providing that a given student meets the definition of full-time at each school.",,,,School,,,,StudentAttendanceSummary,DaysInMembership,,,
+10,National Standards Student Attendance Data Reporting ,6.10,,? Aggregate,Part-day absences,Description of part-day absences and how they are reported upon.,,,,,,"The definition and reporting of part-day absences varies depending on individual arrangments for any given school.  For example Vic. And WA have policy or legislative definitions for part-day absences, where any absence of greater than two hours but less than a full day is reported as a part-day of 0.5.",,"Part-day absences are to be reported and included in the calculated figures. 
+Part-day absences may be reported as 0.5 or to two decimal places e.g. 0.47.",,"The duration and reporting of part-day absences varies dependent on individual arrangments for any given school and jurisdiction.  However, there is minimal impact on national and jurisdictional attendance rates.",,School,,,,,,,,Yes
+11,National Standards Student Attendance Data Reporting ,6.11,,? Aggregate,Ungraded Students,Description of ungraded students will be reported if applicable,,,,,,"Government schools in Tas. and ACT assign all students to applicable grades, therefore, there are no ungraded students reported for these jurisdictions.  There are only ungraded secondary students in WA and NT government schools, all primary students are assigned to applicable grades.",,"Any ungraded students will be reported as:
+1. Ungraded Primary
+2. Ungraded Secondary",,"The NSSC states:
+Students in ungraded classes who cannot readily be allocated to a year of education should be included as either ungraded primary or ungraded secondary, according to the typical age level in each state or territory.
+Students in Secondary support units, physically located in a primary school and vice versa, are to be counted as ungraded in either primary or secondary school.  
+Students reported as ungraded primary or ungraded secondary will be included in totals of Years 1-10.",,,,,,,,,,Yes
+12,National Standards Student Attendance Data Reporting ,7,,Descriptor ,Treatment of incidents/absences,"The items 7A-7S provide a general description of incidents/absences that may be applicable to schools, how these incidents are to be treated and whether they should be included in the sum of possible school days. Note that actual descriptions in jurisdictions and sectors may differ. However, the general basis of the absence is the same. Also not all descriptions may be applicable to all jurisdictions/sectors.",,,,,,,,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+13,National Standards Student Attendance Data Reporting ,7A,,Descriptor ,Unexplained/unauthorised absences,"Absences where the school does not receive any explanation, or where the reason for absence is considered unacceptable.
+Include absences such as:
+-Truancy
+-Unexplained
+-Without parent/guardian approval
+-Unacceptable explanations as determined by the school",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+14,National Standards Student Attendance Data Reporting ,7B,,Descriptor ,Religious/cultural absences,Approved/notified absences due to recognised religious or ceremonial activity.,,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+15,National Standards Student Attendance Data Reporting ,7C,,Descriptor ,Parent-approved absences,"Includes absences such as:
+-Family event
+-Extended holidays",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+16,National Standards Student Attendance Data Reporting ,7D,,Descriptor ,Medical,"Approved/notified absences due to medical reasons.
+Include absences such as
+-Illness
+-External medical appointment with health care professionals including counselling",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+17,National Standards Student Attendance Data Reporting ,7E,,Descriptor ,Disciplinary (Out-of-school),"Disciplinary action that is not on school grounds.
+Includes suspensions but excludes internal suspensions (see 7F)",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,7F Disciplinary (In-school),,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+18,National Standards Student Attendance Data Reporting ,7F,,Descriptor ,Disciplinary (In-school),"Disciplinary action that is on school grounds.
+Includes internal suspensions.",,,,,,"Treatment of Absence: Present
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+19,National Standards Student Attendance Data Reporting ,7G,,Descriptor ,Behavioural reasons,"Behavioural absences, eg. disengagement.
+Excludes disciplinary action (see E or F)",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+20,National Standards Student Attendance Data Reporting ,7H,,Descriptor ,Bereavement,"Approved/notified absences due to bereavement.
+Includes absences such as:
+-Funeral
+-Personal bereavement",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+21,National Standards Student Attendance Data Reporting ,7I,,Descriptor ,School closed,"School closed for religious, public or other holiday.
+Includes absences such as:
+-Unexpected temporary school closure
+-Strike action/industrial action
+-School unavailable
+-School choice
+-Individual school calendars
+-All classes cancelled for the day",,,,,,"Treatment of Absence: NA
+Possible school days: Excluded",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+22,National Standards Student Attendance Data Reporting ,7J,,Descriptor ,Natural disaster/event,Natural disaster/event where students are unable to travel to school and school is closed.,,,,,,"Treatment of Absence: NA
+Possible school days: Excluded",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+23,National Standards Student Attendance Data Reporting ,7K,,Descriptor ,Approved educational absence,"Attendance at approved/sactioned school events where the student is not required to attend school.
+Includes absences such as:
+-Excursions
+-Flexible timetable
+-Attending another school
+-VET activities",,,,,,"Treatment of Absence: Present
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+24,National Standards Student Attendance Data Reporting ,7L,,Descriptor ,Work experience programs,"Approved participation in/attendance at work experience related programs.  School is responsible for students on these programs.
+NSSC states that students' time spent of work experience programs, as part of the school curriculum or program, should be treated as time in school.",,,,,,"Treatment of Absence: Present
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+25,National Standards Student Attendance Data Reporting ,7M,,Descriptor ,Employment,"Short-term employment. School is not responsible for students during this period; however, student remains officially enrolled.",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+26,National Standards Student Attendance Data Reporting ,7N,,Descriptor ,Explained other absent,"Absences from school due to acceptable reasons, other than any of those listed in this table.",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+27,National Standards Student Attendance Data Reporting ,7O,,Descriptor ,Exemptions,"Approved exemptions such as certificate of exemptions, only for exceptional circumstances. Reasons for exemptions must not conflict with other descriptions in this table.
+Includes approved short-term employment for NSW and SA such as employment in the entertainment industry where approval and exemption from class has been given by the appropriate school personnel.
+",,,,,,"Treatment of Absence: NA
+Possible school days: Excluded
+
+Note: Due to the low number of absences in this category, some jurisdictions may choose to include these absences as possible school days.  Although this is not recommended, this has minimal impact to the national and jurisdictional attendance rate.",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+28,National Standards Student Attendance Data Reporting ,7P.1,,Descriptor ,Detention/Juvenile Justice/Suspension/Immigration Detention Centres - notified,School is notified that the student is at the relevant centre. See 7P.2 for not notified absences.,,,,,,"Treatment of Absence: NA
+Possible school days: Excluded",,,7P.2 Detention/Juvenile Justice/Suspension/Immigration  Detention Centres - not notified,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+29,National Standards Student Attendance Data Reporting ,7P.2,,Descriptor ,Detention/Juvenile Justice/Suspension/Immigration  Detention Centres - not notified,"If school is not notified, then the student would be absent for 'unexplained/unauthorised' reasons.",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+30,National Standards Student Attendance Data Reporting ,7Q,,Descriptor ,Behaviour centre,"Absences of students who are moved to a behaviour centre, but who nevertheless remain enrolled in their main school.  All data are attributed back to main school.",,,,,,"Treatment of Absence: Absent
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+31,National Standards Student Attendance Data Reporting ,7R,,Descriptor ,Tutorial centres,"Absences at the main school for students who are moved to a tutorial centre, but who nevertheless remain enrolled in their main school.",,,,,,"Treatment of Absence: Present
+Possible school days: Included",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,
+32,National Standards Student Attendance Data Reporting ,7S,,Descriptor ,Expelled,Student is no longer enrolled at the school.,,,,,,"Treatment of Absence: NA
+Possible school days: Excluded",,,,,,,,,,StudentAttendanceTimeList,"AttendanceTimes/AttendanceTime/AttendanceCode
+
+AttendanceTimes/AttendanceTime/AttendanceStatus",,,

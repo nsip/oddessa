@@ -1,0 +1,44 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population,Coding Data  Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Attribute,Data Element Type,SIFFrame,Able to be mapped RAW,
+1,NAPLAN Student Gain,,,Raw,ACARA SML ID,School - Campus ACARA School ID provided by ACARA,,,,,,,,,,,,,,,,SchoolInfo,ACARAId,,,,
+2,NAPLAN Student Gain,,,Raw,EDP DEEWR ID,School - Campus DEEWR ID,,,,,,,,,,,,,,,,SchoolInfo,CommonWealthId,,,,
+3,NAPLAN Student Gain,,,Raw,EDP JUR ID,This field refers to the School ID provided by the Jurisdiction.,,,,,,,,,,,,,,,,SchoolInfo,StateProvinceId,,,,
+4,NAPLAN Student Gain,,,Raw,Calendar Year,This field refers to the year the data is sourced from.,,,,,,,,,,,,,,,,CalendarDate,SchoolYear,,,,
+5,NAPLAN Student Gain,,,Raw,ACARA SML School Name,"This field refers to the Official School Name of the school.
+If it is missing from School Census, latest advised name is used. In some cases, campus school names have been retained for ease of identification (i.e. where campus suburb reference is omitted in school census data)",,,,,,,,,,,,,,,,SchoolInfo,SchoolName,,,,
+6,NAPLAN Student Gain,,,Raw,Suburb,This field refers to the suburb of the school.,,,,,,,,,,,,,,,,SchoolInfo,AddressList/Address where Type = '0123' or '0765' and Role = '012B'/Street/City,,,,
+7,NAPLAN Student Gain,,,Raw,Postcode,This field refers to the postcode of the school.,,,,,,,,,,,,,,,,SchoolInfo,AddressList/Address where Type ='0123' or '0765' and Role = '012B'/Street/PostalCode,,,,
+8,NAPLAN Student Gain,,,Raw,State,"This field refers to the location state of the school.
+NSW, VIC, QLD, SA, WA, NT, ACT, TAS",,,,,"Permissible Values: NSW, VIC, QLD, SA, WA, NT, ACT, TAS",,,,,,,,,,,SchoolInfo,AddressList/Address where Type = '0123' or '0765' and Role = '012B'/StateProvince,,,,
+9,NAPLAN Student Gain,,,Raw,SchoolSectorCodeDesc,"This field refers to the sector code that the school belongs to.
+G, C, I where G = Government, C = Catholic, I = Independent",,,,,,,,,,,,,,,,SchoolInfo,SchoolSector?,,,,
+10,NAPLAN Student Gain,,,Raw,SchoolTypeCodeDesc,"This field refers to the school type that the school belongs to.
+Primary, Secondary, Combined, Special.
+For Head Campus Schools that combine Primary and Secondary Schools, this should be Combined only.",,,,,,,,,,,,,,,,SchoolInfo,SchoolType,,,,
+11,NAPLAN Student Gain,,,Raw,ACARA SML Head Campus ID,"The field refers to School - Head ACARA Master School ID is allocated by ACARA to the head school, if applicable. An ID will not be allocated where the school does not have any associated campuses. If it has value and the value is the same as the ACARA Master School ID then the school is the main or head campus. If the value is different from the ACARA Master ID then the school is the associated campus or sub campus.",,,,,,,,,,,,,,,,SchoolInfo,ACARAId,,,,
+12,NAPLAN Student Gain,,,Raw,Head EDP DEEWR ID,"The field refers to School - Head DEEWR School ID is allocated by DEEWR to the head campus, if applicable. The Head DEEWR School ID is required and if this field doesn't have a value, it means that the school doesn't have any associated campuses. If it has value and the value is the same as the DEEWR ID then the school is the main or head campus. If the value is different from the DEEWR ID then the school is the associated campus or sub campus.",,,,,,,,,,,,,,,,,,,,Yes,Aggregate Statistic Objects
+13,NAPLAN Student Gain,,,Raw,ACARA RRP Description,"This field refers to Rolled or Individual Reporting Flag. 
+Individual Reporting - data will be reported at the campus level. 
+Rolled Reporting - data will be reported at the head campus level",,,,,,,,,,,,,,,,,,,,,
+14,NAPLAN Student Gain,,,Descriptor,Domain Type,"This field refers to the five domains or learning areas tested in NAPLAN.
+Reading, Persuasive Writing, Spelling, Grammar and Punctuation, and Numeracy",,,,,,,,,,,,,,,,,,,,,
+15,NAPLAN Student Gain,,,Raw,Gain Year Range,This field refers to the Calendar Year the data is linked to - 2010-2012,,,,,,,,,,,,,,,,,,,,Yes,
+16,NAPLAN Student Gain,,,Calculated,SGM School Grade Description,"This field refers to the data for the respective year level.
+Year3, Year5, Year7, Year9",,,,,,,,,,,,,,,,,,,,Yes,
+17,NAPLAN Student Gain,,,Calculated,ACARA GSS Cohort Range,"This field refers to the School Year Level the data is linked to
+3-5, 5-7, 7-9",,,,,,,,,,,,,,,,,,,,Yes,
+18,NAPLAN Student Gain,,,Calculated,ACARA GSS Mean NAPLAN Score,"This field refers to the matched school mean NAPLAN scale score.
+This will be suppressed on My School where NAPLAN Gain Records is less than 5",,,,,,,,,,,,,,,,,,,,Yes,
+19,NAPLAN Student Gain,,,Calculated,ACARA GSS Mean Margin of Error Lower bound,"This refers to the lower bound confidence interval of the school's matched mean NAPLAN scale score based on Margin of error at 90% level of confidence. 
+This will be suppressed on My School where NAPLAN Gain Records is less than 5.",,,,,,,,,,,,,,,,,,,,Yes,
+20,NAPLAN Student Gain,,,Calculated,ACARA GSS Mean Margin of Error Upper bound,"This refers to the upper bound confidence interval of the school's matched mean NAPLAN scale score based on Margin of error at 90% level of confidence. 
+This will be suppressed on My School where NAPLAN Gain Records is less than 5
+",,,,,,,,,,,,,,,,,,,,Yes,
+21,NAPLAN Student Gain,,,Calculated,ACARA GSS Median NAPLAN Score,"This field refers to the matched school median NAPLAN scale score. 
+This will be suppressed on My School where NAPLAN Gain Records is less than 5",,,,,,,,,,,,,,,,,,,,Yes,
+22,NAPLAN Student Gain,,,Calculated,ACARA GSS Median Margin of Error Lower bound,"This refers to the lower bound confidence interval of the school's matched median NAPLAN scale score based on Margin of error at 90% level of confidence.
+This will be suppressed on My School where NAPLAN Gain Records is less than 5",,,,,,,,,,,,,,,,,,,,Yes,
+23,NAPLAN Student Gain,,,Calculated,ACARA GSS Median Margin of Error Upper bound,"This refers to the upper bound confidence interval of the school's matched median NAPLAN scale score based on Margin of error at 90% level of confidence.
+This will be suppressed on My School where NAPLAN Gain Records is less than 5.",,,,,,,,,,,,,,,,,,,,Yes,
+24,NAPLAN Student Gain,,,Count,ACARA GSS Student Count,This field refers to the number of matched students who took the test,,,,,,,,,,,,,,,,,,,,Yes,
+25,NAPLAN Student Gain,,,Count,ACARA SN Student Count,This refers to the number of student in the NAPLAN testing year,,,,,,,,,,,,,,,,,,,,Yes,
+26,NAPLAN Student Gain,,,Calculated,Student Matched Prctg,This refers to the percentage of matched students across the two testing years,,,,,,,,,,,,,,,,,,,,Yes,

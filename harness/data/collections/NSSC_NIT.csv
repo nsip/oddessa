@@ -1,0 +1,600 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population,Coding Data  Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Element,Data Element Type,SIFFrame,Able to be mapped at RAW
+1,NSSC NIT,,Table 1-1,Aggregate,Number of Schools,"A school is defined as an education establishment which satisfies all of the following criteria: 
+1. its major activity is the provision of full-time day primary, secondary or special school education or distance education, and 
+2. it is headed by a principal or equivalent, responsible for its internal operation, and
+3. it is possible for students to enrol and be active in a course of study for a minimum of four continuous weeks (excluding breaks for school vacations).",,Non-special schools and students,Number,,Number  ,"This table requires the number of non-special schools only.
+Intensive Language Learning Centres in Victoria are to be recorded as Pre-year 1 to Year 12.",,,,"Notes: A campus may have a principal, but that does not make a campus a school. The single physical location then becomes the defining factor. Multi-campus arrangements are counted as one school - the number of principals need not equal the number of schools. For Queensland and the Northern Territory, Secondary Colleges are to be considered in-scope. Schools trialling a new system such as the ‘New Basics’ should be included, if they meet the ‘normal’ NSSC criteria.",,,,Australian Bureau of Statistics,,,,Calculated,School,Yes
+2,NSSC NIT,,Table 1-1,Aggregate,Number of Students,Full time equivalent (FTE) number of students,,Non-special schools and students,Number,,Number to 2 decimal places,"Intensive Language Learning Centres in Victoria, and the relevant students are to be recorded as Pre-year 1 to Year 12.",,,,,,School enrolling student,,Australian Bureau of Statistics,,,,Calculated,School,Yes
+3,NSSC NIT,,Table 1-1,Aggregate,Year level of education,Highest and lowest year of education being provided.,,Non-special schools and students,,,,"Any other schools operating with ungraded classes only, should be noted in the comments section.",,,,,,School enrolling student,,Australian Bureau of Statistics,,SchoolInfo,YearLevels,,,
+4,NSSC NIT,,Table 1-1,Derived,School Category,"Schools are categorised into primary, secondary and combined based on the highest and lowest  Year levels of education being provided.",,Non-special schools and students,Character,,,Based on highest and lowest levels of education provided,,,,,,School enrolling student,,Australian Bureau of Statistics,,SchoolInfo,SchoolType,,,
+5,NSSC NIT,,Table 1-1,Derived,Single sex school,Schools with students of one sex only,,Non-special schools and students,,,,Include single sex schools giving details of the number of male and female only in the comments section.,,,,,,School enrolling student,,Australian Bureau of Statistics,,SchoolInfo,SchoolCoEdStatus,Calculated,,
+6,NSSC NIT,,Table 1-2,Aggregate,Number of schools,Number of non-special schools by the size of primary and secondary enrolments (FTE of primary and secondary enrolments).,,Non-special schools and students,Number,,,,,,,,,,,Australian Bureau of Statistics,,,,Calculated,,Yes
+7,NSSC NIT,,Table 1-3,Aggregate,Number of special schools,"Number of special schools, special student entry qualifications, FTE and number of enrolments.  Systems may list individual schools, or cluster categories.",,Special Schools and students,,,,,,,,,,,,Australian Bureau of Statistics,,,,Calculated,,Yes
+8,NSSC NIT,,Table 1-3,Aggregate,Special student entry qualifications,,,Special Schools and students,,,"Behavioural Disorders
+Diagnostic Disorders
+Emotional Disturbance
+Hospital Schools
+Juvenile Justice
+Medium/High Support Needs (intellectual/physical/sensory)",,,,,,,School enrolling student,,Australian Bureau of Statistics,,,,Calculated,,
+9,NSSC NIT,,Table 1-3,Aggregate,FTE (Student enrolments) ,,,Special Schools and students,Number,,Number to 2 decimal places,,,,,,,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+10,NSSC NIT,,Table 1-3,Aggregate,Number of enrolments,,,Special Schools and students,Number,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,SchoolInfo,TotalEnrollments,Calculated,,
+11,NSSC NIT,,Table 3-1,Aggregate,Number of staff,"Staff generally active in schools or AEEs. Staff are persons engaged in the administration and/or provision of day primary, secondary or special school education, or primary or secondary education by distance education at in-scope education establishments.",,In-school staff,,,"Reported by attributes:
+Area of Activity: Active in Primary Education, Active in Secondary Education, Total
+Males, Females, Persons 
+Major Function: Teaching Staff; Specialist Support Staff; Administrative and Clerical Staff (incl. Teacher aides & assistants);  Building operations, general maintenance and other staff",,,,,"INCLUDE staff absent from a position for a period of less than four (4) continuous weeks (excluding school vacations for teaching staff) at the Census date. If they have been or are expected to be absent from a position for a period of four (4) continuous weeks or longer, count the replacement teacher unless that replacement has not or is not expected to be occupying the position for four continuous weeks or longer (excluding school vacations for teaching staff).
+INCLUDE the FTE of in-scope staff teaching evening secondary students attending Secondary Colleges in Tasmania, Western Australia and the Northern Territory and Secondary Colleges in Queensland.
+INCLUDE staff paid from school grant payments.
+INCLUDE staff employed under various Government sponsored employment schemes.
+EXCLUDE persons on extended leave. (Extended leave is a period of leave of four continuous weeks or longer, excluding school vacations and recreation leave. It may be paid or unpaid leave and has no upper limit.)
+EXCLUDE all persons not under the control of the director-general (or equivalent), e.g. nurses or therapists working for the state or territory department of health (or equivalent).
+EXCLUDE persons responsible to a state, territory or commonwealth minister of education but not to the director-general (or equivalent).
+EXCLUDE those persons under the control of the director-general (or equivalent) who satisfy one or more of the following criteria:
+1. are cleaners, whether salaried or employed on contract
+2. are involved in the management and/or maintenance of boarding or hostel facilities for students
+3. are paid from privately raised funds
+4. have been occupying, or expect to be occupying, a position for a period of less than four continuous weeks (excluding school vacations for teaching staff) at the Census date, and/or
+5. persons replacing those who are temporarily absent
+",,,,Australian Bureau of Statistics,,,,Calculated,,Yes
+12,NSSC NIT,,Table 3-1,Aggregate,Number of staff (FTE),"Staff generally active in schools or AEEs. Staff are persons engaged in the administration and/or provision of day primary, secondary or special school education, or primary or secondary education by distance education at in-scope education establishments.",,In-school staff,,,"Reported by attributes:
+Area of Activity: Active in Primary Education, Active in Secondary Education, Total
+Males, Females, Persons 
+Major Function: Teaching Staff; Specialist Support Staff; Administrative and Clerical Staff (incl. Teacher aides & assistants);  Building operations, general maintenance and other staff",,,,,"PART-TIME Staff are persons who are either (a) not employed full time, or (b) part of whose duties fall outside the scope of this collection. Calculate the FTE of these staff. FTE should be based on the reference period.",,,,Australian Bureau of Statistics,,,,Calculated,,Yes
+13,NSSC NIT,,Table 3-1,Aggregate,Staff Area of Activity,"Staff: Active in Primary Education, Secondary Education, Total",,,,,,"Staff to be included in Table 3-1 are further classified to Area of activity. Area of activity comprises primary education and secondary education. Staff who work in more than one Area of activity should have their FTE apportioned across areas of activity and the basis of apportionment to be noted in the comments. 
+Active in primary education refers to activity relating to primary education at all schools.
+Active in secondary education refers to activity relating to secondary education at all schools.
+
+",,,,,,,,Australian Bureau of Statistics,,StaffAssignment,StaffActivity,,,
+14,NSSC NIT,,Table 3-1,Aggregate,Staff Sex,Staff Sex,,,,,"Males, Females, Persons",,,,,,,,,Australian Bureau of Statistics,,StaffPersonal,PersonInfo/Demographics/Sex,,,
+15,NSSC NIT,,Table 3-1,Aggregate,Staff Major Function ,Staff: Major function,,,,,"The functions for staff generally active in schools and AAEs are:
+-Teaching Staff
+-Specialist Support Staff,
+-Administrative and Clerical Staff (incl. Teacher aides & assistants)
+-Building operations, general maintenance and other staff","
+TEACHING STAFF 
+Teaching staff are those who spend the majority of their time in contact with students (i.e. support students either by direct class contact or on an individual basis) and have teaching duties (i.e. are engaged to impart the school curriculum).
+Although the definition of teaching staff no longer contains a reference to payment under a Teachers’ Salary Award, the great majority of teaching staff will be paid in this way.  
+For the Northern Territory, Assistant Teachers in Homeland Learning Centres and Community schools are to be included as Teaching staff, and the number and FTE should be noted in the comments section of the table.
+Undergraduate students working as teaching staff should be included if they meet NSSC criteria.
+For the purposes of this collection, Teaching Staff includes principals, deputy principals, campus principals and senior teachers mainly involved in administrative duties. Depending on their workload, principals can be either full-time or part-time.
+
+SPECIALIST SUPPORT STAFF
+Specialist support staff are those who perform functions that are of special benefit to students or teaching staff in the development of the school curriculum. While these staff may spend the majority of their time in contact with students, they are not employed or engaged to impart the school curriculum.
+
+ADMINISTRATIVE AND CLERICAL STAFF  (Including Teacher aides and assistants)
+Administrative and clerical staff are those whose main duties are generally of a clerical/administrative nature.
+
+BUILDING OPERATIONS, GENERAL MAINTENANCE AND OTHER STAFF - Building operations, general maintenance and other staff are those involved in the maintenance of buildings, grounds etc. These include those staff providing associated technical services and other janitorial staff. It also includes the repair and servicing of equipment such as video machines and laboratory equipment.
+",,,,"MAJOR FUNCTION (of school staff) - Major function is based on duties performed. Staff who spend more than half their time in contact with students, and/or generally perform the majority of their duties in one or more schools/AEEs are classified as school staff. Persons are to be recorded according to their major function rather than to their type of appointment. Any person is to be recorded in only one functional category, i.e. according to their major function. (Allocation of function is seen as a workable estimation of resource usage.)",,,,Australian Bureau of Statistics,,,,,,
+16,NSSC NIT,,Table 3-2,Aggregate,Number of staff,"Executive staff and staff not generally active in schools or AEE's.  Staff who spend the majority of their time in, e.g., state, territory or regional offices, are not considered to be generally active in schools or AEE's and should be recorded in Table 3-2.  Staff whose office is located at a school but who are not generally active in schools should also be recorded in Table 3-2.  Senior Executive staff (including Superintendents and Inspectors) are considered to be 'not generally active in schools or AEEs' for the purposes of this collection.",,,,,"Reported by attributes:
+Males, Females, Persons 
+Major Function: Executive Staff; Specialist Support Staff; Administrative and Clerical Staff; Building Operations, General Maintenance and Other Staff","EXECUTIVE STAFF (including Directors-General (or equivalent) and Inspectors/Superintendents)
+Executive staff are those generally undertaking functions of a senior administrative nature broader than that of a secondary principal, and whose salary generally exceeds that of a secondary principal. Staff should not be included in, or excluded from, this category solely on the basis of salary.
+Regional Consulting Principals in Victoria and Cluster Principals in the Northern Territory are to be included in Executive Staff, and the number and FTE noted in the comments.
+SPECIALIST SUPPORT STAFF
+Specialist support staff are those who manage or are engaged in curriculum development and research activities, assisting with teaching resources, staff development etc. Student support services staff and teacher support services staff are also included in this category.
+ADMINISTRATIVE AND CLERICAL STAFF 
+Administrative and clerical staff are those whose main duties are generally of a clerical/administrative nature. These include office staff and publicity staff in state, territory and regional offices.
+BUILDING OPERATIONS, GENERAL MAINTENANCE & OTHER STAFF
+Building operations, general maintenance and other staff are those involved in the maintenance of buildings, grounds etc. These include staff providing associated technical services and other janitorial staff.
+EXCLUDE cleaners, whether salaried or employed on contract",,,,,,,,Australian Bureau of Statistics,,,,,,
+17,NSSC NIT,,Table 3-2,Aggregate,Number of staff (FTE),"Executive staff and staff not generally active in schools or AEE's.  Staff who spend the majority of their time in, e.g., state, territory or regional offices, are not considered to be generally active in schools or AEE's and should be reocrded in Table 3-2.  Staff whose office is located at a school but who are not generally active in schools should also be recorded in Table 3-2.  Senior Executive staff (including Superintendents and Inspectors) are considered to be 'not generally active in schools or AEEs' for the purposes of this collection.",,,,,"Reported by attributes:
+Males, Females, Persons 
+Major Function: Executive Staff; Specialist Support Staff; Administrative and Clerical Staff; Building Operations, General Maintenance and Other Staff","EXECUTIVE STAFF (including Directors-General (or equivalent) and Inspectors/Superintendents)
+Executive staff are those generally undertaking functions of a senior administrative nature broader than that of a secondary principal, and whose salary generally exceeds that of a secondary principal. Staff should not be included in, or excluded from, this category solely on the basis of salary.
+Regional Consulting Principals in Victoria and Cluster Principals in the Northern Territory are to be included in Executive Staff, and the number and FTE noted in the comments.
+SPECIALIST SUPPORT STAFF
+Specialist support staff are those who manage or are engaged in curriculum development and research activities, assisting with teaching resources, staff development etc. Student support services staff and teacher support services staff are also included in this category.
+ADMINISTRATIVE AND CLERICAL STAFF 
+Administrative and clerical staff are those whose main duties are generally of a clerical/administrative nature. These include office staff and publicity staff in state, territory and regional offices.
+BUILDING OPERATIONS, GENERAL MAINTENANCE & OTHER STAFF
+Building operations, general maintenance and other staff are those involved in the maintenance of buildings, grounds etc. These include staff providing associated technical services and other janitorial staff.
+EXCLUDE cleaners, whether salaried or employed on contract.",,,,,,,,Australian Bureau of Statistics,,,,,,
+18,NSSC NIT,,Table 3-2,Aggregate,Staff Sex,Staff Sex,,,,,"Males, Females, Persons",,,,,,,,,Australian Bureau of Statistics,,,,,,Yes
+19,NSSC NIT,,Table 3-2,Aggregate,Staff Major Function ,Staff: Major function,,,,,"The functions for staff generally active in schools and AAEs are:
+-Teaching Staff
+-Specialist Support Staff,
+-Administrative and Clerical Staff (incl. Teacher aides & assistants)
+-Building operations, general maintenance and other staff","
+TEACHING STAFF 
+Teaching staff are those who spend the majority of their time in contact with students (i.e. support students either by direct class contact or on an individual basis) and have teaching duties (i.e. are engaged to impart the school curriculum).
+Although the definition of teaching staff no longer contains a reference to payment under a Teachers’ Salary Award, the great majority of teaching staff will be paid in this way.  
+For the Northern Territory, Assistant Teachers in Homeland Learning Centres and Community schools are to be included as Teaching staff, and the number and FTE should be noted in the comments section of the table.
+Undergraduate students working as teaching staff should be included if they meet NSSC criteria.
+For the purposes of this collection, Teaching Staff includes principals, deputy principals, campus principals and senior teachers mainly involved in administrative duties. Depending on their workload, principals can be either full-time or part-time.
+
+SPECIALIST SUPPORT STAFF
+Specialist support staff are those who perform functions that are of special benefit to students or teaching staff in the development of the school curriculum. While these staff may spend the majority of their time in contact with students, they are not employed or engaged to impart the school curriculum.
+
+ADMINISTRATIVE AND CLERICAL STAFF  (Including Teacher aides and assistants)
+Administrative and clerical staff are those whose main duties are generally of a clerical/administrative nature.
+
+BUILDING OPERATIONS, GENERAL MAINTENANCE AND OTHER STAFF - Building operations, general maintenance and other staff are those involved in the maintenance of buildings, grounds etc. These include those staff providing associated technical services and other janitorial staff. It also includes the repair and servicing of equipment such as video machines and laboratory equipment.
+",,,,,,,,Australian Bureau of Statistics,,,,,,
+20,NSSC NIT,,Table 21A,Aggregate,Number of students,"Table showing number of students - Full-time, ATSI, M by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Full time; Male; Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+21,NSSC NIT,,Table 21A,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,n.nn,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+22,NSSC NIT,,Table 21A,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+23,NSSC NIT,,Table 21A,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+24,NSSC NIT,,Table 21A,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,,
+25,NSSC NIT,,Table 21A,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+26,NSSC NIT,,Table 21B,Aggregate,Number of students,"Table showing number of students - Full-time,non-ATSI,M by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Full time; Male; Non-Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,Calculated,,Yes
+27,NSSC NIT,,Table 21B,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+28,NSSC NIT,,Table 21B,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+29,NSSC NIT,,Table 21B,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+30,NSSC NIT,,Table 21B,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,,
+31,NSSC NIT,,Table 21B,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+32,NSSC NIT,,Table 21C,Aggregate,Number of students,"Table showing number of students - Full-time, ATSI -notstated, M by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Full time; Male; Aboriginal and Torres Strait Islander- Not Stated;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,Calculated,,Yes
+33,NSSC NIT,,Table 21C,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+34,NSSC NIT,,Table 21C,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+35,NSSC NIT,,Table 21C,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+36,NSSC NIT,,Table 21C,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,,
+37,NSSC NIT,,Table 21C,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+38,NSSC NIT,,Table 22A,Aggregate,Number of students,"Table showing number of students - Full-time, ATSI, F by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Full time; Female; Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+39,NSSC NIT,,Table 22A,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+40,NSSC NIT,,Table 22A,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+41,NSSC NIT,,Table 22A,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+42,NSSC NIT,,Table 22A,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,,
+43,NSSC NIT,,Table 22A,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+44,NSSC NIT,,Table 22B,Aggregate,Number of students,"Table showing number of students - Full-time, non-ATSI, F by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Full time; Female; Non-Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+45,NSSC NIT,,Table 22B,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+46,NSSC NIT,,Table 22B,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+47,NSSC NIT,,Table 22B,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+48,NSSC NIT,,Table 22B,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,,
+49,NSSC NIT,,Table 22B,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+50,NSSC NIT,,Table 22C,Aggregate,Number of students,"Table showing number of students - Full-time, ATSI -notstated, F by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Full time; Female; Aboriginal and Torres Strait Islander-Not Stated;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+51,NSSC NIT,,Table 22C,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+52,NSSC NIT,,Table 22C,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+53,NSSC NIT,,Table 22C,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+54,NSSC NIT,,Table 22C,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,,
+55,NSSC NIT,,Table 22C,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+56,NSSC NIT,,Table 24A,Aggregate,Number of students,"Table showing number of students - Part-time, ATSI, Male, Female, by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes:Part time; Male; Female; Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+57,NSSC NIT,,Table 24A,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+58,NSSC NIT,,Table 24A,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+59,NSSC NIT,,Table 24A,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+60,NSSC NIT,,Table 24A,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+61,NSSC NIT,,Table 24A,Aggregate,Number of students,"Table showing number of students - Part-time, non-ATSI, Male, Female, by age and year level",,,,,,"Attributes:Part time; Male; Female; Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+62,NSSC NIT,,Table 24A,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+63,NSSC NIT,,Table 24A,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+64,NSSC NIT,,Table 24A,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+65,NSSC NIT,,Table 24A,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+66,NSSC NIT,,Table 24A,Aggregate,Number of students,"Table showing number of students - Part-time, ATSI-not stated, Male, Female, by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes:Part time; Male; Female; Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,,,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+67,NSSC NIT,,Table 24A,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+68,NSSC NIT,,Table 24A,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+69,NSSC NIT,,Table 24A,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+70,NSSC NIT,,Table 24A,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+71,NSSC NIT,,Table 25A,Aggregate,Number of students,"Table showing number of students - Part-time,ATSI,M by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Part time; Male; Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+72,NSSC NIT,,Table 25A,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+73,NSSC NIT,,Table 25A,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+74,NSSC NIT,,Table 25A,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+75,NSSC NIT,,Table 25A,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,,
+76,NSSC NIT,,Table 25A,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+77,NSSC NIT,,Table 25B,Aggregate,Number of students,"Table showing number of students - Part-time,non-ATSI,M by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Parttime; Male; Non-Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+78,NSSC NIT,,Table 25B,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+79,NSSC NIT,,Table 25B,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+80,NSSC NIT,,Table 25B,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+81,NSSC NIT,,Table 25B,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,Calculated,,
+82,NSSC NIT,,Table 25B,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+83,NSSC NIT,,Table 25C,Aggregate,Number of students,"Table showing number of students - Part-time, ATSI -notstated, M by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Part-time; Male; Aboriginal and Torres Strait Islander- Not Stated;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+84,NSSC NIT,,Table 25C,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+85,NSSC NIT,,Table 25C,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+86,NSSC NIT,,Table 25C,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+87,NSSC NIT,,Table 25C,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,Calculated,
+88,NSSC NIT,,Table 25C,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+89,NSSC NIT,,Table 26A,Aggregate,Number of students,"Table showing number of students - Part-time,ATSI,  F by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Part time; Female; Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+90,NSSC NIT,,Table 26A,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+91,NSSC NIT,,Table 26A,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+92,NSSC NIT,,Table 26A,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+93,NSSC NIT,,Table 26A,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,,Calculated,
+94,NSSC NIT,,Table 26A,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+95,NSSC NIT,,Table 26B,Aggregate,Number of students,"Table showing number of students - Part-time,non-ATSI,F by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Parttime; Male; Non-Aboriginal and Torres Strait Islander;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+96,NSSC NIT,,Table 26B,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+97,NSSC NIT,,Table 26B,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+98,NSSC NIT,,Table 26B,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+99,NSSC NIT,,Table 26B,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,Calculated,,
+100,NSSC NIT,,Table 26B,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,
+101,NSSC NIT,,Table 26C,Aggregate,Number of students,"Table showing number of students - Part-time, ATSI -notstated, F by age and year level.
+STUDENT - A student is a person who is formally (officially) enrolled or registered at a school and who is also active in a primary, secondary or special education program at that school.  ",,,,,,"Attributes: Part-time; Female; Aboriginal and Torres Strait Islander- Not Stated;
+By Age, Year  and level of education",,,,"Exclude persons who have only completed enrolment procedures at the school.
+Exclude persons who have left the school (e.g. have ceased education or changed schools), or have been absent without explanation for four continuous weeks (excluding school vacations), prior to the Census date.
+A student who attends one school but is formally enrolled at another is to be counted only at the school at which he'she is formally enrolled.
+Students undertaking ""home schooling"" are only included if they are also formally enrolled and active in a course of study at an in-scope establishment.  No part of their home schooling should be included inthe NSSC figures.",,School enrolling student,,Australian Bureau of Statistics,,,,,,Yes
+102,NSSC NIT,,Table 26C,Aggregate,Time fraction ,"FULL -TIME STUDENT - A full time student is a person who satisfies the definition of a student and undertakes a workload equivalent to, or greater than, that usually undertaken by a student of that Year level.
+Note: Some students may undertake additional educational activities such as VET in Schools (including throught TAFE), school-based apprenticeships or traineeships, tertiary extension studies, work placements. or a combination of such programs.  The workload of such activities should be included if the activity is undertaken as part of the student's school enrolment.  This definition relates to workload.  Workload is not necessarily determined by enrolment and attendance alone.  Consequently a student who is enrolled and attending school full-time may not necessarily be full-time for the purposes of this collection.  If the combined workload of alternative school-based educational programs plus the 'normal' schools subject(s) make up the minimum prescribed full-time workload for a given state or territory, then the students should be counted as full-time students for the purposes of the NSSC.
+PART-TIME STUDENT - A part-time student is a person who satisfies the definition of a student but who undertakes a workload less than that usually undertaken by a full-time student of that year level (as determined by the system for that state or territory).  A part-time student has an FTE of less than 1.00. ",,,,,N.NN,"Systems should indicate the basis used to determine a full-time student workload, e.g. hours of attendance or subject load, by noting any changes to the table .
+
+Note - States and territories that have any part-time primary or secondary students should ensure that they are included in all appropriate NSSC tables.",,,,"A full-time student has a FTE of 1.00 even if the student's workload is greater than that usually undertaken by  a student of that Year level.
+
+ The FTE of a part-time student should be determined by dividing the student's workload by what is considered to be a full -time workload for that state or territory.
+
+Note Student FTE must be reported and entered to two decimal places (the number must be rounded before being entered in the spreadsheet). 
+No student may have an FTE exceeding 1.00.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/FTE,,,
+103,NSSC NIT,,Table 26C,Aggregate,Indigenous status,"The ABS standard Aboriginal or Torres Strait Islander identifier is used for students in the NSSC.  The ABS standard question is:
+Is this student of Aboriginal or Torres Strait Islander origin? Valid responses are:
+- Aboriginal but not Torres Strait Islander origin
+- Torres Strait Islander but not Aboriginal origin
+- Both Aboriginal and Torres Strait Islander origin
+Not Stated/Inadequately described
+- Neither Aboriginal and Torres Strait Islander origin",,,,,,,,,,"The ""Not-stated"" category for Indigenous status should be used as a default when it is not recorded whether or not a student is of Aboriginal and/or Torres Strait Islander origin.  Indigenous status should NOT default to ""non-indigenous"" if the question is left blank.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+104,NSSC NIT,,Table 26C,Aggregate,Sex,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+105,NSSC NIT,,Table 26C,Aggregate,Age,,,,,,,,,,,,,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/Demographics/BirthDate,Calculated,,
+106,NSSC NIT,,Table 26C,Aggregate,Year level of education,"PRIMARY STUDENT - A primary student is a student enrolled and active in Pre-Year 1 to Year 6 in all states and territories except South Australia, where the range is Pre-year 1 to Year 7. 
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.
+
+SECONDARY STUDENT -A secondary student is a student enrolled and active in Year 7 to Year 12 in all states and territories except South Australia, where the range is Year 8 to Year 12.
+'Year' is not necessarily the number of years the student has been at the school but is a measure of the level of education.",,,,,,"Pre-year 1 is called Kindergarten in New South Wales and the Australian Capital Territory; Preparatory in Queensland, Victoria and Tasmania; Reception in South Australia; Pre-primary in Western Australia; and Transition in the Northern Territory.
+An Ungraded Primary student is one who cannot be allocated to a particular Year of schooling, but is placed as a primary student based on their age at the census date.
+An Ungraded Secondary student is one who cannot be allocated to a particular Year of schooling, but is placed as a secondary student based on their age at the census date.",,,,"A student is not necessarily a primary student because he or she is of primary age OR primary funded.
+A student is not necessarily a secondary student because he or she is of seconary age OR secondary funded.",,School enrolling student,,Australian Bureau of Statistics,,StudentPersonal,PersonInfo/MostRecent/YearLevel,,,

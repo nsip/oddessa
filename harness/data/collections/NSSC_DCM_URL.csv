@@ -1,0 +1,807 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population,Coding Data  Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Element,Data Element Type,SIFFrame,Could be mapped at RAW,,,,,,,,,,,,,,,
+1,NSSC URL,1,Enrolment,Raw,System Student ID,The ID used by the enrolling system for administration of the student and their enrolment(s).,EN_SYSSTDID,All Active Enrolments,String,," [x(*)] string, various alpha-numeric length",N/A,Length and composition of the System Student ID may vary between enrolling education systems.,N/A,13 Main School Flag (EN_MNSCHFLG),,"Assumption is there will be a record for each student at each school in which they are enrolled, but that the student id across schools will be the same so records can be combined to calculate FTE of each student",School Enrolling Student,,,,StudentPersonal,LocalId,Identifier,Student,,,,,,,,,,,,,,,,
+2,NSSC URL,2a,Enrolment,Raw,Given Name,Student's first or given name,ST_GNAME,All enrolled Students,Alpha-numeric or String?,," [x(*)] string, various alpha-numeric length",N/A,Length and composition of the Student First Name may vary between enrolling education systems.,N/A,Enrolment Frame 2-EN_FSTLET,,Source of Enrolment Frame 2-EN_FSTLET,School Enrolling Student,,,,StudentPersonal,PersonInfo/Name/GivenName,Identifying,Student,,,,,,,,,,,,,,,,
+3,NSSC URL,2,Enrolment,Derived,Letters of Student's Enrolled Given Name,The second and third letters in the student’s first (or given) name.,EN_FSTLET,All Active Enrolments,Alpha-numeric,2,"XX
+ 99 = Not stated/inadequately described Where letters are missing (i.e. first (or given) name is less than three letters), replace the missing letters with “2”.","Enter the second (2nd) and the third (3rd) letters in the student’s first name consecutively, excluding any non-alphabetic characters and counting the next available letter in that name.
+If the student's given name includes non-alphabetic characters such as hyphens (as in Lee-Archer), apostrophes (as in O’Mara), or blank spaces (as in De Vries), these should be ignored when counting the position of each character.
+Any missing values should be replaced with a 2, except, and only where the entire name is missing (Not stated/inadequately described) in which case the 99 entry should be used.
+Not case sensitive.
+For example: 
+For the name Jane enter AN. 
+For the name Ed enter D2.
+For the name An-Marie enter NM.","Data is valid to two alpha-numeric characters only. Entries of more than two alpha-numeric characters, blank spaces and entries containing numbers other than 2 or 9 will not be valid.",AIHW: Statistical Linkage Key 581 <http://meteor.aihw.gov.au/content/index.phtml/itemId/349510>,"Enrolment Frame 
+3 - Letters of Student’s Enrolled Family Name (EN_SURLET)
+4 - Date of Birth (EN_DOB)
+5 - Sex (EN_SEX) 
+Enrolment Derived
+1 - Statistical Linkage Key (END_LNK_RECKEY)",,To be used if there is no student id across schools? Derived from Student's Enrolled Given Name,School Enrolling Student,,,,StudentPersonal,PersonInfo/Name/GivenName,Derived,Student,,,,,,,,,,,,,,,,
+4,NSSC URL,3a,Enrolment,Raw,Family Name,Family Name,ST_SURNAME,All enrolled Students,Alpha-numeric or String?,," [x(*)] string, various alpha-numeric length",N/A,Length and composition of the Student First Name may vary between enrolling education systems.,N/A,3 - Letters of Student’s Enrolled Family Name (EN_SURLET),,Source of Enrolment Frame 3-EN_SURLET,School Enrolling Student,,,,StudentPersonal,PersonInfo/Name/FamilyName,Identifying,Student,,,,,,,,,,,,,,,,
+5,NSSC URL,3,Enrolment,Derived,Letters of Student’s Enrolled Family Name,"The second, third and fifth letters of the student’s family name (or surname).",EN_SURLET,All Active Enrolments,Alpha-numeric,3,"XXX
+999 = Not stated/inadequately described
+Where letters are missing (i.e. family name (or surname) is less than five letters), replace the missing letters with “2”.","Enter the second (2nd), third (3rd) and fifth (5th) letters in the student’s family name consecutively, excluding any non-alphabetic characters and counting the next available letters in that name.
+If the child's family name includes non-alphabetic characters such as hyphens (as in Lee-Archer), apostrophes (as in O’Mara), or blank spaces (as in De Vries), these should be ignored when counting the position of each character.
+Any missing values should be replaced with a 2, except, and only where the entire name is missing (Not stated/inadequately described) in which case the 999 entry should be used.
+For example: 
+For the surname SMITH enter MIH. 
+For the surname NG enter G22.
+For the surname Owen-Smith enter WES.","Data is valid to three alpha-numeric characters only. Entries of more than three alpha-numeric characters, blank spaces and entries containing numbers other than 2 or 9 will not be valid.",AIHW: Statistical Linkage Key 581 <http://meteor.aihw.gov.au/content/index.phtml/itemId/349510>,"Enrolment Frame
+2 - Letters of Student’s Enrolled Given Name (EN_FSTLET)
+4 - Date of Birth (EN_DOB)
+5 - Sex (EN_SEX) 
+Enrolment Derived
+1 - Statistical Linkage Key (END_LNK_RECKEY)",,To be used if there is no student id across schools? Derived from Student’s Enrolled Family Name,School Enrolling Student,,,,StudentPersonal,PersonInfo/Name/FamilyName,Derived,Student,,,,,,,,,,,,,,,,
+6,NSSC URL,4,Enrolment,Raw,Date of Birth (DOB) ,"The day, month and year on which the student was born.",EN_DOB,All Active Enrolments,"Continuous, Numeric",8,"DDMMYYYY
+00 = missing day value
+00 = missing month value
+0000 = missing year value","When entering data enter:
+• two digits for the day (include leading zeros)
+• two digits for the month (include leading zeros)
+• four digits for the year.
+If the DOB is only partly stated, enter the data that is available and put a 0 in place of the missing numerals.
+For example:
+If the student was born on the 1st of January 2000 it would be recorded as 01012000.
+If the student’s birth month is known to be February but the day and year are not known it would be recorded as 00020000
+If the whole birth date is unknown it would be recorded as 00000000","Entries less than 8 numerals will be assumed to have leading zeros to make the entry 8 numerals in length.
+Entries of more than 8 numerals, use of separators (for example, the symbols / or .), blank spaces or alphabetic characters will not be valid.",N/A,"Enrolment Frame
+2 - Letters of Student’s Enrolled Given Name (EN_FSTLET)
+3 - Letters of Student’s Enrolled Family Name (EN_SURLET)
+5 - Sex (EN_SEX) 
+Enrolment Derived
+1 - Statistical Linkage Key (END_LNK_RECKEY)",,"Do you want to store year, month and day seperately?",School Enrolling Student,,,,StudentPersonal,PersonInfo/Demographics/BirthDate,Descriptor,Student,,,,,,,,,,,,,,,,2 - Letters of Student’s Enrolled Given Name (EN_FSTLET)
+7,NSSC URL,5,Enrolment,Raw,Sex,The biological sex of the student.,EN_SEX,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = Male
+2 = Female
+3 = Intersex or Indeterminate
+9 = Not stated/inadequately described","Record the biological distinction between male and female, as represented by a code.
+The “Intersex or Indeterminate” category is for an instance when the student’s enrolled sex is neither male nor female. For not stated or missing information the “Not stated/inadequately described” category should be used.
+",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+2 - Letters of Student’s Enrolled Given Name (EN_FSTLET)
+3 - Letters of Student’s Enrolled Family Name (EN_SURLET)
+4 - Date of Birth (EN_DOB)
+Enrolment Derived
+1 - Statistical Linkage Key (END_LNK_RECKEY)",,,School Enrolling Student,Schools Australia Cat 4220.1,ABS,,StudentPersonal,PersonInfo/Demographics/Sex,Descriptor,Student,,,,,,,,,,,,,,,,4 - Date of Birth (EN_DOB)
+8,NSSC URL,6,Enrolment,Raw,Indigenous Status,The Indigenous status of an enrolment showing whether the enrolled person is a person of Aboriginal and/or Torres Strait Islander descent who identifies as an Aboriginal and/or Torres Strait Islander and is accepted as such by the community in which he or she lives.,EN_INDIGST,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = Aboriginal but not Torres Strait Islander origin
+2 = Torres Strait Islander but not Aboriginal origin
+3 = Both Aboriginal and Torres Strait Islander origin
+4 = Neither Aboriginal nor Torres Strait Islander origin
+9 = Not Stated/inadequately described","Self-identification is an important component of the definition for Aboriginal and/or Torres Strait Islander status and persons should not be identified as having Aboriginal and/or Torres Strait Islander status without their consent. However, it is expected that reporting of this item will include students whose parent/s or carer/s has/have identified them as having Aboriginal and/or Torres Strait Islander status.
+Where ATSI Status is not stated or unknown, the “Not Stated/Inadequately” described category should be used.",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,"Standards for Statistics on Cultural and Language Diversity (ABS cat. no. 1289.0)
+SCSEEC 2010 Data Standards Manual http://www.acara.edu.au/verve/_resources/DSM_1.pdf","Enrolment Derived
+2 - Indigenous (derived)  Status (END_INDSTS)",,,School Enrolling Student,,,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,Descriptor,Student,,,,,,,,,,,,,,,,5 - Sex (EN_SEX)
+9,NSSC URL,7a,Enrolment,Raw,StreetNumber,The address number assigned to building,,,,,,,,,,,Student's term? Usual? Physical Address?,School Enrolling Student,,,,StudentPersonal,PersonInfo/AddressList/Address/Street/StreetNumber,Descriptor,Student,,,,,,,,,,,,,,,,
+10,NSSC URL,7b,Enrolment,Raw,StreetName,The name of the street,,,,,,,,,,,Student's term? Usual? Physical Address?,School Enrolling Student,,,,StudentPersonal,PersonInfo/AddressList/Address/Street/StreetName,Descriptor,Student,,,,,,,,,,,,,,,,
+11,NSSC URL,7c,Enrolment,Raw,City,The city part of the address,,,,,,,,,,,Student's term? Usual? Physical Address?,School Enrolling Student,,,,StudentPersonal,PersonInfo/AddressList/Address/City,Descriptor,Student,,,,,,,,,,,,,,,,
+12,NSSC URL,7d,Enrolment,Raw,StateProvince,The state  code,,,,,,,,,,,Student's term? Usual? Physical Address?,School Enrolling Student,,,,StudentPersonal,PersonInfo/AddressList/Address/StateProvince,Descriptor,Student,,,,,,,,,,,,,,,,
+13,NSSC URL,7e,Enrolment,Raw,PostalCode,The postal code,,,,,,,,,,,Student's term? Usual? Physical Address?,School Enrolling Student,,,,StudentPersonal,PersonInfo/AddressList/Address/PostalCode,Descriptor,Student,,,,,,,,,,,,,,,,
+14,NSSC URL,7,Enrolment,Derived,Area of Usual Residence Mesh Block Code ,"The place where the student usually resides for the majority of their time during the given enrolment as represented by the ASGS geographical area code Mesh Block (MB). This is assumed to be based on where the primary carer for the student (parent/guardian 1 or 2) resides.
+
+It is represented by a geographical area code derived from the Australian Statistical Geography Standard (ASGS) 2011.",EN_ASGS_MB,All Active Enrolments,"Categorical, Numeric",11,"NNNNNNNNNNN
+The Area of Usual Residence ASGS Mesh Block is a eleven-digit hierarchical coding structure using the ABS: Australian Statistical Geography Standard (ASGS) 2011.
+Where this item is not available the following codes should be used:
+10000009899 - New South Wales: undefined MB
+20000009899 - Victoria: undefined MB
+30000009899 - Queensland: undefined MB
+40000009899 - South Australia: undefined MB
+50000009899 - Western Australia: undefined MB
+60000009899 - Tasmania: undefined MB
+70000009899 - Northern Territory: undefined MB
+80000009899 - Australian Capital Territory: undefined MB
+90000009899 - Other Territories: undefined MB","The place of usual residence of the parent or guardian with whom the child spends the majority of their time should be used for coding to ASGS 2011 Mesh Block code.
+If the child spends 50% with one parent/guardian and 50% with the other, use the 1st residential address recorded.
+For children boarding at a boarding school, report the area of usual residence as the child's parent or guardian, not the boarding school.
+When coding, if one level is known, all levels above that level are also known as ASGS is a hierarchical structure.
+Mesh Blocks (MBs) are the smallest geographic region in the ASGS and form the basis for the larger regions of the ASGS. There are approximately 347,000 MBs covering the whole of Australia without gaps or overlaps. They broadly identify land use such as residential, commercial, agricultural and parks etc. MBs are the building blocks for all the larger regions of the ASGS. As MBs are very small they can be combined together to accurately approximate a large range of other statistical regions.
+Note: If required, ABS can code from address information supplied.","Data is valid to 11 numerals only. Data is categorical; entries other than prescribed are not valid.
+Entries of less than 11 numerals will not be valid.",ABS: Australian Statistical Geography Standard (ASGS) 2011,Address information?,,"Derived from Student's term? Usual? Address?, see detail as for school's physical address below, why Mesh Block here not SA1 as for school?
+http://www.abs.gov.au/websitedbs/D3310114.nsf/home/Australian+Statistical+Geography+Standard+(ASGS)",School Enrolling Student,,,,StudentPersonal,PersonInfo/AddressList/Address/StatisticalAreas/StatisticalArea (where SpatialUnitType = MB),Derived,Student,,,,,,,,,,,,,,,,
+15,NSSC URL,8,Enrolment,Raw,Grade of Student’s Enrolment,"The incremental level of formal schooling that the enrolment relates to on a Pre-Year 1 to Year 12 scale.
+The grades included are: 
+Primary grades
+• Pre-year 1 (the grade of formal schooling prior to Year 1)
+• Year 1 to Year 7
+• Ungraded Primary
+Secondary grades
+• Year 7 to Year 12
+• Ungraded Secondary",EN_GRADE,All Active Enrolments,"Categorical, Numeric",3,"NNN
+100 = Pre-Year 1 
+101 = Year 1 
+102 = Year 2  
+103 = Year 3 
+104 = Year 4 
+105 = Year 5 
+106 = Year 6 
+107 = Year 7 primary 
+199 = Ungraded primary 
+207 = Year 7 secondary 
+208 = Year 8 
+209 = Year 9 
+210 = Year 10 
+211 = Year 11 
+212 = Year 12 
+299 = Ungraded secondary","Where an enrolment is across more than one grade, the lowest grade should be recorded.
+Pre- Year 1 is known by the following names in the various states/territories
+• Kindergarten  (NSW & ACT) 
+• Preparatory (QLD, VIC & TAS)
+• Reception (SA)
+• Pre-primary (WA)
+• Transition (NT)
+Year 7 may be a Primary Grade or Secondary Grade depending on the schooling structure. Year 7 is included as a:
+• Primary Grade in QLD, SA and WA; and 
+• Secondary Grade in NSW, Vic., Tas., NT and ACT
+Students who are ungraded are allocated to Ungraded Primary or Ungraded Secondary based on:
+• if they can be identified receiving a primary or secondary level of education; or if not
+• their age compared to typical primary/secondary ages in their state or territory for graded students in that reference year.
+Generally, Ungraded Primary students are aged from 4-12 and Ungraded Secondary students are aged from 13 and over. Age ranges for ungraded students may vary between the states and territories based on different schooling structures.
+For example:
+If an enrolment is identified as undertaking both Year 9 and 12 content then Year 9 is recorded against the enrolment.",Data entered into this field is valid to 3 numerals only. Data is categorical; entries other than prescribed are not valid.,N/A,"School Frame
+4 - School Type (SCH_TYPE)
+
+Enrolment Derived
+4 - Enrolment Level (END_LVL)
+
+School Derived
+3 - Education Provider High Grade (EPR_HIGHGRADE)
+4 - Education Provider Low Grade (EPR_LOWGRADE)",,"Need to know State/Territory of school to apply these values, although there are changes in some jurisdictions, would need school level information",School Enrolling Student,,,,StudentPersonal,MostRecent/YearLevel,Descriptor,Student,,,,,,,,,,,,,,,,Enrolment Derived
+16,NSSC URL,9,Enrolment,Raw,Full-Time Equivalent Value of Enrolment,"The measure of the workload of an enrolment with a base reference to the minimum full-time workload for an enrolment.
+ Minimum full-time workload for an enrolment = 1.00",EN_FTEVAL,All Active Enrolments,"Continuous, Numeric ",,"All values greater than or equal to zero (0.00)
+Values greater than 1.00 will be queried for validity.","Workload and FTE values of enrolments are determined by the relevant education authorities and may be based on hours, weeks or units.
+It is possible for an enrolment to undertake a larger workload than 1.0.","All values greater than or equal to zero (0.0).
+Values greater than 1.00 will be queried for validity.",N/A,"Enrolment Derived
+3 - Full-time or Part-time Status of Enrolment (END_FTPT)
+Student Derived
+1 - Full-Time Equivalent (FTE) Value of Student (STD_FTEVAL)
+2 - Full-time or Part-time Status of Student (STD_FTPT)",,"Assumes this FTE applies to this school only, there will be multpile records for students enrolled in more that one school",School Enrolling Student,,,,StudentSchoolEnrollment,FTE,Descriptor,Student,,,,,,,,,,,,,,,,1 - Statistical Linkage Key (END_LNK_RECKEY)
+17,NSSC URL,10,Enrolment,Raw,Enrolled Full-fee Paying Overseas Student (FFPOS) Status,"The status of an enrolment showing whether:
+• both the course and the school/system are registered on the Commonwealth Register of Institutions and Courses for Overseas Students (CIRCOS), and
+• the person is liable for a fee which reflects the imputed full average cost of the person’s education at the school (including both recurrent and capital costs) irrespective of the actual arrangements to meet the fee. Include FFPOS students who may be exempt from fees.
+",EN_FFPOS,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = FFPOS
+2 = Non-FFPOS
+9 = Not stated/Unknown",The course must be registered on the Commonwealth register of Institutions and Course for Overseas Students (CRICOS).,Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,N/A,,,School Enrolling Student,,,,StudentSchoolEnrollment,FFPOS,Descriptor,Student,,,,,,,,,,,,,,,,
+18,NSSC URL,11,Enrolment,Raw,System School ID,A unique authorisation number allocated to registered schools by the system administering those schools,SCH_SYSID,All in-scope schools,String,,String of varying alpha-numeric length,Length and composition of the System School ID may vary between systems.,N/A,N/A,"Enrolment Frame
+11 - System School Campus ID (SCH_SYSCMPSID) 
+School Frame
+1 - System School ID (SCH_SYSID)
+2 - System School Campus ID (SCH_SYSCMPSID)",,,School Enrolling Student,,,,StudentSchoolEnrollment,SchoolInfoRefId,Identifier,Student,,,,,,,,,,,,,,,,
+19,NSSC URL,12,Enrolment,Raw,System School Campus ID,A unique authorisation number allocated to a registered school campus by the system administering the school,SCH_SYSCMPSID,All in-scope schools,String,,[x(*)] string of various alpha-numeric length,Length and composition of the System School Campus ID may vary between systems.,N/A,N/A,"Enrolment Frame
+11 - System School ID (SCH_SYSID) 
+School Frame
+1 - System School ID (SCH_SYSID)
+2 - System School Campus ID (SCH_SYSCMPSID)",,Can it be null?,School Enrolling Student,,,,StudentSchoolEnrollment,Campus/SchoolCampusId,Identifier,Student,,,,,,,,,,,,,,,,
+20,NSSC URL,13,Enrolment,Raw,Main School Flag,A flag that identifies a student’s main place of schooling.,EN_MNSCHFLG,All Active Enrolments,"Categorical, Numeric",1,"N 
+1 = Main School
+2 = School provider 2
+3 = School provider 3
+N = School provider n","Students with one enrolment will always be at their main school and should have Main School Flag recorded as 1.
+For systems that are able to identify students with multiple enrolments the Main School Flag will determine which characteristics are used for reporting. Students with multiple enrolments will have their characteristics taken from the enrolment at the main 
+Order of Main School Flag is determined by:
+1)     enrolments at non-special schools before special schools; otherwise
+2)     the school the student is enrolled in the lowest grade
+3)     the school the student undertakes the majority of their workload (largest FTE); otherwise
+4)     the school as identified by the data provider
+5)     other identification by the data provider.",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+ 1 - System Student ID (EN_SYSSTDID) 
+8 - Grade of Student’s Enrolment (EN_GRADE) 
+9 - Full-Time Equivalent Value of Enrolment (EN_FTEVAL) 
+School Frame 
+1 - System School ID (SCH_SYSID) 
+4 - School Type (SCH_TYPE)",,"some students esp in senior secondary years undertake school education in non school sites such as TAFES, ACE rpoviders, gaols? Youth detention centres? These are out of scope",School Enrolling Student,,,,StudentSchoolEnrollment,School Enrollment Type,Descriptor,Student,,,,,,,,,,,,,,,,
+21,NSSC URL,14,Enrolment,Raw,Student's Country of Birth,The country in which the student was born.,EN_COB,All Active Enrolments,"Categorical, Numeric",4,"NNNN
+The country of birth field is a four-digit, three level hierarchical coding structure using the ABS: Standard Australian Classification of Countries (SACC), Second Edition (cat. no. 1269.0) (see Appendix D).","The SCSEEC 2010 Data Standards Manual provides a number of options for the country of birth question that can be included on enrolment forms. Options reflect a standard set of questions, or individualised questions for each state based on common countries of birth by state and territory as identified in the 2006 Population Census.
+All question modules from the standard use the ABS: SACC.
+Country of birth is a hierarchical 4 digit category broken down by:
+• First digit = Major Group
+• Second digit = Minor Group
+• Third and Fourth digit = Detailed level.
+As a hierarchical structure, if one level is known, all levels above that level are also known.
+Not further defined codes are included in the standard. Not further defined codes include leading zeros.
+For example:
+If the Major Group only is known (e.g. North-West Europe) then 2000 is recorded showing the 2 that identifies the Major group and 000 which identifies the unknown minor group and detailed level.
+If the Detailed Level is known (e.g. England) then 2101 is recorded for England which also identifies the Minor group (21 - United Kingdom, Channel Islands & Isle of Man)  and the Major Group (2 – North-West Europe)","Data is valid to 4 numerals only. Data is categorical; entries other than prescribed in the SACC are not valid.
+
+Entries that would otherwise meet a ‘not further defined’ code with leading zeros will be treated as that code.","Standard Australian Classification of Countries (SACC), Second Edition (ABS cat. no. 1269.0)
+
+SCSEEC 2010 Data Standards Manual",N/A,,,School Enrolling Student,,,,StudentPersonal,PersonInfo/Demographics/CountryofBirth,Descriptor,Student,,,,,,,,,,,,,,,,
+22,NSSC URL,15,Enrolment,Raw,Student’s Main Language other than English Spoken at Home,"The main language other than English, spoken in the home by the student.",EN_MLSH,All Active Enrolments,"Categorical, Numeric",4,"NNNN
+The ‘Main Language other than English’ is a 4-digit, three level hierarchical coding structure using the ABS: Australian Standard Classification of Languages (ASCL) second edition (ABS cat.no. 1267.0).
+Common codes:
+0000 – Inadequately described
+0001 – Non verbal, so described
+0002 – Not stated
+1201 – English","The SCSEEC 2010 Data Standards Manual provides a number of options for the main language other than English spoken at home question that can be included on enrolment forms. Options reflect a standard set of questions, or individualised questions for each state based on common countries of birth by state and territory as identified in the 2006 Population Census.
+All question modules from the standard use the ABS: ASCL.
+Country of birth is a hierarchical 4 digit category broken down by:
+• First digit = Broad Group
+• Second digit = Narrow Group
+• Third and Fourth digit = Detailed Level.
+As a hierarchical structure, if one level is known, all levels above that level are also known.
+If English Only and another language are selected, the response should be coded to the first language other than English specified.
+If the student speaks more than one language at home (not including English), Main Language other than English is the language the student speaks most often. If this cannot be identified then code the first language identified.
+Not further defined codes are included in the standard. Not further defined codes include leading zeros.
+For example:
+If the Broad Group only is known (e.g. Northern European Languages) then 1000 is recorded showing the 1 that identifies the Broad Group and 000 which identifies the unknown Narrow Group and Detailed Level.
+If the Detailed Level is known (e.g. Irish) then  1102 is recorded for Irish which also identifies the Narrow Group (11 - Celtic)  and the Broad Group (1 – Northern European Languages)","Data is valid to 4 numerals only. Data is categorical; entries other than prescribed in the ASCL are not valid.
+
+Entries that would otherwise meet a ‘not further defined’ code with leading zeros will be treated as that code.","Australian Standard Classification of Languages (ASCL) Second Edition, (ABS cat. no. 1267.0).
+
+SCSEEC 2010 Data Standards Manual","Enrolment Frame
+22 - Parent/Guardian 1 Main Language other than English Spoken at Home (PG_MLSH1) 
+23 - Parent/Guardian 2 Main Language other than English Spoken at Home (PG_MLSH2) 
+
+Enrolment Derived
+5 - Language Background Indicator (END_LBI)",,,School Enrolling Student,,,,StudentPersonal,StudentPersonal/PersonInfo/Demographics/LBOTE,Derived,Student,,,,,,,,,,,,,,,,
+23,NSSC URL,16,Enrolment,Raw,Parent/Guardian 1 School Education,The highest level of primary or secondary education attained by the student’s parent/guardian 1.,PG_SCHED1,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = Year 9 or equivalent or below
+2 = Year 10 or equivalent
+3 = Year 11 or equivalent
+4 = Year 12 or equivalent
+9 = Not stated/Unknown","School education means primary or secondary education, regardless of the location or institution where it was undertaken.
+It includes study at a secondary education level that might, for example, be undertaken at a Technical and Further Education (TAFE) institution.
+For persons who have never attended school, include in the 'Year 9 or equivalent or below' category.",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid,"SCSEEC 2010 Data Standards Manual
+Isn't there an ABS Standard?","Enrolment Frame
+17 - Parent/Guardian 2 School Education (PG_SCHED2) 
+18 - Parent/Guardian 1 Highest Non School Education or Qualification (PG_NSCHED1) 
+19 - Parent/Guardian 2 Highest Non School Education or Qualification (PG_NSCHED2) 
+
+Enrolment Derived
+6 - Highest Education Attainment of Parent/Guardian 1 (PGD_PGED1)
+7 - Highest Education Attainment of Parent/Guardian 2 (PGD_PGED2)",,,School Enrolling Student,,,,StudentPersonal,MostRecent/Parent1SchoolEducationLevel,Descriptor,,,,,,,,,,,,,,,,,
+24,NSSC URL,17,Enrolment,Raw,Parent/Guardian 2 School Education,The highest level of primary or secondary education attained by the student’s parent/guardian 2.,PG_SCHED2,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = Year 9 or equivalent or below
+2 = Year 10 or equivalent
+3 = Year 11 or equivalent
+4 = Year 12 or equivalent
+9 = Not stated/Unknown","School education means primary or secondary education, regardless of the location or institution where it was undertaken.
+It includes study at a secondary education level that might, for example, be undertaken at a Technical and Further Education (TAFE) institution.
+For persons who have never attended school, include in the 'Year 9 or equivalent or below' category.",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid,"SCSEEC 2010 Data Standards Manual
+Isn't there an ABS Standard?","Enrolment Frame
+16 - Parent/Guardian 1 School Education (PG_SCHED1) 
+18 - Parent/Guardian 1 Highest Non School Education or Qualification (PG_NSCHED1) 
+19 - Parent/Guardian 2 Highest Non School Education or Qualification (PG_NSCHED2) 
+
+Enrolment Derived
+6 - Highest Education Attainment of Parent/Guardian 1 (PGD_PGED1)
+7 - Highest Education Attainment of Parent/Guardian 2 (PGD_PGED2)",,,School Enrolling Student,,,,StudentPersonal,MostRecent/Parent2SchoolEducationLevel,Descriptor,Student,,,,,,,,,,,,,,,,
+25,NSSC URL,18,Enrolment,Raw,Parent/Guardian 1 Highest Non- School Education or Qualification,The highest level of post-school qualification attained by the student's parent/guardian 1.,PG_NSCHED1,All Active Enrolments,"Categorical, Numeric",1,"N
+5  = Certificate I to IV (including trade certificate)
+6  = Advanced diploma/Diploma
+7  = Bachelor degree or above
+8  = No non-school qualification
+9  = Not stated/unknown","Primary and secondary education is not counted as non-school qualifications, regardless of the location or institution where the study was undertaken.
+For example, secondary education undertaken as a mature-age student at a Technical and Further Education (TAFE) institution is considered school education.
+Include non-school qualifications (such as Certificate I) completed by parents/guardians when at school. 
+",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,"SCSEEC 2010 Data Standards Manual
+Isn't there an ABS Standard?","Enrolment Frame
+16 - Parent/Guardian 1 School Education (PG_SCHED1) 
+17 - Parent/Guardian 2 School Education (PG_SCHED2) 
+19 - Parent/Guardian 2 Highest Non School Education or Qualification (PG_NSCHED2) 
+Enrolment Derived
+6 - Highest Education Attainment of Parent/Guardian 1 (PGD_PGED1)
+7 - Highest Education Attainment of Parent/Guardian 2 (PGD_PGED2)",,,School Enrolling Student,,,,StudentPersonal,MostRecent/Parent1NonSchoolEducation,Descriptor,Student,,,,,,,,,,,,,,,,
+26,NSSC URL,19,Enrolment,Raw,Parent/Guardian 2 Highest Non- School Education or Qualification,The highest level of post-school qualification attained by the student's parent/guardian 2.,PG_NSCHED2,All Active Enrolments,"Categorical, Numeric",1,"N
+5  = Certificate I to IV (including trade certificate)
+6  = Advanced diploma/Diploma
+7  = Bachelor degree or above
+8  = No non-school qualification
+9  = Not stated/unknown","Primary and secondary education is not counted as non-school qualifications, regardless of the location or institution where the study was undertaken.
+For example, secondary education undertaken as a mature-age student at a Technical and Further Education (TAFE) institution is considered school education.
+Include non-school qualifications (such as Certificate I) completed by parents/guardians when at school. 
+",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,"SCSEEC 2010 Data Standards Manual
+Isn't there an ABS Standard?","Enrolment Frame
+16 - Parent/Guardian 1 School Education (PG_SCHED1) 
+17 - Parent/Guardian 2 School Education (PG_SCHED2) 
+18 - Parent/Guardian 1 Highest Non School Education or Qualification (PG_NSCHED1) 
+Enrolment Derived
+6 - Highest Education Attainment of Parent/Guardian 1 (PGD_PGED1)
+7 - Highest Education Attainment of Parent/Guardian 2 (PGD_PGED2)",,,School Enrolling Student,,,,StudentPersonal,MostRecent/Parent2NonSchoolEducation,Descriptor,Student,,,,,,,,,,,,,,,,
+27,NSSC URL,20,Enrolment,Raw,Parent/Guardian 1 Occupation Group,The current occupation of employed work of parent/guardian 1.,PG_OCG1,All Active Enrolments,"Categorical, Numeric",1,"N
+1  = Senior management in large business organisation, government   administration and defence, and qualified professionals
+2  = Other business managers, arts/media/sportspersons and associate professionals
+3  = Tradesmen/women, clerks and skilled office, sales and service staff
+4  = Machine operators, hospitality staff, assistants, labourers and related workers
+8  = Not in paid work in last 12 months
+9  = Not stated/unknown","If the person is not currently in paid work but has had a job in the last 12 months or has retired in the last 12 months, use the person’s last occupation. If the person has not been in paid work in the last 12 months, enter 8. If the person has left the field blank, or the occupation is unknown, enter 9.",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,"SCSEEC 2010 Data Standards Manual
+Isn't there an ABS Standard?","Enrolment Frame
+21 -Parent/Guardian 2 Occupation Group
+Enrolment Derived ICSEA? For school",,,School Enrolling Student,,,,StudentPersonal,MostRecent/Parent1EmploymentType,Descriptor,Student,,,,,,,,,,,,,,,,
+28,NSSC URL,21,Enrolment,Raw,Parent/Guardian 2 Occupation Group,The current occupation of employed work of parent/guardian 2.,PG_OCG2,All Active Enrolments,"Categorical, Numeric",1,"N
+1  = Senior management in large business organisation, government   administration and defence, and qualified professionals
+2  = Other business managers, arts/media/sportspersons and associate professionals
+3  = Tradesmen/women, clerks and skilled office, sales and service staff
+4  = Machine operators, hospitality staff, assistants, labourers and related workers
+8  = Not in paid work in last 12 months
+9  = Not stated/unknown","If the person is not currently in paid work but has had a job in the last 12 months or has retired in the last 12 months, use the person’s last occupation. If the person has not been in paid work in the last 12 months, enter 8. If the person has left the field blank, or the occupation is unknown, enter 9.",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,"SCSEEC 2010 Data Standards Manual
+Isn't there an ABS Standard?","Enrolment Frame
+20 -Parent/Guardian 1 Occupation Group
+Enrolment Derived ICSEA? For School",,,School Enrolling Student,,,,StudentPersonal,MostRecent/Parent2EmploymentType,Descriptor,Student,,,,,,,,,,,,,,,,
+29,NSSC URL,22,Enrolment,Raw,Parent/Guardian 1 Main Language other than English sopken at home,"The main language other than English, spoken in the home by parent/guardian 1.",PG_MLSH1,All Active Enrolments,"Categorical, Numeric",4,"NNNN
+The ‘Main Language other than English’ is a 4-digit, three level hierarchical coding structure using the ABS: Australian Standard Classification of Languages (ASCL) second edition (ABS cat.no. 1267.0).
+Common codes:
+0000 – Inadequately described
+0001 – Non verbal, so described
+0002 – Not stated
+1201 – English","The SCSEEC 2010 Data Standards Manual provides a number of options for the main language other than English spoken at home question that can be included on enrolment forms. Options reflect a standard set of questions, or individualised questions for each state based on common countries of birth by state and territory as identified in the 2006 Population Census.
+All question modules from the standard use the ABS: ASCL.
+Country of birth is a hierarchical 4 digit category broken down by:
+• First digit = Broad Group
+• Second digit = Narrow Group
+• Third and Fourth digit = Detailed Level.
+As a hierarchical structure, if one level is known, all levels above that level are also known.
+If English Only and another language are selected, the response should be coded to the first language other than English specified.
+If the student speaks more than one language at home (not including English), Main Language other than English is the language the student speaks most often. If this cannot be identified then code the first language identified.
+Not further defined codes are included in the standard. Not further defined codes include leading zeros.
+For example:
+If the Broad Group only is known (e.g. Northern European Languages) then 1000 is recorded showing the 1 that identifies the Broad Group and 000 which identifies the unknown Narrow Group and Detailed Level.
+If the Detailed Level is known (e.g. Irish) then  1102 is recorded for Irish which also identifies the Narrow Group (11 - Celtic)  and the Broad Group (1 – Northern European Languages)","Data is valid to 4 numerals only. Data is categorical; entries other than prescribed in the ASCL are not valid.
+
+Entries that would otherwise meet a ‘not further defined’ code with leading zeros will be treated as that code.","Australian Standard Classification of Languages (ASCL) Second Edition, (ABS cat. no. 1267.0).
+
+SCSEEC 2010 Data Standards Manual","Enrolment Frame
+15 - Student's Main Language other than English Spoken at Home (EN_MLSH) 
+23 - Parent/Guardian 2 Main Language other than English Spoken at Home (PG_MLSH2) 
+
+Enrolment Derived
+5 - Language Background Indicator (END_LBI)",,,School Enrolling Student,,,,StudentPersonal,MostRecent/Parent1Language,Descriptor,Student,,,,,,,,,,,,,,,,
+30,NSSC URL,23,Enrolment,Raw,Parent/Guardian 2 Main Language other than English sopken at home,"The main language other than English, spoken in the home by parent/guardian 2.",PG_MLSH2,All Active Enrolments,"Categorical, Numeric",4,"NNNN
+The ‘Main Language other than English’ is a 4-digit, three level hierarchical coding structure using the ABS: Australian Standard Classification of Languages (ASCL) second edition (ABS cat.no. 1267.0).
+Common codes:
+0000 – Inadequately described
+0001 – Non verbal, so described
+0002 – Not stated
+1201 – English","The SCSEEC 2010 Data Standards Manual provides a number of options for the main language other than English spoken at home question that can be included on enrolment forms. Options reflect a standard set of questions, or individualised questions for each state based on common countries of birth by state and territory as identified in the 2006 Population Census.
+All question modules from the standard use the ABS: ASCL.
+Country of birth is a hierarchical 4 digit category broken down by:
+• First digit = Broad Group
+• Second digit = Narrow Group
+• Third and Fourth digit = Detailed Level.
+As a hierarchical structure, if one level is known, all levels above that level are also known.
+If English Only and another language are selected, the response should be coded to the first language other than English specified.
+If the student speaks more than one language at home (not including English), Main Language other than English is the language the student speaks most often. If this cannot be identified then code the first language identified.
+Not further defined codes are included in the standard. Not further defined codes include leading zeros.
+For example:
+If the Broad Group only is known (e.g. Northern European Languages) then 1000 is recorded showing the 1 that identifies the Broad Group and 000 which identifies the unknown Narrow Group and Detailed Level.
+If the Detailed Level is known (e.g. Irish) then  1102 is recorded for Irish which also identifies the Narrow Group (11 - Celtic)  and the Broad Group (1 – Northern European Languages)","Data is valid to 4 numerals only. Data is categorical; entries other than prescribed in the ASCL are not valid.
+
+Entries that would otherwise meet a ‘not further defined’ code with leading zeros will be treated as that code.","Australian Standard Classification of Languages (ASCL) Second Edition, (ABS cat. no. 1267.0).
+
+SCSEEC 2010 Data Standards Manual","Enrolment Frame
+15 - Student's Main Language other than English Spoken at Home (EN_MLSH) 
+22 - Parent/Guardian 1 Main Language other than English Spoken at Home (PG_MLSH1) 
+
+Enrolment Derived
+5 - Language Background Indicator (END_LBI)",,,School Enrolling Student,,,,StudentPersonal,MostRecent/Parent2Language,Descriptor,Student,,,,,,,,,,,,,,,,
+31,NSSC URL,24,Enrolment,Raw,Australian Government Department of Education and TrainingSchool ID,A unique identification number allocated to registered schools by the Australian Government Department of Education. Formally DEEWR School ID and SCH_DEEWRID.,SCH_DETID,All Active Enrolments,Numeric,5,NNNNN,"Enter the school identification number as recorded in the enrolment system.  The code was developed by the Australian Government Department of Education and allocated by the Australian government.
+The allowance for data entered into this field is valid to a maximum of five digits. The range for this field is 00001 to 99999.
+Entries of more than five digits, blank spaces and alphabetic characters will not be valid.
+Impact of ASL? Can use local SchoolID and output AGSchoolID?",Data is valid to 5 numerals only,N/A,"School Frame
+5 - DET School ID (SCH_DETID)
+
+1 - System School ID (SCH_SYSID)
+3 - School Name (SCH_NAME)
+Other School ids?",,"ASL? School identifiers? Automation? 
+Categorical, Numeric? String? Identifiers not usually numeric due to leading 0s May not be known to school SIS",School Enrolling Student,,,,SchoolInfo,CommonwealthId,Identifier,,,,,,,,,,,,,,,,,
+32,NSSC URL,1,School,Raw,System School ID,A unique authorisation number allocated to registered schools by the system administering those schools.,SCH_SYSID,All in-scope schools,String,,[x(*)] string of various alpha-numeric length,Length and composition of the System School ID may vary between systems Impact of ASL?,N/A,N/A,"Enrolment Frame
+11 - System School ID (SCH_SYSID) 
+12 - System School Campus ID (SCH_SYSCMPSID) 
+School Frame
+2 - System School Campus ID (SCH_SYSCMPSID)
+3 - School Name (SCH_NAME)
+School Derived
+All school derived elements would be derived based on System School ID.
+Other School ids?",,,School Registration Board in each jurisdiction,ASL,,,SchoolInfo,StateProvinceId,Identifier,School,,,,,,,,,,,,,,,,
+33,NSSC URL,2,School,Raw,System School Campus ID,A unique authorisation number allocated to a registered school campus by the system administering the school.,SCH_SYSCMPSID,All in-scope school campuses,String,,[x(*)] string of various alpha-numeric length,Length and composition of the System SchoolCampus ID may vary between systems. Impact of ASL?,N/A,N/A,"Enrolment Frame
+11 - System School ID (SCH_SYSID) 
+12 - System School Campus ID (SCH_SYSCMPSID) 
+School Frame
+1 - System School ID (SCH_SYSID)
+3 - School Name (SCH_NAME)
+Other School ids?",,"No campus name, no relationship between school and campus, main campus etc",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,Campus/SchoolCampusId,Identifier,School,,,,,,,,,,,,,,,,
+34,NSSC URL,3,School,Raw,School Name,The official title of the registered school.,SCH_NAME,All in-scope schools,Alphanumeric String,200,[x(200)] 0-200 characters,All schools are registered under a name recognised by the departments of education in each jurisdiction. This is defined by the Conference of Education Systems Chief Executive Officers.,Data is valid up to 200 alphanumeric string only.,N/A,"School Frame
+1 - System School ID (SCH_SYSID) 
+2 - System School Campus ID (SCH_SYSCMPSID)
+Other School ids?",,This section Needs a NIMF makeover,School Registration Board in each jurisdiction,ASL,,,SchoolInfo,SchoolName,Identifying,School,,,,,,,,,,,,,,,,
+35,NSSC URL,4,School,Derived,School Type,"The level and type of school based on the enrolments at the school.
+School types are:
+• Primary Schools – schools with only primary enrolments
+• Secondary Schools – schools with only secondary enrolments
+• Combined Schools – schools with both primary and secondary enrolments
+• Special Schools (or Special Assistance Schools) – schools with only special enrolments
+
+",SCH_TYPE,All in-scope schools,"Categorical, Numeric",1,"N
+1 = Primary
+2 = Secondary
+3 = Combined
+4 = Special",School type should be determined based on the NSSC enrolments at that school. See the NIT for further school definitions,Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+8 - Grade of Student’s Enrolment (EN_GRADE)
+13 - Main School Flag (EN_MNSCHFLG)
+
+School Derived
+3 - Education Provider High Grade (EPR_HIGHGRADE)
+4 - Education Provider Low Grade (EPR_LOWGRADE)",,"What about Campus type? Authoritative sources? Other?
+Derived from enrolments of students, not what is authorised from regulator",,ASL?,,,SchoolInfo,Campus/CampusType,Descriptor,School,,,,,,,,,,,,,,,,
+36,NSSC URL,5,School,Raw,DET School ID,The unique identification number allocated to registered schools by the Australian Government Department of Educationand Training. Formally DEEWR School ID and SCH_DEEWRID.,SCH_DETID,All in-scope schools,Numeric,5,NNNNN,"Enter the school identification number as recorded in the enrolment system.  The code was developed by the Australian Government Department of Education and Training and allocated by the Australian government.
+The allowance for data entered into this field is valid to a maximum of five digits. The range for this field is 00001 to 99999.
+Entries of more than five digits, blank spaces and alphabetic characters will not be valid.
+Impact of ASL? Can use local SchoolID and output AGSchoolID?",Data is valid to 5 numerals only,N/A,"Enrolment Frame
+24 - DET_School ID (SCH_DETID)
+
+School Frame
+1 - System School ID (SCH_SYSID)
+3 - School Name (SCH_NAME)
+
+Other School ids?",,"ASL? School identifiers? Automation? 
+Categorical, Numeric? String? Identifiers not usually numeric due to leading 0s May not be known to school SIS",AG? ,ASL,,,SchoolInfo,CommonwealthId,Identifier,School,,,,,,,,,,,,,,,,
+37,NSSC URL,6,School,Derived,ARIA Status,A measure of the school’s level of remoteness represented using the Remoteness Structure and Remoteness Area code from the ASGS determined by using the Accessibility/Remoteness Index of Australia (ARIA).,SCH_ARIA,All in-scope schools,"Categorical, Numeric",,"NNN
+0 = Major Cities of Australia
+1 = Inner Regional Australia
+2 = Outer Regional Australia
+3 = Remote Australia
+4 = Very Remote Australia
+9 = Not provided / Not Stated","The ARIA remoteness is based on six remoteness zones based on the ARIA index for a given geographic area as below.
+• Major Cities of Australia: SA1s with an average Accessibility/Remoteness Index of Australia (ARIA) index value of 0 to 0.2
+• Inner Regional Australia: SA1s with an average ARIA index value greater than 0.2 and less than or equal to 2.4
+• Outer Regional Australia: SA1s with an average ARIA index value greater than 2.4 and less than or equal to 5.92
+• Remote Australia: SA1s with an average ARIA index value greater than 5.92 and less than or equal to 10.53
+• Very Remote Australia: SA1s with an average ARIA index value greater than 10.53
+• Migratory: composed of off-shore, shipping and migratory SA1s",Data is valid to 2 numerals only. Data is categorical; entries other than prescribed are not valid.,"ABS: Australian Statistical Geography Standard (ASGS) 2011
+
+The University of Adelaide – Australian Population and Migration Research Centre: ARIA and Accessibility","School Frame
+7 - SCSEEC Remoteness Status (SCH_MCRMT)",,"Actually derived from physical address…
+SA1 is? http://www.abs.gov.au/ausstats/abs@.nsf/0/7CAFD05E79EB6F81CA257801000C64CD?opendocument
+Can relate to school or campus or site…",,ASL,,,SchoolInfo,ARIA,Derived,School,,,,,,,,,,,,,,,,
+38,NSSC URL,7,School,Derived,SCSEEC Remoteness Status,A measure of the school’s level of remoteness,SCH_MCRMT,All in-scope schools,"Categorical, Numeric",3,"NNN
+110   =  Metropolitan Zone Mainland State Capital City regions
+120   =  Metropolitan Zone Major urban Statistical Districts
+211 =  Provincial Zone Provincial City Statistical Districts 50,000 to  99,999
+212 =  Provincial Zone Provincial City Statistical Districts 25,000 to 49,999
+221 =  Provincial Zone Inner provincial areas
+222 =  Provincial Zone Outer provincial areas
+310   =  Remote Zone Remote areas
+320   =  Remote Zone Very Remote areas","The SCSEEC remoteness indicator is based on three remoteness Zones: Metropolitan, Provincial and Remote.
+• Metropolitan refers to Mainland State Capital City mainland and city-based areas and Major urban Statistical Districts. Metropolitan codes begin with 1.
+• Provincial refers to central and regional areas. The Provincial codes start with 2.
+• Remote refers to isolated and highly remote areas. Remote codes begin with 3.
+For reporting purposes Remote and Very Remote areas are sometimes reported separately.",Data is valid to 3 numerals only. Data is categorical; entries other than prescribed are not valid.,"MCEETYA Schools Geographic Location Classification, 2001","School Frame
+6 - ARIA Status (SCH_ARIA)",,"Actually derived from physical address…
+mapped to Statistical districts
+Can relate to school or campus or site…",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,SchoolGeographicLocation,Derived,School,,,,,,,,,,,,,,,,
+39,NSSC URL,8,School,Raw,School Address - Apartment/Flat number,The apartment/flat number of the school’s physical address,SCH_APPNO,All in-scope schools,String,5,"[x(5)] 0 - 5 characters
+For “Not Applicable” or “Not provided” responses, leave blank.","From the address line, record the information which identifies the apartment/flat number of the school. 
+Address line information may include apartment/flat/unit number (if any); house/property number/street name.
+When combined with other school address elements this information enables identification of the school’s physical address.
+A complete identification/description of an address can comprise of one or more than one instance of address line. Instances of address lines are commonly identified in electronic information systems as Address-line 1, Address-line 2, etc. 
+The format of data collection is less important than consistent use of conventions in recording address data. Hence, address may be collected in an unstructured manner but should ideally be stored in a structured format. 
+Where address line is collected as a stand-alone item, the address line details should be separated into sub-components. Multiple address lines may be recorded as required. 
+Where the address is unknown, identify the reason for the unknown response and document any follow-up processes undertaken.
+If a jurisdiction is able to accurately code address to SA1 and provide detailed information on coding process and validations made, there is no requirement to provide this data element.",Data is valid to a 5 alpha-numeric string,ABS: Census Dictionary,"School Frame
+9 to 14 - School Address Elements 
+15 - Education Provider Geographic Location Statistical Area 1 Code (SCH_ASGS_SA1)",,"ABS: Census Dictionary http://www.abs.gov.au/ausstats/abs@.nsf/mf/2901.0
+Classifications can be derived from geo-coding of school physical address, or campus, or site",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,AddressList/Street/ApartmentNumber,Descriptor,School,,,,,,,,,,,,,,,,
+40,NSSC URL,9,School,Raw,School Address - Street number,The street number of the school’s physical address,SCH_STRTNO,All in-scope schools,String,5,"[x(5)] 0 - 5 characters
+For “Not Applicable” or “Not provided” responses, leave blank.","From the address line, record the information which identifies the street number of the school. 
+Address line information may include apartment/flat/unit number (if any); house/property number/street name.
+When combined with other school address elements this information enables identification of the school’s physical address.
+A complete identification/description of an address can comprise of one or more than one instance of address line. Instances of address lines are commonly identified in electronic information systems as Address-line 1, Address-line 2, etc. 
+The format of data collection is less important than consistent use of conventions in recording address data. Hence, address may be collected in an unstructured manner but should ideally be stored in a structured format. 
+Where address line is collected as a stand-alone item, the address line details should be separated into sub-components. Multiple address lines may be recorded as required. 
+Where the address is unknown, identify the reason for the unknown response and document any follow-up processes undertaken.
+If a jurisdiction is able to accurately code address to SA1 and provide detailed information on coding process and validations made, there is no requirement to provide this data element.",Data is valid to a 5 alpha-numeric string,ABS: Census Dictionary,"School Frame
+9 to 14 - School Address Elements 
+15 - Education Provider Geographic Location Statistical Area 1 Code (SCH_ASGS_SA1)",,"ABS: Census Dictionary http://www.abs.gov.au/ausstats/abs@.nsf/mf/2901.0
+Classifications can be derived from geo-coding of school physical address, or campus, or site",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,AddressList/Street/StreetNumber,Descriptor,School,,,,,,,,,,,,,,,,
+41,NSSC URL,10,School,Raw,School Address - Street name,The street name of the school’s physical address,SCH_STRTNM,All in-scope schools,String,18,"[x(18)] 0 - 18 characters
+For “Not Applicable” or “Not provided” responses, leave blank.","From the address line, record the information which identifies the street number of the school. 
+Address line information may include apartment/flat/unit number (if any); house/property number/street name.
+When combined with other school address elements this information enables identification of the school’s physical address.
+A complete identification/description of an address can comprise of one or more than one instance of address line. Instances of address lines are commonly identified in electronic information systems as Address-line 1, Address-line 2, etc. 
+The format of data collection is less important than consistent use of conventions in recording address data. Hence, address may be collected in an unstructured manner but should ideally be stored in a structured format. 
+Where address line is collected as a stand-alone item, the address line details should be separated into sub-components. Multiple address lines may be recorded as required. 
+Where the address is unknown, identify the reason for the unknown response and document any follow-up processes undertaken.
+If a jurisdiction is able to accurately code address to SA1 and provide detailed information on coding process and validations made, there is no requirement to provide this data element.",Data is valid to a 18 alpha-numeric string,ABS: Census Dictionary,"School Frame
+9 to 14 - School Address Elements 
+15 - Education Provider Geographic Location Statistical Area 1 Code (SCH_ASGS_SA1)",,"ABS: Census Dictionary http://www.abs.gov.au/ausstats/abs@.nsf/mf/2901.0
+Classifications can be derived from geo-coding of school physical address, or campus, or site",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,AddressList/Street/StreetName,Descriptor,School,,,,,,,,,,,,,,,,
+42,NSSC URL,11,School,Raw,School Address - Suburb,The suburb of the school’s physical address,SCH_SUBURB,All in-scope schools,String,18,"[x(18)] 0 - 18 characters
+For “Not Applicable” or “Not provided” responses, leave blank.","The suburb (or town or locality) of the school is part of the address information about a school. 
+When combined with other school address elements this information enables identification of the school’s physical address.
+Suburb of an address is usually seperate to address lines are commonly identified in electronic information systems.
+The format of data collection is less important than consistent use of conventions in recording address data. Hence, address may be collected in an unstructured manner but should ideally be stored in a structured format. 
+Where address line is collected as a stand-alone item, the address line details should be separated into sub-components. Multiple address lines may be recorded as required. 
+Where the address is unknown, identify the reason for the unknown response and document any follow-up processes undertaken.
+If a jurisdiction is able to accurately code address to SA1 and provide detailed information on coding process and validations made, there is no requirement to provide this data element.",Data is valid to a 18 alpha-numeric string,ABS: Census Dictionary,"School Frame
+9 to 14 - School Address Elements 
+15 - Education Provider Geographic Location Statistical Area 1 Code (SCH_ASGS_SA1)",,"ABS: Census Dictionary http://www.abs.gov.au/ausstats/abs@.nsf/mf/2901.0
+Classifications can be derived from geo-coding of school physical address, or campus, or site",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,AddressList/City,Descriptor,School,,,,,,,,,,,,,,,,
+43,NSSC URL,12,School,Raw,School Address - State/Territory,The State or Territory of the school’s physical address,SC_STATE,All in-scope schools,String,3,"[x(3)] 0 - 3 characters
+For “Not Applicable” or “Not provided” responses, leave blank.","The suburb (or town or locality) of the school is part of the address information about a school. 
+When combined with other school address elements this information enables identification of the school’s physical address.
+Suburb of an address is usually seperate to address lines are commonly identified in electronic information systems.
+The format of data collection is less important than consistent use of conventions in recording address data. Hence, address may be collected in an unstructured manner but should ideally be stored in a structured format. 
+Where address line is collected as a stand-alone item, the address line details should be separated into sub-components. Multiple address lines may be recorded as required. 
+Where the address is unknown, identify the reason for the unknown response and document any follow-up processes undertaken.
+If a jurisdiction is able to accurately code address to SA1 and provide detailed information on coding process and validations made, there is no requirement to provide this data element.",Data is valid to a 3 alpha-numeric string,ABS: Census Dictionary,"School Frame
+9 to 14 - School Address Elements 
+15 - Education Provider Geographic Location Statistical Area 1 Code (SCH_ASGS_SA1)",,"Guide for use in APPNO is not sufficient for this field.
+This field defines JURISDICTION of school which is important for ASL, NAPLAN Online and other purposes. May need to add codes for outside Australia
+This three character string has eight valid alternatives only, which are abbreviations. ",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,AddressList/StateProvince,Descriptor,School,,,,,,,,,,,,,,,,
+44,NSSC URL,13,School,Raw,School Address - Postcode,The postcode of the school’s physical address,SCH_PCD,All in-scope schools,Numeric,4,"NNNN
+For ""Not Applicable"" or ""Not provided"" responses, leave blank.","The suburb (or town or locality) of the school is part of the address information about a school. 
+When combined with other school address elements this information enables identification of the school’s physical address.
+Suburb of an address is usually seperate to address lines are commonly identified in electronic information systems.
+The format of data collection is less important than consistent use of conventions in recording address data. Hence, address may be collected in an unstructured manner but should ideally be stored in a structured format. 
+Where address line is collected as a stand-alone item, the address line details should be separated into sub-components. Multiple address lines may be recorded as required. 
+Where the address is unknown, identify the reason for the unknown response and document any follow-up processes undertaken.
+If a jurisdiction is able to accurately code address to SA1 and provide detailed information on coding process and validations made, there is no requirement to provide this data element.",Data is valid to 4 numerals only,ABS: Census Dictionary,"School Frame
+9 to 14 - School Address Elements 
+15 - Education Provider Geographic Location Statistical Area 1 Code (SCH_ASGS_SA1)",,"Guide for use in APPNO is not sufficient for this field, postcodes usually apply to postal addresses…They are administrative areas used by Australia Post",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,AddressList/PostalCode,Descriptor,School,,,,,,,,,,,,,,,,
+45,NSSC URL,14,School,Derived,Education Provider Geographic Location Statistical Area 1 Code,"The physical location of the school as represented by the ASGS geographical area code Statistical Area 1 (SA1). 
+It is represented by a geographical area code derived from the Australian Statistical Geography Standard (ASGS) 2011.",SCH_ASGS_SA1,All in-scope schools,"Categorical, Numeric",7,"NNNNNNN
+The Area of Usual Residence ASGS SA1 is a seven-digit hierarchical coding structure using the ABS: Australian Statistical Geography Standard (ASGS) 2011.
+Where this item is not available the following codes should be used:
+1949999 - New South Wales: unknown SA1
+2949999 - Victoria: unknown SA1
+3949999 - Queensland: unknown SA1
+4949999 - South Australia: unknown SA1
+5949999 - Western Australia: unknown SA1
+6949999 - Tasmania: unknown SA1
+7949999 - Northern Territory: unknown SA1
+8949999 - Australian Capital Territory: unknown SA1
+9949999 - Other Territories: unknown SA1","For multi-campus schools, the campus at which the main office is located should be used. Otherwise use the location of the principal or equivalent head of the school.
+When coding, if one level is known, all levels above that level are also known as ASGS is a hierarchical structure.
+The SA1s have been designed as the smallest unit for the release of Census data. SA1s are built from whole Mesh Blocks. Whole SA1s aggregate directly to SA2s in the Main Structure, as well as all of the Non ABS Structures except LGAs and Tourism Regions. SA1s do not cross state or territory borders. There are approximately 55,000 SA1s. In aggregate, they cover the whole of Australia without gaps or overlaps.","Data is valid to 7 numerals only. Data is categorical; entries other than prescribed are not valid.
+
+Entries of less than 7 numerals will not be valid.",ABS: Australian Statistical Geography Standard (ASGS) 2011,"School Frame
+9 to 14 - School Address Elements",,"Need to know main campus of school, does this apply to other physical address attributes?
+Need to know State/Territory to code unknowns
+Derived from physical address
+NO SECTOR INFORMATION INCLUDED",School Registration Board in each jurisdiction,ASL,,,SchoolInfo,SLA?,Derived,School,,,,,,,,,,,,,,,,
+46,NSSC URL,1,Enrolment Derived Elements,Derived,Statistical Linkage Key,"A string containing the letters of the student’s family (last) name and given (first) name, and the digits of the student’s date of birth and sex.",END_LNK_RECKEY,All Active Enrolments,String,14,"[x(14)] 14 characters
+For “Not Applicable” or “Not provided” responses, leave blank.","This item is derived by combining four student-level items: letters of family (last) name, letters of given (first) name, date of birth and sex. 
+For example:
+a female (2) student named Jane Smith born on 1 July 2006 would be allocated the SLK:
+MIH + AN + 01072006 + 2 = MIHAN010720062",Data is valid to 14 alpha-numeric characters only,AIHW: Statistical Linkage Key 581,"Enrolment Frame
+2 - Letters of Student’s Enrolled Given Name (EN_FSTLET)
+3 - Letters of Student’s Enrolled Family Name (EN_SURLET)
+4 - Date of Birth (EN_DOB)
+5 - Sex (EN_SEX)",,,School Registration Board in each jurisdiction,ASL,,,,,Derived Identifier,Student,Yes,,,,,,,,,,,,,,,
+47,NSSC URL,2,Enrolment Derived Elements,Derived,Indigenous Status ,A student’s Indigenous  status.,END_INDSTS,All Active Enrolments,"Categorical, Numeric",1,"N
+3 = Indigenous
+4 = Non-Indigenous","From the Enrolment Frame: Enrolment ATSI Indicator:
+Indigenous = (Aboriginal but not Torres Strait Islander origin + Torres Strait Islander but not Aboriginal origin + Both Aboriginal and Torres Strait Islander origin)
+Non-Indigenous = (Non-Indigenous + Not Stated)
+",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,"Standards for Statistics on Cultural and Language Diversity (ABS cat. no. 1289.0)
+SCSEEC 2010 Data Standards Manual","Enrolment Frame
+6 - Indigenous Status (EN_INDIGST)",,"Some systems may provide derived element rather than ""pure""",School Registration Board in each jurisdiction,ASL,,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,Derived,Student,,,,,,,,,,,,,,,,
+48,NSSC URL,3,Enrolment Derived Elements,Derived,Full-time or Part-time Status of Enrolment,A flag showing whether the student’s enrolment is full-time or part-time,END_FTPT,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = Full-time
+2 = Part-time","This item is derived from the Full-Time Equivalent (FTE) Value of Enrolment (EN_FTEVAL):
+Where the FTE is greater or equal to 1.00 the enrolment is full-time
+Where FTE is less than 1.00 but greater than or equal to 0.00 the enrolment is part-time.",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+8 - Full-Time Equivalent Value of Enrolment (EN_FTEVAL)",,At a particular provider or over multiple providers?,School Registration Board in each jurisdiction,ASL,,,StudentSchoolEnrollment,FTPTStatus,Calculated,Student,,,,,,,,,,,,,,,,
+49,NSSC URL,4,Enrolment Derived Elements,Derived,Enrolment Level,"The general level of education being undertaken by the student (for that enrolment). 
+The levels include:
+Primary
+Students undertaking primary education according to the state/territory schooling structure.
+Junior Secondary
+Students undertaking secondary education but generally not yet completing the senior secondary certificates according to the state/territory schooling structure.
+Senior Secondary
+Students undertaking secondary education and generally expected to be involved in completing the senior secondary certificates according to the state/territory schooling structure.
+",END_LVL,All Active Enrolments,"Categorical, Numeric",2,"NN
+10 = Primary
+21 = Junior Secondary
+22 = Senior Secondary","Primary Level = (Pre-grade 1 + Grade 1 + Grade 2 + Grade 3 + Grade 4 + Grade 5 + Grade 6 + Grade 7 primary + Ungraded primary)
+Junior Secondary = (Grade 7 secondary + Grade 8 + Grade 9 + Grade 10 + Ungraded secondary)
+Senior Secondary = (Grade 11 + Grade 12)",Data is valid to 2 numerals only. Data is categorical; entries other than prescribed are not valid,N/A,"Enrolment Frame
+7 - Grade of Student’s Enrolment (EN_GRADE)
+School Derived
+5 - Size of Education Provider (primary students) (EPR_SCHSIZPRI)
+6 - Size of Education Provider (secondary students) (EPR_SCHSIZSEC)",,Need to know to the state/territory and their state/territory schooling structure and State/territory and schooling structure that is relevant,School Registration Board in each jurisdiction,ASL,,,StudentPersonal,MostRecent/YearLevel,Derived,Student,,,,,,,,,,,,,,,,
+50,NSSC URL,5,Enrolment Derived Elements,Derived,Language Background Indicator,Language Background of student,END_LBI,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = LBOTE
+2 = Not LBOTE
+9=Not Stated/Non verbal/inadequately described","LBOTE is calculated using the guidelines in the SCSEEC 2010 Data Standards Manual
+For the calculations below the following abbreviations are used
+• Student (ST)
+• Parent Guardian 1 (PG1)
+• Parent Guardian 2 (PG2)
+LBOTE
+ST or PG1 or PG2 = any value other than 0000,0001,0002, 1201
+Not LBOTE
+ST or PG1 or PG2 = 1201, other persons = 0000, 0001, 0002, 1201
+Not stated/Non-verbal/Inadequately described 
+ST and PG1 and PG2 = 0000, 0001, 0002",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,"Standard Australian Classification of Countries (SACC), Second Edition (ABS cat. no. 1269.0)
+ACARA Data Standards Manual: Student Background Characteristics","Enrolment Frame
+15 - Student’s Main Language other than English Spoken at Home (EN_MLSH)
+22 - Parent/Guardian 1 Main Language other than English Spoken at Home (PG_MLSH1) 
+23 - Parent/Guardian 2 Main Language other than English Spoken at Home (PG_MLSH2)",,This is LBOTE indicator?,,,,,StudentPersonal,PersonInfo/Demographics/LBOTE,Derived,Student,,,,,,,,,,,,,,,,
+51,NSSC URL,6,Enrolment Derived Elements,Derived,Highest Education Attainment of Parent/Guardian 1,"The highest level of schooling or further study completed by the student’s parent/guardian 1.
+This item is derived by combining non-school and school education items.",PGD_PGED1,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = Year 9 (up to and including Year 9)
+2 = Year 10 or equivalent
+3 = Year 11 or equivalent
+4 = Year 12 or equivalent
+5 = Certificate I to IV (including trade certificate)
+6 = Advanced diploma/Diploma
+7 = Bachelor degree or above
+9 = Not stated/Unknown","Non- school qualifications supersede school attainment when deciding the highest education attainment of parent/guardian.
+Where either non-school qualifications or school attainment are not stated but the other entry is a stated response then the highest education attainment is the stated response.
+Where both non-school qualifications and school attainment are not stated then the highest education attainment is not stated.
+",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+16 - Parent/Guardian 1 School Education (PG_SCHED1) 
+17 - Parent/Guardian 2 School Education (PG_SCHED2) 
+18 - Parent/Guardian 1 Highest Non School Education or Qualification (PG_NSCHED1) 
+19 - Parent/Guardian 2 Highest Non School Education or Qualification (PG_NSCHED2) 
+Enrolment Derived
+7 - Highest Education Attainment of Parent/Guardian 2 (PGD_PGED2)",,,,,,,StudentPersonal,MostRecent/Parent1SchoolEducationLevel,Derived,Student,,,,,,,,,,,,,,,,
+52,NSSC URL,7,Enrolment Derived Elements,Derived,Highest Education Attainment of Parent/Guardian 2,"The highest level of schooling or further study completed by the student’s parent/guardian 2.
+This item is derived by combining non-school and school education items.",PGD_PGED2,All Active Enrolments,"Categorical, Numeric",1,"N
+1 = Year 9 (up to and including Year 9)
+2 = Year 10 or equivalent
+3 = Year 11 or equivalent
+4 = Year 12 or equivalent
+5 = Certificate I to IV (including trade certificate)
+6 = Advanced diploma/Diploma
+7 = Bachelor degree or above
+9 = Not stated/Unknown","Non- school qualifications supersede school attainment when deciding the highest education attainment of parent/guardian.
+Where either non-school qualifications or school attainment are not stated but the other entry is a stated response then the highest education attainment is the stated response.
+Where both non-school qualifications and school attainment are not stated then the highest education attainment is not stated.
+",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+16 - Parent/Guardian 1 School Education (PG_SCHED1) 
+17 - Parent/Guardian 2 School Education (PG_SCHED2) 
+18 - Parent/Guardian 1 Highest Non School Education or Qualification (PG_NSCHED1) 
+19 - Parent/Guardian 2 Highest Non School Education or Qualification (PG_NSCHED2) 
+Enrolment Derived
+6 - Highest Education Attainment of Parent/Guardian 2 (PGD_PGED1)",,,,,,,StudentPersonal,MostRecent/Parent2SchoolEducationLevel,Derived,Student,,,,,,,,,,,,,,,,
+53,NSSC URL,8,Enrolment Derived Elements,Derived,Age,"The age of the student at 1st July, as derived from the student’s date of birth.",END_AGE,All Active Enrolments,"Continuous, Numeric",2,"NN
+00 =missing values","Age (in whole years) as derived from the student’s enrolled date of birth. For publication purposes, students who are older than 21 will be placed in the category 21+.
+Where DOB is not available, the student’s age will be coded to 00.
+The formula used by the ABS to calculate age as at 1st July using their DOB is:
+=IF(LEN(DOB)>7,DATEDIF(LEFT(DOB,2)&""/""&MID(DOB,3,2)&""/""&RIGHT(DOB,4),""1/7/2014"",""y""),IF(LEN(DOB)<8,(DATEDIF(LEFT(DOB,1)&""/""&MID(DOB,2,2)&""/""&RIGHT(DOB,4),""1/7/2014"",""y""))))
+This formula may be used in Excel where DOB = cell reference for DOB in DDMMYYYY format.
+This formula is designed to increment a person’s age on their birthday.","Data is valid to 2 numerals only, in the range 00 to 21. Entries other than prescribed are not valid.",N/A,"Enrolment Frame
+4 - Date of Birth (EN_DOB)",,21+ is three characters,,,,,StudentPersonal,PersonInfo/Demographics/BirthDate,Calculated,Student,,,,,,,,,,,,,,,,
+54,NSSC URL,9,Enrolment Derived Elements,Derived,Census Year,The calendar year of the Schools Census,END_YEAR,All Active Enrolments,"Continuous,  Numeric",4,NNNN,The ABS will derive the year based on the cycle the data is being provided for. ,Data is valid to 4 numerals only. Entries other than prescribed are not valid.,N/A,N/A,,Why isn't this on a header for the data feed?,,,,,StudentSchoolEnrollment,SchoolYear,Descriptor,Time,,,,,,,,,,,,,,,,
+55,NSSC URL,1,Student Derived Elements,Derived,Full-Time Equivalent (FTE) Value of Student,"The sum of the total workload of a student i.e. the sum of all a student’s enrolled full-time equivalent values expressed using decimal notation (to two decimal places).
+",STD_FTEVAL,All Students? Active Enrolments,"Continuous, Numeric",,All values greater than or equal to zero (0.00),"It is possible for a student to undertake a larger workload than 1.00; however, this element should be reflective of the student’s workload and not the resources allocated to that student.
+Students who are physically attending a school but are completing distance education or at another school and whose sum of enrolments are greater than 1.00 FTE are counted as only 1.00 FTE where the workload of the student is still full-time and not overloaded.
+Data for this item does not differentiate where the student undertakes the workload and only requires that the subjects are endorsed as a part of the student’s education workload at the school.","All values greater than or equal to zero (0.0).
+Student FTE values greater than 1.0 will be queried.",Record to two decimal places.,"Enrolment Frame
+8 - Full-Time Equivalent Value of Enrolment (EN_FTEVAL)
+Student Derived
+2 - Full-time or Part-time Status of Student (STD_FTPT)",,"Use SLK to identify students across multiple enrolents? Example of where a statistical concept differs from an administrative one. Could cap at 1.0? 
+There is interest in reporting to more than one decimal place, why? No mention of summing across multiple enrolment records…
+Confusion about students, enrolments etc...
+Over multiple providers?  Across multiple enrolment records?",,,,,StudentPersonal,StudentPersonal/MostRecent/FTE,Derived,Student,,,,,,,,,,,,,,,,
+56,NSSC URL,2,Student Derived Elements,Derived,Full-time or Part-time Status of Student,A flag that identifies whether the student’s total workload (across all enrolments) equates to either full-time or part-time. ,STD_FTPT,All Students? Active Enrolments,"Categorical, Numeric",1,"N
+1 = Full-time
+2 = Part-time","This item is derived from the Full-Time Equivalent (FTE) Value of Student (STD_FTEVAL).
+Where the FTE is greater or equal to 1.00 the student is full-time
+Where FTE is less than 1.00 but greater than or equal to 0.00 the student is part-time.",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+9- Full-Time Equivalent Value of Enrolment (EN_FTEVAL)
+Student Derived
+1 - Full-Time Equivalent (FTE) Value of Student (STD_FTEVAL)",,"Missing Headcounts…..At a particular provider or over multiple providers?
+Across multiple enrolment records",,,,,StudentSchoolEnrollment,FTE,Derived,Student,,,,,,,,,,,,,,,,
+57,NSSC URL,1,School Derived Element,Derived,School Affiliation ,"The system that administers the school.
+Government: An establishment administered by the department/ministry of education under directors-general of education (or equivalent) (as defined by membership of the Conference of Education Systems Chief Executive Officers (CESCO)).
+Non-Government: Any establishment not administered by the departments of education, including those establishments administered by any other government authority.
+Subcategories of non-government, as provided by the Australian Government Department of Education through the non-government NSSC data submission and as self-reported by the schools include
+Catholic – including systemic and non-systemic
+Independent – including Anglican and all Other non-government affiliated schools.
+",SCHD_AFF,All In-scope schools,"Categorical, Numeric",2,"NN
+01 = Government
+21 = Catholic
+22 = Independent",School state/territory will be derived by the ABS based on the source of a data file or information provided on the Australian Government Department of Education non-government data provision.,Data is valid to 2 numerals only. Data is categorical; entries other than prescribed are not valid.,Australian Government Department of Education: Non-government schools portal,N/A,,"This is an administrative flag. Could use first character for 1=government, 2=nongovernment",School Registration Board in each jurisdiction? AG? ABS?,ASL,,,SchoolInfo,SchoolSector,Derived,School,,,,,,,,,,,,,,,,
+58,NSSC URL,2,School Derived Element,Derived,State/Territory,The state or territory that is responsible for administration of a school.,SCHD_STATE,All In-scope schools,"Categorical, Numeric",1,"N
+1 = NSW
+2 = Vic.
+3 = Qld
+4 = SA
+5 = WA
+6 = Tas.
+7 = NT
+8 = ACT","School state/territory will be derived by the ABS based on the source of a data file or information provided on the Australian Government Department of Education non-government data provision. 
+",Data is valid to 1 numeral only. Data is categorical; entries other than prescribed are not valid.,N/A,"N/A
+School Frame
+9 to 14 - School Address Elements 
+15 - Education Provider Geographic Location Statistical Area 1 Code (SCH_ASGS_SA1)",,"This could be derived from school physical location address. Use of ASL or application with tenanted systems will require revision.
+This could be derived from school physical location but there are schools registered with one jurisdiction which are active in another.",,ASL,,,SchoolInfo,AddressList/StateProvince,Descriptor,School,,,,,,,,,,,,,,,,
+59,NSSC URL,3,School Derived Element,Derived,Education Provider High Grade,The highest grade of education enrolled at a school.,EPR_HIGHGRADE,All In-scope schools,"Categorical, Numeric",3,"NNN
+100 = Pre-grade 1
+101 = Grade 1
+102 = Grade 2 
+103 = Grade 3
+104 = Grade 4
+105 = Grade 5
+106 = Grade 6
+177 = Grade 7
+208 = Grade 8
+209 = Grade 9
+210 = Grade 10
+211 = Grade 11
+212 = Grade 12","Education Provider High Grade (Grade 7 (177)) = Grade of Student’s Enrolment (Grade 7 Primary (107) and Grade 7 Secondary (207))
+Ungraded grades are excluded from calculation of High Grade",Data is valid to 3 numerals only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+8 - Grade of Student’s Enrolment (EN_GRADE)
+School Frame
+4 - School Type (SCH_TYPE)
+School Derived
+4 - Education Provider Low Grade (EPR_LOWGRADE)",,"Not the same as 8-Enrolment EN_GRADE, also not the same as Registering Body authorises, ASL?",,,,,,,calculated,School,Yes,,,,,,,,,,,,,,,
+60,NSSC URL,4,School Derived Element,Derived,Education Provider Low Grade,Identifies the lowest grade of education enrolled at a school.,EPR_LOWGRADE,All In-scope schools,"Categorical, Numeric",3,"NNN
+100 = Pre-grade 1
+101 = Grade 1
+102 = Grade 2 
+103 = Grade 3
+104 = Grade 4
+105 = Grade 5
+106 = Grade 6
+177 = Grade 7
+208 = Grade 8
+209 = Grade 9
+210 = Grade 10
+211 = Grade 11
+212 = Grade 12","Education Provider Low Grade (Grade 7 (177)) = Grade of Student’s Enrolment (Grade 7 Primary (107) and Grade 7 Secondary (207))
+Ungraded grades are excluded from calculation of Low Grade",Data is valid to 3 numerals only. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+8 - Grade of Student’s Enrolment (EN_GRADE)
+School Frame
+4 - School Type (SCH_TYPE)
+School Derived
+3 - Education Provider High Grade (EPR_HIGHGRADE)",,"Not the same as 8-Enrolment EN_GRADE, also not the same as Registering Body authorises, ASL?",,,,,,,calculated,School,Yes,,,,,,,,,,,,,,,
+61,NSSC URL,5a,School Derived Element,Derived,Total Primary School Enrolment,School's Primary FTE enrolments,,All in-scope schools,"Continuous, Numeric ",,XXXX.X,Sum of FTE values of all primary enrolments for this school,"Data is continuous, 1 decimal place, no maximum",,"Enrolment Frame
+9 - Full-Time Equivalent Value of Enrolment (EN_FTEVAL)
+Enrolment Derived 
+4 - Enrolment Level (END_LVL)",,"Should be at campus level, add headcount?",,,,,,,,,Yes,,,,,,,,,,,,,,,
+62,NSSC URL,5,School Derived Element,Derived,Size of Education Provider (primary students),The size of a school’s primary enrolments represented by a range of size of FTE enrolments,EPR_SCHSIZEPRI,All In-scope schools,"Categorical, Numeric",,"[N(0:18)]
+0 = 0
+1 = 1 to 20
+2 = 21 to 35
+3 = 36 to 100
+4 = 101 to 200
+5 = 201 to 300
+6 = 301 to 400
+7 = 401 to 500
+8 = 501 to 600
+9 = 601 to 700
+10 = 701 to 800
+11 = 801 to 900
+12 = 901 to 1000
+13 = 1001 to 1100
+14 = 1101 to 1200
+15 = 1201 to 1300
+16 = 1301 to 1400
+17 = 1401 to 1500
+18 = Over 1500",Calculated by summing the FTE values of all primary enrolments at a given school,Data is valid between 0 and 18 inclusive. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+9 - Full-Time Equivalent Value of Enrolment (EN_FTEVAL)
+Enrolment Derived
+4 - Enrolment Level (END_LVL)
+School Frame
+4 - School Type (SCH_TYPE)
+School Derived
+6 - Size of Education Provider (secondary students) (EPR_SCHSIZSEC)",,"Calculated value, why not keep total FTE, why category? What happens with ungraded enrolments? Similar for campus? Differences for Grade 7 in primary? Secondary?",,,,,,,calculated,School,Yes,,,,,,,,,,,,,,,
+63,NSSC URL,6,School Derived Element,Derived,Size of Education Provider (secondary students),The size of a school’s secondary enrolments represented by a range of size of FTE enrolments,EPR_SCHSIZESEC,All In-scope schools,"Categorical, Numeric",,"[N(0:18)]
+0 = 0
+1 = 1 to 20
+2 = 21 to 35
+3 = 36 to 100
+4 = 101 to 200
+5 = 201 to 300
+6 = 301 to 400
+7 = 401 to 500
+8 = 501 to 600
+9 = 601 to 700
+10 = 701 to 800
+11 = 801 to 900
+12 = 901 to 1000
+13 = 1001 to 1100
+14 = 1101 to 1200
+15 = 1201 to 1300
+16 = 1301 to 1400
+17 = 1401 to 1500
+18 = Over 1500",Calculated by summing the FTE values of all secondary enrolments at a given school,Data is valid between 0 and 18 inclusive. Data is categorical; entries other than prescribed are not valid.,N/A,"Enrolment Frame
+9 - Full-Time Equivalent Value of Enrolment (EN_FTEVAL)
+Enrolment Derived
+4 - Enrolment Level (END_LVL)
+School Frame
+4 - School Type (SCH_TYPE)
+School Derived
+5 - Size of Education Provider (primary students) (EPR_SCHSIZPRI)",,"Calculated value, why not keep total FTE, why category? What happens with ungraded enrolments? Similar for campus? Differences for Grade 7 in primary? Secondary?",,,,,,,calculated,School,Yes,,,,,,,,,,,,,,,
+64,NSSC URL,7,School Derived Element,Derived,Size of Education Provider (all students),The size of a school’s total enrolments represented by a range of size of FTE enrolments,EPR_SCHSIZE,All In-scope schools,"Continuous, Numeric",,All values greater than or equal to zero (0.0),Calculated by summing the FTE values of all  enrolments at a given school,,,,,"Doesn't exist, this is a proposal",,,,,,,calculated,School,Yes,,,,,,,,,,,,,,,

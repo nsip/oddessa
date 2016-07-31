@@ -1,0 +1,108 @@
+DataElementId,Collection,Collection Data Element Number,Collection Frame,Classification,Data Element,Definition,Collection Short Name,Population,Coding Data Type,Size,Coding Format,Guide for Use,System Requirements,Standards Used,Related Items,Rules,Comments,Authoritative Source,Where used or published,Custodian of DataSet,Reference to Standards,SIF Object,SIF Attribute,Data Element Type,SIFFrame,Able to be mapped RAW
+1,VET in Schools NCVER,,,Derived,Age Group,The age of the student as at 30 June of the collection year. It is generally reported in age ranges.,,Student,Character,,"Classification categories
+14 years and under
+15 to 19 years
+20 years and over
+not known",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,Calculated based on the AVETMISS field Date of Birth from the Client file.,,,,,,StudentPersonal,PersonInfo/Demographics/BirthDate,,,
+2,VET in Schools NCVER,,,Raw,AQF qualification level,"The level of an Australian Qualification Framework (AQF) qualification in which a student/apprentice or trainee is enrolled.
+The Australian Qualification Framework is a unified system of national qualifications in schools, vocational education and training (technical and further education [TAFE] institutes and private providers) and the higher education sector (mainly universities). 
+‘Other’ includes education not elsewhere classified, statements of attainment not identifiable by level, plus other programs that do not lead to a qualiﬁcation under the Australian Qualifications Framework",,,,,"Classification categories
+Certificate IV or higher
+Certificate III
+Certificate II
+Certificate I
+Other",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,Collected in the field Program Level of Education Identifier from the Program file,,,,,,,,,,
+3,VET in Schools NCVER,,,Raw,Field of education,The broad area of study related to a subject in which a student is enrolled.,,,,,"Classification categories:
+Natural and physical sciences   
+Information technology   
+Engineering and related technologies   
+Architecture and building  
+ Agriculture, environmental and related studies   
+Health   
+Education   
+Management and commerce   
+Society and culture   
+Creative arts   
+Food, hospitality and personal services   
+Mixed field programmes   ",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,Collected in the field Subject Field of Education Identifier from the Subject file for subject enrolments.,,,,,,,,,,
+4,VET in Schools NCVER,,,Raw,Indigenous Status,Whether a student self-identifies as being of Aboriginal or Torres Strait Islander descent,,,,,"Indigenous
+Not indigenous
+Not known",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,Collected in the field Indigenous Status Identifier from the Client file.,,,,,,StudentPersonal,PersonInfo/Demographics/IndigenousStatus,,,
+5,VET in Schools NCVER,,,Raw,Industry skills councils,The categories of training package qualifications by their specific industry sectors. Industry skills councils represent particular industries and groups of training packages.,,,,,"AgriFood   
+Auto Skills Australia   
+Community Services and Health   
+Construction and Property Services   
+E-oz Energy   
+ForestWorks   
+Government   
+Innovation and Business   
+Manufacturing   
+Service   
+SkillsDMC   
+Transport and Logistics   
+World Vision Australia   
+Training packages not assigned to industry skills councils   ",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,,,,,,,,,,,
+6,VET in Schools NCVER,,,Derived,Remoteness (ARIA+) region,"The degree of remoteness of a location in terms of the ease or difficulty people face in accessing services in non-metropolitan Australia.
+ARIA+ is an index of remoteness derived from measures of road distance between populated localities and service centres. These road distance measures are then used to generate a remoteness score for any location in Australia. 
+The Australian Standard Geographical Classification (ASGC) divides Australia into six remoteness areas and is used for collection and dissemination of geographically classified statistics. It groups locations together into comparative classes of remoteness so that data can be collected, analysed and disseminated for broad regions which are more or less remote",,,,,"Classification categories:
+Major cities
+Inner regional
+Outer regional
+Remote
+Very remote
+Outside Australia
+Not known",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,"From 2011, student remoteness (ARIA+) is based on ABS ASGS SA2 regions (which are derived from the AVETMISS fields Postcode and Suburb from the Client file). ","Because the rules state this is derived from the client file, assume this is the ARIA of the student (not the school).",,,,,StudentPersonal,PersonInfo/AddressList/City  and   PersonInfo/AddressList/PostalCode,,,
+7,VET in Schools NCVER,,,Raw,School-based apprentice and trainee status,"Whether a student is enrolled in at least one module/unit of competency in a school-based apprenticeship or traineeship.
+School-based apprentices and trainees combine attendance at school with formal engagement with the workplace and study towards a nationally recognised vocational qualification.
+The program differs from VET subjects or courses undertaken as part of the senior secondary certificate (other VET in Schools programs) in that a school-based apprenticeship or traineeship involves an employment and training contract with an employer and always includes structured workplace learning.
+",,,,,"Classification categories:
+School -based apprentices and trainees
+Other VET in Schools students",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,Calculated based on the field Client Identifier - New Apprenticeships from the Enrolment file.,,,,,,,,,,
+8,VET in Schools NCVER,,,Raw,School type,"The home school of the student and not where the vocational training takes place.
+'Other' includes TAFE institutes, community education providers, privately operated registered training organisations (RTOs), home school arrangement and students attending mixed school types.",,,,,"Classification categories:
+Government school
+Catholic school
+Independent school
+Other",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,,,,,,,SchoolInfo,"SchoolSector
+IndependentSchool
+NonGovSystemicStatus",,,
+9,VET in Schools NCVER,,,Raw,Sex,"This reflects the gender of the student/apprentice or trainee, as captured on their enrolment form or on their training contract.",,,,,"Males
+Females
+Not known",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,Collected in the AVETMISS field Sex Identifier from the Client file.,,,,,,StudentPersonal,PersonInfo/Demographics/Sex,,,
+10,VET in Schools NCVER,,,Raw,Subject result,The result that is recorded against a student's subject enrolment,,,,,"Classification categories:
+Assessed - passed
+Recognition of prior learning - granted
+Recognition of prior learning - not granted
+Assessed - failed
+Withdrawn
+Continuing studies
+Not assessed - completed
+Not assessed - not completed
+",,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,Collected in the field Outcome Identifier – National from the Enrolment file.,,,,,,,,,,
+11,VET in Schools NCVER,,,Raw,Training packages,"A set of nationally endorsed standards, guidelines and qualifications for training and for recognising and assessing skills.  They are developed by industry with the aim of meeting the needs of an industry or group of industries.  For more details of training packages go to:  <http://www.training.gov.au>. ",,,,,,,,AVETMISS VET Provider Collection Specifications: Release 7.0 (AVETMISS Release 7.0),,Collected in the field Prgram Identifier from the Program file.,,,,,,,,,,
+Different collection below:,,,,Not sure which one is correct,,,,,,,,,,,,,,,,,,,,,,
+1,VETiS (ACARA),,,Raw,SMCL ID,Internal ACARA ID,,,,,,,,,,,,,,,,,,,,
+2,VETiS (ACARA),,,Raw,ACARA SML UD,ACARA Master School ID,,,,,,,,,,,,,,,,SchoolInfo,ACARAId,,,
+3,VETiS (ACARA),,,Raw,EDP DEEWR ID,DEEWR School ID,,,,,,,,,,,,,,,,SchoolInfo,CommonwealthId,,,
+4,VETiS (ACARA),,,Raw,EDP JUR ID,Juridiction School ID,,,,,,,,,,,,,,,,SchoolInfo,StateProvinceId,,,
+5,VETiS (ACARA),,,Raw,Calendar Year,This field refers to the year the data is sourced from.,,,,,,,,,,,,,,,,CalendarDate,SchoolYear,,,
+6,VETiS (ACARA),,,Raw,ACARA SML School Name,School Name,,,,,,,,,,,,,,,,SchoolInfo,SchoolName,,,
+7,VETiS (ACARA),,,Raw,Suburb,This field refers to the suburb of the school.,,,,,,,,,,,,,,,,SchoolInfo,AddressList,,,
+8,VETiS (ACARA),,,Raw,Postcode,This field refers to the postcode of the school.,,,,,,,,,,,,,,,,SchoolInfo,AddressList,,,
+9,VETiS (ACARA),,,Raw,State,This field refers to the location state of the school.,,,,,,,,,,,,,,,,SchoolInfo,AddressList,,,
+10,VETiS (ACARA),,,Raw,SchoolSectorCodeDesc,School - Sector Code,,,,,,,,,,,,,,,,SchoolInfo,SchoolSector,,,
+11,VETiS (ACARA),,,Raw,ACARA SML Head Campus ID,"The field refers to School - Head ACARA Master School ID is allocated by ACARA to the head school, if applicable.  An ID will not be allocated where the school doesn't have any associated campuses.  If it has value and the value is the same as the ACARA Master School ID then the school is the main or head campus.  If the value is different from the ACARA Master ID then the school is the associated campus or sub campus.",,,,,,,,,,,,,,,,SchoolInfo,ACARAId,,,
+12,VETiS (ACARA),,,Raw,Head EDP DEEWR ID,"The field refers to school - Head DEEWR School ID is allocated by DEEWR to the head campus, if applicable.  The Head DEEWR School ID is required and if this field doesn't have a value, it means that the school doesn't have any associated campuses.  If it has value and the value is the same as the DEEWR ID then the school is the main or head campus.  If the value is different from the DEEWR ID then the school is the associated campus or sub campus.",,,,,,,,,,,,,,,,SchoolInfo,CommonwealthId,,,
+13,VETiS (ACARA),,,Raw,ACARA RRP Description,This field refers to Rolled or Individual Reporting Flag,,,,,,,,,,,,,,,,,,,,
+14,VETiS (ACARA),,,Raw,VETCategoryDesc,"Enrolments, Qualifications Completed and School Based Apprenticeships.  An enrolment in a VET course is counted if the student has completed at least one unit of competency as part of that course. Participation in a school-based apprenticeship or traineeship is counted if the student has completed at least one unit of competency as part of the apprenticeship or traineeship. Qualifications completed are AQF VET qualifications awarded.",,,,,,,,,,,,,,,,,,,,
+15,VETiS (ACARA),,,Raw,HeadClassificationDesc,This field refers to ASCED course Head Classification. ABS broad field of education as recorded in AVETMISS. This list is from Australian Bureau of Statistics Release 1272.0 July 2001 - Australian Standard Classification of Education (ASCED). This field is a proxy for industry area.,,,,,,,,Australian Bureau of Statistics Release 1272.0 July 2001 - Australian Standard Classification of Education (ASCED),,,,,,,,,,,,
+16,VETiS (ACARA),,,Raw,SubClassificationDesc,This field refers to ASCED course Sub Classification under the Head Classification.  This field is a proxy for industry area.,,,,,,,,Australian Bureau of Statistics Release 1272.0 July 2001 - Australian Standard Classification of Education (ASCED),,,,,,,,,,,,
+17,VETiS (ACARA),,,Count,Classification Total,This field refers to the count of classification. This data is from last year.,,,Number,,,,,,,,,,,,,,,,,
+18,VETiS (ACARA),,,Count,Certificate I,Count of the Australian Qualifications Framework level of the qualification or enrolment for Certificate I. This data is from last year.,,,Number,,,,,,,,,,,,,,,,,
+19,VETiS (ACARA),,,Count,Certificate II,Count of the Australian Qualifications Framework level of the qualification or enrolment for Certificate II. This data is from last year.,,,Number,,,,,,,,,,,,,,,,,
+20,VETiS (ACARA),,,Count,Certificate III,Count of the Australian Qualifications Framework level of the qualification or enrolment for Certificate III. This data is from last year.,,,Number,,,,,,,,,,,,,,,,,
+21,VETiS (ACARA),,,Count,Certificate IV,Count of the Australian Qualifications Framework level of the qualification or enrolment for Certificate IV. This data is from last year.,,,Number,,,,,,,,,,,,,,,,,
+22,VETiS (ACARA),,,Count,Diploma OR Higher,Count of the Australian Qualifications Framework level of the qualification or enrolment for Diploma or higher. This data is from last year.,,,Number,,,,,,,,,,,,,,,,,
+23,VETiS (ACARA),,,Count,Other,Count of the Australian Qualifications Framework level of the qualification or enrolment for Other.  This includes vocational education and training not elsewhere classified. This data is from last year.,,,Number,,,,,,,,,,,,,,,,,
+24,VETiS (ACARA),,,Count,SchoolBasedApprenticeshipsAndTraineeships,Number of students at the school undertaking school-based apprenticeships and traineeships.  Students are counted if they have completed at least one unit of competency as part of the apprenticeship or traineeship.  This data is from last year.,,,Number,,,,,,,,,,,,,,,,,
+25,VETiS (ACARA),,,Aggregate,TotalStudentCountByCategory,Count of the Students per category. This data is from last year.,,,Number,,,,,,,,,,,,,,,,,Yes
