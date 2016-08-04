@@ -1,2 +1,4 @@
 build/
 tools/release
+harness/harness
+harness/var/
