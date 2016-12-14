@@ -168,6 +168,7 @@ func getSearchResults(index string, query string) SearchResult {
 		namespace = elements_namespace
 	}
 
+	query = strings.ToLower(query)
 	res, err := searcher.Search(query, 0, -1)
 	if err != nil {
 		log.Println("Searching error: ", err)

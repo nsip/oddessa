@@ -161,7 +161,8 @@ $(function() {
                         };
                         // force search strings to uppercase & trim for comparison
                         var uppercase_objects = usecase.Objects.map(function(object) {
-                            return object.toUpperCase(); });
+                            return object.toUpperCase();
+                        });
                         if ($.inArray($.trim(searchresult.SIFObject.toUpperCase()), uppercase_objects) > -1) {
                             cs.Score = pctScore
                         }
@@ -217,6 +218,13 @@ $(function() {
         $("#tbl-excludes").empty();
         $("#tbl-includes").empty();
 
+        // refresh display for any pinned data
+        var data = [];
+        mergePinnables(data);
+        showMap(data);
+        showTables(data);
+
+
     }
 
     function clearInput() {
@@ -233,19 +241,19 @@ $(function() {
 
             var contentbox = jQuery('<div class="cd-timeline-content"></div>')
             var content = '<h3>' + item.DataElement + '</h3>' +
-            '<h6>(Collection Context: ' + item.CollectionFrame + ')</h6>' +
-            '<input type="checkbox" class="pinnable"> pin' +
-            '<h5>Definition:</h5>' +
-            '<p>' + item.Definition + '</p>' +
-            '<h5>Usage:</h5>' +
-            '<p>' + item.Usage + '</p>' +
-            '<h5>SIF Mapping:</h5>' +
-            '<p><ul>' +
-            '<li>SIF Object:  ' + item.SIFObject + '</li>' +
-            '<li>SIF Element: ' + item.SIFElement + '</li>' +
-            '</ul></p>' +
-            '<button class="cd-btn" docid="' + item.DocID + '" >Read more</button>' +
-            '<span class="cd-date"><h5>' + item.Collection + '</h5></span>'
+                '<h6>(Collection Context: ' + item.CollectionFrame + ')</h6>' +
+                '<input type="checkbox" class="pinnable"> pin' +
+                '<h5>Definition:</h5>' +
+                '<p>' + item.Definition + '</p>' +
+                '<h5>Usage:</h5>' +
+                '<p>' + item.Usage + '</p>' +
+                '<h5>SIF Mapping:</h5>' +
+                '<p><ul>' +
+                '<li>SIF Object:  ' + item.SIFObject + '</li>' +
+                '<li>SIF Element: ' + item.SIFElement + '</li>' +
+                '</ul></p>' +
+                '<button class="cd-btn" docid="' + item.DocID + '" >Read more</button>' +
+                '<span class="cd-date"><h5>' + item.Collection + '</h5></span>'
             $(contentbox).append(content)
             $(newdiv).append(picture)
             $(newdiv).append(contentbox)
